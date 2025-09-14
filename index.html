@@ -125,6 +125,29 @@
             gap: 8px;
         }
         
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #2980b9;
+        }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -137,6 +160,8 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         
         .project-card:hover {
@@ -145,6 +170,9 @@
         
         .project-content {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .project-title {
@@ -156,6 +184,22 @@
         .project-desc {
             color: #666;
             margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .project-tag {
+            background: #e7f4ff;
+            color: #2980b9;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
         }
         
         .project-link {
@@ -167,6 +211,8 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
+            text-align: center;
+            margin-top: auto;
         }
         
         .project-link:hover {
@@ -235,6 +281,15 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -301,28 +356,52 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+                <button class="filter-btn" data-filter="machinelearning">Machine Learning</button>
+                <button class="filter-btn" data-filter="sql">SQL</button>
+            </div>
+            
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="powerbi datascience machinelearning sql">
                     <div class="project-content">
                         <h3 class="project-title">Rossmann Sales Forecasting</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
                         <p class="project-desc">Time-series models predicting 6-8 weeks of future sales with promo impact analysis and store performance benchmarking.</p>
-                        <p><strong>Technologies:</strong> SQL, Python, Power BI, DAX</p>
+                        <p><strong>Technologies:</strong> SQL, Python, Power BI, DAX, Machine Learning</p>
                         <a href="https://github.com/rotimi2020/Data-Analyst-Portfolio/tree/main/rossmann_store_sales_analysis" class="project-link">View Project</a>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="datascience sql">
                     <div class="project-content">
                         <h3 class="project-title">Library Management System</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
                         <p class="project-desc">Analysis of library operations including book inventory, user activities, and financial metrics using SQL queries.</p>
                         <p><strong>Technologies:</strong> SQL, MySQL/PostgreSQL</p>
                         <a href="https://github.com/rotimi2020/Data-Analyst-Portfolio/tree/main/library_management_system" class="project-link">View Project</a>
                     </div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" data-category="powerbi datascience sql">
                     <div class="project-content">
                         <h3 class="project-title">Delaware Financial Analysis</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
                         <p class="project-desc">Analysis of State of Delaware's credit card transactions to identify spending patterns and financial trends.</p>
                         <p><strong>Technologies:</strong> SQL, Power BI, DAX, Excel</p>
                         <a href="https://github.com/rotimi2020/Data-Analyst-Portfolio/tree/main/delaware_credit_card_transaction" class="project-link">View Project</a>
@@ -354,5 +433,45 @@
             <p>&copy; 2023 Rotimi - Data Analyst Portfolio</p>
         </div>
     </footer>
+
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Show all projects if "all" is selected
+                    if (filterValue === 'all') {
+                        projectCards.forEach(card => {
+                            card.style.display = 'flex';
+                        });
+                    } else {
+                        // Hide all projects first
+                        projectCards.forEach(card => {
+                            card.style.display = 'none';
+                        });
+                        
+                        // Show projects with matching category
+                        projectCards.forEach(card => {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                card.style.display = 'flex';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
