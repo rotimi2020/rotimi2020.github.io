@@ -3,13 +3,12 @@
 This repository contains the source code for my professional portfolio website.
 
 ## 🌐 Live Website
-Visit my live portfolio at: **[https://https://rotimi2020.github.io](https://https://rotimi2020.github.io)**
+Visit my live portfolio at: **[https://rotimi2020.github.io](https://rotimi2020.github.io)**
 
 ## 🛠️ Built With
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages
+- HTML5, CSS3, JavaScript
+- GitHub Pages for hosting
+- Power BI, SQL, Python (featured in projects)
 
 ## 📞 Contact
 - Email: omoseworotimi@gmail.com
@@ -18,4 +17,4 @@ Visit my live portfolio at: **[https://https://rotimi2020.github.io](https://htt
 
 ---
 
-*This portfolio showcases my data analysis, visualization, and machine learning projects.*
+*This portfolio showcases my data analysis, visualization, and machine learning projects using various tools and technologies.*
