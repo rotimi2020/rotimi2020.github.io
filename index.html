@@ -148,13 +148,13 @@
             background: #2980b9;
         }
         
-        .projects-grid {
+        .projects-grid, .certs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .project-card {
+        .project-card, .cert-card {
             background: white;
             border-radius: 10px;
             overflow: hidden;
@@ -164,37 +164,37 @@
             flex-direction: column;
         }
         
-        .project-card:hover {
+        .project-card:hover, .cert-card:hover {
             transform: translateY(-5px);
         }
         
-        .project-content {
+        .project-content, .cert-content {
             padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
         
-        .project-title {
+        .project-title, .cert-title {
             font-size: 1.4rem;
             color: #2c3e50;
             margin-bottom: 15px;
         }
         
-        .project-desc {
+        .project-desc, .cert-desc {
             color: #666;
             margin-bottom: 20px;
             flex-grow: 1;
         }
         
-        .project-tags {
+        .project-tags, .cert-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
             margin-bottom: 15px;
         }
         
-        .project-tag {
+        .project-tag, .cert-tag {
             background: #e7f4ff;
             color: #2980b9;
             padding: 5px 10px;
@@ -202,7 +202,7 @@
             font-size: 0.8rem;
         }
         
-        .project-link {
+        .project-link, .cert-link {
             display: inline-block;
             background: #3498db;
             color: white;
@@ -215,7 +215,43 @@
             margin-top: auto;
         }
         
-        .project-link:hover {
+        .project-link:hover, .cert-link:hover {
+            background: #2980b9;
+        }
+        
+        .resume-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .resume-option {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resume-download {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+        
+        .resume-download:hover {
             background: #2980b9;
         }
         
@@ -278,7 +314,7 @@
                 align-items: center;
             }
             
-            .projects-grid {
+            .projects-grid, .certs-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -289,6 +325,10 @@
             
             .filter-btn {
                 width: 200px;
+            }
+            
+            .resume-options {
+                flex-direction: column;
             }
         }
     </style>
@@ -377,7 +417,7 @@
                         </div>
                         <p class="project-desc">Time-series models predicting 6-8 weeks of future sales with promo impact analysis and store performance benchmarking.</p>
                         <p><strong>Technologies:</strong> SQL, Python, Power BI, DAX, Machine Learning</p>
-                        <a href="https://github.com/rotimi2020/rossmann-store-sales/blob/main/rossmann-store-sales.md" class="project-link">View Project</a>
+                        <a href="https://github.com/rotimi2020/Data-Analyst-Portfolio/tree/main/rossmann_store_sales_analysis" class="project-link">View Project</a>
                     </div>
                 </div>
                 
@@ -408,7 +448,84 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Training</h2>
             
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">IBM Data Science Professional Certificate</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Data Science</span>
+                            <span class="cert-tag">Machine Learning</span>
+                            <span class="cert-tag">Python</span>
+                        </div>
+                        <p class="cert-desc">Comprehensive program covering data science methodology, Python, SQL, data visualization, and machine learning algorithms.</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">PwC Power BI Virtual Internship</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Power BI</span>
+                            <span class="cert-tag">Data Visualization</span>
+                            <span class="cert-tag">Dashboard</span>
+                        </div>
+                        <p class="cert-desc">Forage virtual internship focused on creating KPI dashboards, churn analysis, and diversity reporting using Power BI.</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Customer Churn Analysis Training</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Analytics</span>
+                            <span class="cert-tag">SQL</span>
+                            <span class="cert-tag">Visualization</span>
+                        </div>
+                        <p class="cert-desc">Virtual internship program focused on customer churn analysis, retention strategies, and data-driven decision making.</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            
+            <div class="resume-options">
+                <div class="resume-option">
+                    <h3>Data Analyst Resume</h3>
+                    <p>Focused on data visualization, Power BI, and SQL skills</p>
+                    <a href="#" class="resume-download">Download PDF</a>
+                </div>
+                
+                <div class="resume-option">
+                    <h3>Data Scientist Resume</h3>
+                    <p>Focused on machine learning, Python, and statistical analysis</p>
+                    <a href="#" class="resume-download">Download PDF</a>
+                </div>
+                
+                <div class="resume-option">
+                    <h3>Business Intelligence Resume</h3>
+                    <p>Focused on dashboards, reporting, and data storytelling</p>
+                    <a href="#" class="resume-download">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="container">
             <div class="stats-container">
                 <h3>GitHub Stats</h3>
                 <img src="https://github-readme-stats.vercel.app/api?username=rotimi2020&show_icons=true&theme=radical" alt="GitHub Stats" style="max-width: 100%; margin-top: 20px;">
