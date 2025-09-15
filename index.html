@@ -382,6 +382,15 @@
             background: #2980b9;
         }
         
+        .email-instructions {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -658,6 +667,10 @@
             <h2 class="modal-title">Request BSc Certificate</h2>
             <p>For privacy and security reasons, I don't publicly share my BSc certificate online. Please provide your details below, and I'll be happy to share it directly with legitimate employers.</p>
             
+            <div class="email-instructions">
+                <p><strong>Note:</strong> After submitting, your email client will open with a pre-filled message. You must click "Send" in your email client to complete the request.</p>
+            </div>
+            
             <form class="modal-form" id="certificateRequestForm">
                 <div class="form-group">
                     <label for="requesterName">Your Name</label>
@@ -679,7 +692,7 @@
                     <textarea id="requestPurpose" placeholder="Please briefly explain why you need my certificate..."></textarea>
                 </div>
                 
-                <button type="submit" class="submit-request">Send Request</button>
+                <button type="submit" class="submit-request">Open Email Client</button>
             </form>
         </div>
     </div>
@@ -758,17 +771,26 @@
                 // Create mailto link
                 const subject = "BSc Certificate Request";
                 const body = `Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nPurpose: ${purpose}\n\nPlease let me know how you would like to proceed.`;
-                window.location.href = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-                // Open email client
-                window.location.href = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
-                // Close the modal
-                modal.style.display = 'none';
+                // Create the mailto URL
+                const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
-                // Show thank you message
-                alert('Kindly resend your request using your Gmail account instead of this form. Thank you.');
-
+                // Try to open the email client
+                try {
+                    window.location.href = mailtoUrl;
+                    
+                    // Close the modal after a short delay
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        
+                        // Show thank you message
+                        alert('Your email client should open with a pre-filled message. Please click "Send" to complete your request. Thank you.');
+                    }, 500);
+                } catch (error) {
+                    // If there's an error, show a message
+                    alert('Could not open your email client. Please send an email directly to omoseworotimi@gmail.com with your request.');
+                    console.error('Error opening email client:', error);
+                }
             });
         });
     </script>
