@@ -17,6 +17,7 @@
             background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         .container {
@@ -309,16 +310,20 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            overflow-y: auto;
         }
         
         .modal-content {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            width: 90%;
+            width: 100%;
             max-width: 500px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
             position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
         }
         
         .close-modal {
@@ -328,6 +333,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: #666;
+            z-index: 10;
         }
         
         .modal-title {
@@ -359,6 +365,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
+            width: 100%;
         }
         
         .form-group textarea {
@@ -376,6 +383,7 @@
             cursor: pointer;
             transition: background 0.3s;
             margin-top: 10px;
+            width: 100%;
         }
         
         .submit-request:hover {
@@ -674,22 +682,22 @@
             <form class="modal-form" id="certificateRequestForm">
                 <div class="form-group">
                     <label for="requesterName">Your Name</label>
-                    <input type="text" id="requesterName" required>
+                    <input type="text" id="requesterName" required placeholder="Enter your full name">
                 </div>
                 
                 <div class="form-group">
                     <label for="requesterEmail">Your Email</label>
-                    <input type="email" id="requesterEmail" required>
+                    <input type="email" id="requesterEmail" required placeholder="Enter your email address">
                 </div>
                 
                 <div class="form-group">
                     <label for="requesterCompany">Company/Organization</label>
-                    <input type="text" id="requesterCompany">
+                    <input type="text" id="requesterCompany" placeholder="Where do you work?">
                 </div>
                 
                 <div class="form-group">
                     <label for="requestPurpose">Purpose of Request</label>
-                    <textarea id="requestPurpose" placeholder="Please briefly explain why you need my certificate..."></textarea>
+                    <textarea id="requestPurpose" required placeholder="Please briefly explain why you need my certificate..."></textarea>
                 </div>
                 
                 <button type="submit" class="submit-request">Open Email Client</button>
@@ -745,17 +753,20 @@
             churnCertificateLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
             });
             
             // Close modal when clicking the X
             closeModal.addEventListener('click', function() {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             });
             
             // Close modal when clicking outside the modal content
             window.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 }
             });
             
@@ -773,7 +784,7 @@
                 const body = `Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nPurpose: ${purpose}\n\nPlease let me know how you would like to proceed.`;
                 
                 // Create the mailto URL
-                const mailtoUrl = `mailto:datascientist5050@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
                 // Try to open the email client
                 try {
@@ -782,6 +793,7 @@
                     // Close the modal after a short delay
                     setTimeout(() => {
                         modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
                         
                         // Show thank you message
                         alert('Your email client should open with a pre-filled message. Please click "Send" to complete your request. Thank you.');
