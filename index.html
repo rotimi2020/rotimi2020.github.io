@@ -757,8 +757,9 @@
                 
                 // Create mailto link
                 const subject = "BSc Certificate Request";
-                const body = `Hello Rotimi,%0D%0A%0D%0AI would like to request a copy of your BSc certificate for verification.%0D%0A%0D%0AName: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0APurpose: ${purpose}%0D%0A%0D%0APlease let me know how you would like to proceed.`;
-                
+                const body = `Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nPurpose: ${purpose}\n\nPlease let me know how you would like to proceed.`;
+                window.location.href = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
                 // Open email client
                 window.location.href = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 
