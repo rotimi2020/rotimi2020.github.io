@@ -438,6 +438,23 @@
                 padding: 20px;
                 width: 95%;
             }
+
+            /* Add to your existing CSS */
+.project-link.demo {
+    background: #28a745;
+}
+
+.project-link.demo:hover {
+    background: #218838;
+}
+
+.project-link.code {
+    background: #6c757d;
+}
+
+.project-link.code:hover {
+    background: #545b62;
+}
         }
     </style>
 </head>
@@ -526,6 +543,7 @@
                 <div class="skill-badge"><i class="fas fa-server"></i> Microsoft SQL Server</div>
                 <div class="skill-badge"><i class="fas fa-code"></i> Visual Studio Code</div>
                 <div class="skill-badge"><i class="fas fa-book"></i> Jupyter Notebook</div>
+                <div class="skill-badge"><i class="fas fa-rocket"></i> Streamlit</div>
 
             </div>
         </div>
@@ -541,7 +559,8 @@
                 <button class="filter-btn" data-filter="datascience">Data Science</button>
                 <button class="filter-btn" data-filter="machinelearning">Machine Learning</button>
                 <button class="filter-btn" data-filter="sql">SQL</button>
-                 <button class="filter-btn" data-filter="excel">Excel</button>
+                <button class="filter-btn" data-filter="excel">Excel</button>
+                <button class="filter-btn" data-filter="streamlit">Streamlit</button>
             </div>
             
             <div class="projects-grid">
@@ -603,10 +622,55 @@
                         <p><strong>Technologies:</strong> Power BI, Python, Excel</p>
                         <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="project-link">View Project</a>
                     </div>
+
+                   <div class="project-card" data-category="python machinelearning streamlit">
+                    <div class="project-content">
+                        <h3 class="project-title">NHANES Diabetes Streamlit App</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Web App</span>
+                            
+                        </div>
+                        <p class="project-desc">Interactive web app built with Streamlit to explore NHANES data and predict diabetes risk through visualizations and a machine learning model.</p>
+                        <p><strong>Technologies:</strong> Streamlit, Python, Scikit-learn, Pandas, Plotly</p>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <a href="https://nhanes-diabetes.streamlit.app//" class="project-link" style="background: #6c757d;" target="_blank">🚀 Live Demo</a>
+                        <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="project-link">View Project</a>
+                    <div>   
+                    </div>                       
                 </div>
             </div>
         </div>
     </section>
+
+
+                       <!-- Add this after the Projects section -->
+<section id="demos">
+    <div class="container">
+        <h2 class="section-title">Live Demos</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Interactive Machine Learning App</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">Streamlit</span>
+                        <span class="project-tag">Real-time</span>
+                        <span class="project-tag">Interactive</span>
+                        <span class="project-tag">Web Application</span>
+                    </div>
+                    <p class="project-desc">A fully functional web application showcasing machine learning capabilities with user-friendly interface for real-time predictions and data analysis.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="YOUR_STREAMLIT_APP_URL" class="project-link" target="_blank">🚀 Launch App</a>
+                        <a href="YOUR_GITHUB_REPO_URL" class="project-link" style="background: #6c757d;" target="_blank">📁 View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="certifications">
         <div class="container">
