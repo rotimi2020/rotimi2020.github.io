@@ -213,8 +213,9 @@
             font-weight: 600;
             transition: background 0.3s;
             text-align: center;
-            margin-top: auto;
             cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
         }
         
         .project-link:hover, .cert-link:hover {
@@ -399,7 +400,7 @@
             font-size: 14px;
         }
 
-        /* Project link styles */
+        /* Project link styles - Updated for horizontal layout */
         .project-links {
             display: flex;
             gap: 10px;
@@ -484,33 +485,17 @@
                 width: 95%;
             }
 
-         .project-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-/* Ensure buttons stay side-by-side on larger screens */
-@media (min-width: 769px) {
-    .project-links {
-        flex-direction: row;
-    }
-    
-    .project-links .project-link {
-        flex: 1;
-        min-width: auto;
-    }
-}
-
-/* Keep the column layout for mobile */
-@media (max-width: 768px) {
-    .project-links {
-        flex-direction: column;
-    }
-}
-
-
+            /* Ensure buttons stay side-by-side on mobile with proper spacing */
+            .project-links {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .project-links .project-link {
+                flex: 1;
+                min-width: 120px;
+                margin: 2px;
+            }
         }
     </style>
 </head>
@@ -701,8 +686,8 @@
                         </p>
                         <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Folium, Jupyter</p>
                         <div class="project-links">
-                            <a href="" class="project-link demo" target="_blank"> View Certificate </a>
-                            <a href="" class="project-link code" > View Badge</a>
+                            <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="project-link cert" target="_blank">View Certificate</a>
+                            <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="project-link code" target="_blank">View Badge</a>
                         </div>
                     </div>
                 </div>
