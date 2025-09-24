@@ -398,7 +398,52 @@
             border-radius: 4px;
             font-size: 14px;
         }
+
+        /* Project link styles */
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
         
+        .project-link.demo {
+            background: #28a745;
+        }
+
+        .project-link.demo:hover {
+            background: #218838;
+        }
+
+        .project-link.code {
+            background: #6c757d;
+        }
+
+        .project-link.code:hover {
+            background: #545b62;
+        }
+
+        .project-link.cert {
+            background: #ffc107;
+            color: #212529;
+        }
+
+        .project-link.cert:hover {
+            background: #e0a800;
+        }
+
+        .education h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .education p {
+            margin-bottom: 5px;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -439,22 +484,9 @@
                 width: 95%;
             }
 
-            /* Add to your existing CSS */
-.project-link.demo {
-    background: #28a745;
-}
-
-.project-link.demo:hover {
-    background: #218838;
-}
-
-.project-link.code {
-    background: #6c757d;
-}
-
-.project-link.code:hover {
-    background: #545b62;
-}
+            .project-links {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -468,14 +500,12 @@
                 <h1>Hi there, I'm Rotimi!</h1>
                 <p class="tagline">Data Analyst | Data Scientist | Machine Learning Practitioner</p>
     
-
                 <div class="social-links">
-                <a href="https://github.com/rotimi2020" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@rotimiomosewo7787" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="mailto:omoseworotimi@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/rotimi2020" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@rotimiomosewo7787" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:omoseworotimi@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
-
             </div>
         </div>
     </header>
@@ -495,14 +525,8 @@
                         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                         <p><strong>B.Sc. (Hons.) in Computer Science</strong></p>
                         <p>National Open University, 2019</p>
-                        <p>**Relevant Coursework:** Data Structures and Algorithms, Database Systems, Data Analysis, Fundamentals of Machine Learning
-                        </p>
+                        <p><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Database Systems, Data Analysis, Fundamentals of Machine Learning</p>
                     </div>
-                    <br>
-                    
-        
-
-
                 </div>
             </div>
         </div>
@@ -512,7 +536,7 @@
         <div class="container">
             <h2 class="section-title">Skills</h2>
             <div class="skills">
-               <div class="skill-badge"><i class="fas fa-robot"></i> Scikit-Learn</div>
+                <div class="skill-badge"><i class="fas fa-robot"></i> Scikit-Learn</div>
                 <div class="skill-badge"><i class="fas fa-chart-area"></i> Matplotlib</div>
                 <div class="skill-badge"><i class="fas fa-chart-line"></i> Seaborn</div>
                 <div class="skill-badge"><i class="fas fa-table"></i> Pandas</div>
@@ -523,13 +547,11 @@
                 <div class="skill-badge"><i class="fas fa-square-root-alt"></i> Statistical Analysis</div>
                 <div class="skill-badge"><i class="fas fa-brain"></i> Machine Learning</div>
                 <div class="skill-badge"><i class="fas fa-eye"></i> Data Visualization</div>
-                    
-                
-
             </div>
         </div>
     </section>
-    <section id="skills">
+
+    <section id="tools">
         <div class="container">
             <h2 class="section-title">Tools & Technologies</h2>
             <div class="skills">
@@ -544,10 +566,10 @@
                 <div class="skill-badge"><i class="fas fa-code"></i> Visual Studio Code</div>
                 <div class="skill-badge"><i class="fas fa-book"></i> Jupyter Notebook</div>
                 <div class="skill-badge"><i class="fas fa-rocket"></i> Streamlit</div>
-
             </div>
         </div>
     </section>
+
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
@@ -569,14 +591,13 @@
                         <h3 class="project-title">Rossmann Sales Forecasting</h3>
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
-                             <span class="project-tag">Python</span>
+                            <span class="project-tag">Python</span>
                             <span class="project-tag">Data Science</span>
                             <span class="project-tag">Machine Learning</span>
                             <span class="project-tag">SQL</span>
                         </div>
                         <p class="project-desc">Developed time-series models to forecast store sales, analyze promotional impact, and benchmark performance.</p>
-
-                        <p><strong>Technologies:</strong> SQL, Python, Power BI </p>
+                        <p><strong>Technologies:</strong> SQL, Python, Power BI</p>
                         <a href="https://github.com/rotimi2020/rossmann-store-sales/blob/main/rossmann-store-sales.md" class="project-link">View Project</a>
                     </div>
                 </div>
@@ -586,9 +607,9 @@
                         <h3 class="project-title">Library Management System</h3>
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
-                             <span class="project-tag">Python</span>
+                            <span class="project-tag">Python</span>
                             <span class="project-tag">SQL</span>
-                        </div> <br>
+                        </div>
                         <p class="project-desc">Analysis of library operations including book inventory, user activities, and financial metrics using SQL queries.</p>
                         <p><strong>Technologies:</strong> SQL, Power BI, Python</p>
                         <a href="https://github.com/rotimi2020/library-management-system/blob/main/library-management-system.md" class="project-link">View Project</a>
@@ -601,31 +622,30 @@
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
                             <span class="project-tag">SQL</span>
-                        </div><br>
+                        </div>
                         <p class="project-desc">Analysis of State of Delaware's credit card transactions to identify spending patterns and financial trends.</p>
                         <p><strong>Technologies:</strong> SQL, Power BI</p>
                         <a href="https://github.com/rotimi2020/de-checkbook-analysis/blob/main/delaware-checkbook-analysis.md" class="project-link">View Project</a>
                     </div>
                 </div>
 
-                   <div class="project-card" data-category="powerbi python datascience machinelearning sql excel">
+                <div class="project-card" data-category="powerbi python datascience machinelearning sql excel">
                     <div class="project-content">
                         <h3 class="project-title">NHANES Diabetes Analysis & Prediction</h3>
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
-                             <span class="project-tag">Python</span>
+                            <span class="project-tag">Python</span>
                             <span class="project-tag">Data Science</span>
                             <span class="project-tag">Machine Learning</span>
                             <span class="project-tag">Excel</span>
                         </div>
-                         
                         <p class="project-desc">Explored NHANES health data to uncover risk factors for diabetes and built predictive models for risk assessment.</p>
                         <p><strong>Technologies:</strong> Power BI, Python, Excel</p>
                         <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="project-link">View Project</a>
                     </div>
-                   </div>
+                </div>
 
-                   <div class="project-card" data-category="python machinelearning streamlit">
+                <div class="project-card" data-category="python machinelearning streamlit">
                     <div class="project-content">
                         <h3 class="project-title">NHANES Diabetes Streamlit App</h3>
                         <div class="project-tags">
@@ -633,15 +653,14 @@
                             <span class="project-tag">Machine Learning</span>
                             <span class="project-tag">Streamlit</span>
                             <span class="project-tag">Web App</span>
-                            
                         </div>
                         <p class="project-desc">Interactive web app built with Streamlit to explore NHANES data and predict diabetes risk through visualizations and a machine learning model.</p>
                         <p><strong>Technologies:</strong> Streamlit, Python, Scikit-learn, Pandas, Plotly</p>
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <a href="https://nhanes-diabetes.streamlit.app//" class="project-link" style="background: #6c757d;" target="_blank">🚀 Live Demo</a>
-                        <a href="https://github.com/rotimi2020/rotimi2020.github.io" class="project-link">View Project</a>
-                    </div>   
-                    </div>                       
+                        <div class="project-links">
+                            <a href="https://nhanes-diabetes.streamlit.app/" class="project-link demo" target="_blank">🚀 Live Demo</a>
+                            <a href="https://github.com/rotimi2020/rotimi2020.github.io" class="project-link code">View Code</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="project-card" data-category="datascience python machinelearning">
@@ -656,15 +675,14 @@
                         <p class="project-desc">
                             Applied machine learning (K-Means) and data analysis to solve location optimization problems, covering the full data science lifecycle.
                         </p>
-                        <p><strong>Technologies:</strong> Streamlit, Python, Scikit-learn, Pandas, Plotly</p>
-                            <div style="display: flex; gap: 10px; margin-top: 15px;">
-                                <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="project-link" style="background: #6c757d;" target="_blank"> 🚀 View Cert. </a>
-                                <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1?utm_source=IBM&utm_medium=institutions&utm_campaign=IBMBadge" class="project-link" target="_blank"> View Badge </a>
-                            </div>
+                        <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Folium, Jupyter</p>
+                        <div class="project-links">
+                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="project-link cert" target="_blank">📜 View Certificate</a>
+                            <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1?utm_source=IBM&utm_medium=institutions&utm_campaign=IBMBadge" class="project-link cert" target="_blank">🏅 View Badge</a>
+                        </div>
                     </div>
                 </div>
-                
-         
+            </div>
         </div>
     </section>
 
@@ -683,7 +701,6 @@
                             <span class="cert-tag">Open Source Tools</span>
                         </div>
                         <p class="cert-desc">Completed a comprehensive program in data science, covering methodology, Python, SQL, data visualization, and machine learning.</p>
-
                         <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="cert-link">View Certificate</a>
                     </div>
                 </div>
@@ -711,7 +728,7 @@
                             <span class="cert-tag">Machine Learning</span>
                         </div>
                         <p class="cert-desc">Undergraduate degree covering programming, algorithms, database systems, software engineering, and fundamentals of machine learning.</p>
-                        <a href="#" class="cert-link" id="churn-certificate-link">View Certificate</a>
+                        <a href="#" class="cert-link" id="bsc-certificate-link">Request Certificate</a>
                     </div>
                 </div>
             </div>
@@ -725,7 +742,7 @@
             <div class="resume-options">
                 <div class="resume-option">
                     <h3>Data Analyst Resume</h3>
-                    <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis..</p>
+                    <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
                     <a href="#" class="resume-download">Download PDF</a>
                 </div>
                 
@@ -740,7 +757,6 @@
                     <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
                     <a href="#" class="resume-download">Download PDF</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -849,12 +865,12 @@
             
             // Certificate Modal functionality
             const modal = document.getElementById('certificateModal');
-            const churnCertificateLink = document.getElementById('churn-certificate-link');
+            const bscCertificateLink = document.getElementById('bsc-certificate-link');
             const closeModal = document.getElementById('closeModal');
             const certificateRequestForm = document.getElementById('certificateRequestForm');
             
-            // Open modal when clicking the churn certificate link
-            churnCertificateLink.addEventListener('click', function(e) {
+            // Open modal when clicking the BSc certificate link
+            bscCertificateLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 modal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
