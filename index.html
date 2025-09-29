@@ -361,7 +361,8 @@
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             padding: 12px 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -744,37 +745,37 @@
         </div>
     </section>
 
-      <section id="resume">
-    <div class="container">
-        <h2 class="section-title">My Resume</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: #666;">
-            Choose the resume that best matches your opportunity:
-        </p>
-        
-        <div class="resume-options">
-            <div class="resume-option">
-                <h3>Data Analyst Resume</h3>
-                <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
-                <p><strong>Best for:</strong> Data Analyst, Business Analyst roles</p>
-                <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="resume-download request-resume-btn" data-resume-type="Data Analyst">Request This Resume</a>
-            </div>
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">
+                Choose the resume that best matches your opportunity:
+            </p>
+            
+            <div class="resume-options">
+                <div class="resume-option">
+                    <h3>Data Analyst Resume</h3>
+                    <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
+                    <p><strong>Best for:</strong> Data Analyst, Business Analyst roles</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Data Analyst">Request This Resume</a>
+                </div>
 
-            <div class="resume-option">
-                <h3>Power BI Analyst Resume</h3>
-                <p>Skilled in Power BI and SQL for creating dashboards, visualizations, and actionable meaningful business insights.</p>
-                <p><strong>Best for:</strong> Power BI Developer, BI Analyst roles</p>
-                <a href="#" class="resume-download request-resume-btn" data-resume-type="Power BI Analyst">Request This Resume</a>
-            </div>
+                <div class="resume-option">
+                    <h3>Power BI Analyst Resume</h3>
+                    <p>Skilled in Power BI and SQL for creating dashboards, visualizations, and actionable meaningful business insights.</p>
+                    <p><strong>Best for:</strong> Power BI Developer, BI Analyst roles</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Power BI Analyst">Request This Resume</a>
+                </div>
 
-            <div class="resume-option">
-                <h3>Junior Data Scientist Resume</h3>
-                <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
-                <p><strong>Best for:</strong> Junior Data Scientist, ML Engineer roles</p>
-                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pd" class="resume-download request-resume-btn" data-resume-type="Junior Data Scientist">Request This Resume</a>
+                <div class="resume-option">
+                    <h3>Junior Data Scientist Resume</h3>
+                    <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
+                    <p><strong>Best for:</strong> Junior Data Scientist, ML Engineer roles</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Junior Data Scientist">Request This Resume</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="stats">
         <div class="container">
@@ -806,7 +807,7 @@
     <!-- Certificate Request Modal -->
     <div class="modal" id="certificateModal">
         <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
+            <span class="close-modal" id="closeCertificateModal">&times;</span>
             <h2 class="modal-title">Request BSc Certificate</h2>
             <p>For privacy and security reasons, I don't publicly share my BSc certificate online. Please provide your details below, and I'll be happy to share it directly with legitimate employers.</p>
             
@@ -840,9 +841,51 @@
         </div>
     </div>
 
+    <!-- Resume Request Modal -->
+    <div class="modal" id="resumeModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeResumeModal">&times;</span>
+            <h2 class="modal-title">Request Resume</h2>
+            
+            <form class="modal-form" id="resumeRequestForm">
+                <div class="form-group">
+                    <label for="resumeType">Resume Type</label>
+                    <select id="resumeType" required>
+                        <option value="">Select which resume you need</option>
+                        <option value="Data Analyst">Data Analyst Resume</option>
+                        <option value="Power BI Analyst">Power BI Analyst Resume</option>
+                        <option value="Junior Data Scientist">Junior Data Scientist Resume</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterName">Your Name</label>
+                    <input type="text" id="resumeRequesterName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterEmail">Your Email</label>
+                    <input type="email" id="resumeRequesterEmail" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterCompany">Company/Organization</label>
+                    <input type="text" id="resumeRequesterCompany" placeholder="Where do you work?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobInterest">Job Role of Interest</label>
+                    <input type="text" id="jobInterest" placeholder="e.g., Data Analyst, Business Intelligence">
+                </div>
+                
+                <button type="submit" class="submit-request">Send Request</button>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Project filtering functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Project filtering functionality
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
             
@@ -879,160 +922,132 @@
             });
             
             // Certificate Modal functionality
-            const modal = document.getElementById('certificateModal');
+            const certificateModal = document.getElementById('certificateModal');
             const bscCertificateLink = document.getElementById('bsc-certificate-link');
-            const closeModal = document.getElementById('closeModal');
+            const closeCertificateModal = document.getElementById('closeCertificateModal');
             const certificateRequestForm = document.getElementById('certificateRequestForm');
             
             // Open modal when clicking the BSc certificate link
-            bscCertificateLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
+            if (bscCertificateLink) {
+                bscCertificateLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    certificateModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            }
             
             // Close modal when clicking the X
-            closeModal.addEventListener('click', function() {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
+            if (closeCertificateModal) {
+                closeCertificateModal.addEventListener('click', function() {
+                    certificateModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
             
             // Close modal when clicking outside the modal content
             window.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
+                if (e.target === certificateModal) {
+                    certificateModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+                if (e.target === resumeModal) {
+                    resumeModal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 }
             });
             
-            // Handle form submission
-            certificateRequestForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('requesterName').value;
-                const email = document.getElementById('requesterEmail').value;
-                const company = document.getElementById('requesterCompany').value;
-                const purpose = document.getElementById('requestPurpose').value;
-                
-                // Create mailto link
-                const subject = "BSc Certificate Request";
-                const body = `Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nPurpose: ${purpose}\n\nPlease let me know how you would like to proceed.`;
-                
-                // Create the mailto URL
-                const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                
-                // Try to open the email client
-                try {
+            // Handle certificate form submission
+            if (certificateRequestForm) {
+                certificateRequestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('requesterName').value;
+                    const email = document.getElementById('requesterEmail').value;
+                    const company = document.getElementById('requesterCompany').value;
+                    const purpose = document.getElementById('requestPurpose').value;
+                    
+                    // Create mailto link
+                    const subject = "BSc Certificate Request";
+                    const body = `Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nPurpose: ${purpose}\n\nPlease let me know how you would like to proceed.`;
+                    
+                    // Create the mailto URL
+                    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                    // Try to open the email client
+                    try {
+                        window.location.href = mailtoUrl;
+                        
+                        // Close the modal after a short delay
+                        setTimeout(() => {
+                            certificateModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                            
+                            // Show thank you message
+                            alert('Your email client should open with a pre-filled message. Please click "Send" to complete your request. Thank you.');
+                        }, 500);
+                    } catch (error) {
+                        // If there's an error, show a message
+                        alert('Could not open your email client. Please send an email directly to omoseworotimi@gmail.com with your request.');
+                        console.error('Error opening email client:', error);
+                    }
+                });
+            }
+            
+            // Resume Modal functionality
+            const resumeModal = document.getElementById('resumeModal');
+            const resumeRequestForm = document.getElementById('resumeRequestForm');
+            const closeResumeModal = document.getElementById('closeResumeModal');
+            const requestResumeBtns = document.querySelectorAll('.request-resume-btn');
+            
+            // Open modal when clicking any request button
+            if (requestResumeBtns) {
+                requestResumeBtns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const resumeType = this.getAttribute('data-resume-type');
+                        document.getElementById('resumeType').value = resumeType;
+                        resumeModal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+            }
+            
+            // Close modal
+            if (closeResumeModal) {
+                closeResumeModal.addEventListener('click', function() {
+                    resumeModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            // Handle resume form submission
+            if (resumeRequestForm) {
+                resumeRequestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const resumeType = document.getElementById('resumeType').value;
+                    const name = document.getElementById('resumeRequesterName').value;
+                    const email = document.getElementById('resumeRequesterEmail').value;
+                    const company = document.getElementById('resumeRequesterCompany').value;
+                    const jobInterest = document.getElementById('jobInterest').value;
+                    
+                    // Create email
+                    const subject = `Resume Request: ${resumeType}`;
+                    const body = `Hello Rotimi,\n\nI would like to request your ${resumeType}.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nJob Role Interested In: ${jobInterest}\n\nPlease send the resume when convenient. Thank you!`;
+                    
+                    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
                     window.location.href = mailtoUrl;
                     
-                    // Close the modal after a short delay
+                    // Close modal after delay
                     setTimeout(() => {
-                        modal.style.display = 'none';
+                        resumeModal.style.display = 'none';
                         document.body.style.overflow = 'auto';
-                        
-                        // Show thank you message
-                        alert('Your email client should open with a pre-filled message. Please click "Send" to complete your request. Thank you.');
+                        alert('Your email client will open with a pre-filled request. Please click "Send" to complete your request.');
                     }, 500);
-                } catch (error) {
-                    // If there's an error, show a message
-                    alert('Could not open your email client. Please send an email directly to omoseworotimi@gmail.com with your request.');
-                    console.error('Error opening email client:', error);
-                }
-            });
+                });
+            }
         });
-
-
-
-        // Add this to your existing script
-const resumeModal = document.getElementById('resumeModal');
-const resumeRequestForm = document.getElementById('resumeRequestForm');
-const closeResumeModal = document.getElementById('closeResumeModal');
-const requestResumeBtns = document.querySelectorAll('.request-resume-btn');
-
-// Open modal when clicking any request button
-requestResumeBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const resumeType = this.getAttribute('data-resume-type');
-        document.getElementById('resumeType').value = resumeType;
-        resumeModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-// Close modal
-closeResumeModal.addEventListener('click', function() {
-    resumeModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
-
-// Handle resume form submission
-resumeRequestForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const resumeType = document.getElementById('resumeType').value;
-    const name = document.getElementById('requesterName').value;
-    const email = document.getElementById('requesterEmail').value;
-    const company = document.getElementById('requesterCompany').value;
-    const jobInterest = document.getElementById('jobInterest').value;
-    
-    // Create email (you can integrate with Formspree or similar)
-    const subject = `Resume Request: ${resumeType}`;
-    const body = `Hello Rotimi,\n\nI would like to request your ${resumeType}.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nJob Role Interested In: ${jobInterest}\n\nPlease send the resume when convenient. Thank you!`;
-    
-    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoUrl;
-    
-    // Close modal after delay
-    setTimeout(() => {
-        resumeModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        alert('Your email client will open with a pre-filled request. Please click "Send" to complete your request.');
-    }, 500);
-});
     </script>
-
-    <!-- Add this modal before </body> -->
-<div class="modal" id="resumeModal">
-    <div class="modal-content">
-        <span class="close-modal" id="closeResumeModal">&times;</span>
-        <h2 class="modal-title">Request Resume</h2>
-        
-        <form class="modal-form" id="resumeRequestForm">
-            <div class="form-group">
-                <label for="resumeType">Resume Type</label>
-                <select id="resumeType" required>
-                    <option value="">Select which resume you need</option>
-                    <option value="Data Analyst">Data Analyst Resume</option>
-                    <option value="Power BI Analyst">Power BI Analyst Resume</option>
-                    <option value="Junior Data Scientist">Junior Data Scientist Resume</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="requesterName">Your Name</label>
-                <input type="text" id="requesterName" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="requesterEmail">Your Email</label>
-                <input type="email" id="requesterEmail" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="requesterCompany">Company/Organization</label>
-                <input type="text" id="requesterCompany">
-            </div>
-            
-            <div class="form-group">
-                <label for="jobInterest">Job Role of Interest</label>
-                <input type="text" id="jobInterest" placeholder="e.g., Data Analyst, Business Intelligence">
-            </div>
-            
-            <button type="submit" class="submit-request">Send Request</button>
-        </form>
-    </div>
-</div>
 </body>
 </html>
