@@ -744,31 +744,37 @@
         </div>
     </section>
 
-       <section id="resume">
-      <div class="container">
+      <section id="resume">
+    <div class="container">
         <h2 class="section-title">My Resume</h2>
-         <div class="resume-options">
-        <div class="resume-option">
-          <h3>Data Analyst Resume</h3>
-          <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
-          <a href="#" class="resume-download">View Resume</a>
-        </div>
-    
-        <div class="resume-option">
-          <h3>Power BI Analyst Resume</h3>
-            <p>Expertise in Power BI and SQL, with skills in dashboards, data models, and turning raw data into meaningful business insights.</p>
-            <a href="#" class="resume-download">View Resume</a>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">
+            Choose the resume that best matches your opportunity:
+        </p>
+        
+        <div class="resume-options">
+            <div class="resume-option">
+                <h3>Data Analyst Resume</h3>
+                <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
+                <p><strong>Best for:</strong> Data Analyst, Business Analyst roles</p>
+                <a href="#" class="resume-download request-resume-btn" data-resume-type="Data Analyst">Request This Resume</a>
+            </div>
 
+            <div class="resume-option">
+                <h3>Power BI Analyst Resume</h3>
+                <p>Skilled in Power BI and SQL for creating dashboards, visualizations, and actionable insights.</p>
+                <p><strong>Best for:</strong> Power BI Developer, BI Analyst roles</p>
+                <a href="#" class="resume-download request-resume-btn" data-resume-type="Power BI Analyst">Request This Resume</a>
+            </div>
+
+            <div class="resume-option">
+                <h3>Junior Data Scientist Resume</h3>
+                <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
+                <p><strong>Best for:</strong> Junior Data Scientist, ML Engineer roles</p>
+                <a href="#" class="resume-download request-resume-btn" data-resume-type="Junior Data Scientist">Request This Resume</a>
+            </div>
         </div>
-    
-        <div class="resume-option">
-          <h3>Junior Data Scientist Resume</h3>
-          <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
-          <a href="#" class="resume-download">View Resume</a>
-        </div>
-        </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <section id="stats">
         <div class="container">
@@ -934,6 +940,99 @@
                 }
             });
         });
+
+
+
+        // Add this to your existing script
+const resumeModal = document.getElementById('resumeModal');
+const resumeRequestForm = document.getElementById('resumeRequestForm');
+const closeResumeModal = document.getElementById('closeResumeModal');
+const requestResumeBtns = document.querySelectorAll('.request-resume-btn');
+
+// Open modal when clicking any request button
+requestResumeBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const resumeType = this.getAttribute('data-resume-type');
+        document.getElementById('resumeType').value = resumeType;
+        resumeModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Close modal
+closeResumeModal.addEventListener('click', function() {
+    resumeModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// Handle resume form submission
+resumeRequestForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const resumeType = document.getElementById('resumeType').value;
+    const name = document.getElementById('requesterName').value;
+    const email = document.getElementById('requesterEmail').value;
+    const company = document.getElementById('requesterCompany').value;
+    const jobInterest = document.getElementById('jobInterest').value;
+    
+    // Create email (you can integrate with Formspree or similar)
+    const subject = `Resume Request: ${resumeType}`;
+    const body = `Hello Rotimi,\n\nI would like to request your ${resumeType}.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nJob Role Interested In: ${jobInterest}\n\nPlease send the resume when convenient. Thank you!`;
+    
+    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoUrl;
+    
+    // Close modal after delay
+    setTimeout(() => {
+        resumeModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        alert('Your email client will open with a pre-filled request. Please click "Send" to complete your request.');
+    }, 500);
+});
     </script>
+
+    <!-- Add this modal before </body> -->
+<div class="modal" id="resumeModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeResumeModal">&times;</span>
+        <h2 class="modal-title">Request Resume</h2>
+        
+        <form class="modal-form" id="resumeRequestForm">
+            <div class="form-group">
+                <label for="resumeType">Resume Type</label>
+                <select id="resumeType" required>
+                    <option value="">Select which resume you need</option>
+                    <option value="Data Analyst">Data Analyst Resume</option>
+                    <option value="Power BI Analyst">Power BI Analyst Resume</option>
+                    <option value="Junior Data Scientist">Junior Data Scientist Resume</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="requesterName">Your Name</label>
+                <input type="text" id="requesterName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="requesterEmail">Your Email</label>
+                <input type="email" id="requesterEmail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="requesterCompany">Company/Organization</label>
+                <input type="text" id="requesterCompany">
+            </div>
+            
+            <div class="form-group">
+                <label for="jobInterest">Job Role of Interest</label>
+                <input type="text" id="jobInterest" placeholder="e.g., Data Analyst, Business Intelligence">
+            </div>
+            
+            <button type="submit" class="submit-request">Send Request</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
