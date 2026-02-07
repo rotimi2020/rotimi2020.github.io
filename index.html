@@ -68,7 +68,6 @@
             margin-bottom: 20px;
             color: white;
             border: 4px solid white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
         
         h1 {
@@ -91,12 +90,11 @@
         .social-links a {
             color: white;
             font-size: 1.5rem;
-            transition: transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s;
         }
         
         .social-links a:hover {
             transform: translateY(-3px);
-            opacity: 0.8;
         }
         
         section {
@@ -108,20 +106,6 @@
             margin-bottom: 40px;
             color: #2c3e50;
             font-size: 2.2rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            border-radius: 2px;
         }
         
         .about-content {
@@ -135,14 +119,9 @@
             flex: 1;
             min-width: 300px;
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-text p {
-            margin-bottom: 15px;
-            line-height: 1.8;
         }
         
         .skills {
@@ -156,20 +135,12 @@
         .skill-badge {
             background: #e7f4ff;
             color: #2980b9;
-            padding: 10px 18px;
-            border-radius: 25px;
+            padding: 8px 15px;
+            border-radius: 20px;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.3s;
-            cursor: default;
-        }
-        
-        .skill-badge:hover {
-            background: #3498db;
-            color: white;
-            transform: translateY(-2px);
         }
         
         .filter-buttons {
@@ -182,25 +153,17 @@
         
         .filter-btn {
             padding: 10px 20px;
-            background: #ecf0f1;
-            color: #2c3e50;
-            border: 2px solid transparent;
+            background: #3498db;
+            color: white;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background 0.3s;
             font-weight: 600;
         }
         
-        .filter-btn:hover {
-            background: #3498db;
-            color: white;
-            border-color: #2980b9;
-        }
-        
-        .filter-btn.active {
-            background: #3498db;
-            color: white;
-            border-color: #2980b9;
+        .filter-btn:hover, .filter-btn.active {
+            background: #2980b9;
         }
         
         .projects-grid, .certs-grid {
@@ -220,8 +183,8 @@
         }
         
         .project-card:hover, .cert-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
         
         /* Enhanced Project Card with Image */
@@ -236,22 +199,6 @@
             color: white;
             position: relative;
             overflow: hidden;
-        }
-        
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
         }
         
         .project-image.rossmann {
@@ -297,14 +244,12 @@
             font-size: 1.4rem;
             color: #2c3e50;
             margin-bottom: 15px;
-            font-weight: 700;
         }
         
         .project-desc, .cert-desc {
             color: #666;
             margin-bottom: 20px;
             flex-grow: 1;
-            line-height: 1.6;
         }
         
         .project-tags, .cert-tags {
@@ -317,10 +262,9 @@
         .project-tag, .cert-tag {
             background: #e7f4ff;
             color: #2980b9;
-            padding: 5px 12px;
+            padding: 5px 10px;
             border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            font-size: 0.8rem;
         }
         
         .project-link, .cert-link {
@@ -331,7 +275,7 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: background 0.3s;
             text-align: center;
             cursor: pointer;
             border: none;
@@ -340,17 +284,51 @@
         
         .project-link:hover, .cert-link:hover {
             background: #2980b9;
-            transform: translateX(5px);
+        }
+        
+        .resume-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .resume-option {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resume-download {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+        
+        .resume-download:hover {
+            background: #2980b9;
         }
         
         .stats-container {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: #2c3e50;
             color: white;
             padding: 40px;
             border-radius: 10px;
             text-align: center;
             margin-top: 40px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
         
         /* Enhanced Contact Form */
@@ -360,7 +338,7 @@
             background: white;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .contact-form {
@@ -378,7 +356,6 @@
         .form-group label {
             font-weight: 600;
             color: #2c3e50;
-            font-size: 0.95rem;
         }
         
         .form-group input,
@@ -389,7 +366,6 @@
             border-radius: 5px;
             font-size: 1rem;
             transition: border-color 0.3s;
-            font-family: inherit;
         }
         
         .form-group input:focus,
@@ -413,24 +389,18 @@
             font-weight: 600;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            transition: background 0.3s;
         }
         
         .submit-btn:hover {
             background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
         
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
             flex-wrap: wrap;
         }
         
@@ -444,13 +414,11 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: background 0.3s;
         }
         
         .contact-btn:hover {
             background: #2980b9;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
         
         footer {
@@ -461,11 +429,7 @@
             margin-top: 60px;
         }
         
-        footer p {
-            margin: 5px 0;
-        }
-        
-        /* Universal Modal Styles */
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -483,48 +447,30 @@
         
         .modal-content {
             background-color: white;
-            padding: 35px;
+            padding: 30px;
             border-radius: 10px;
             width: 100%;
             max-width: 500px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
             position: relative;
             max-height: 90vh;
             overflow-y: auto;
-            animation: modalSlideIn 0.3s ease-out;
-        }
-        
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .close-modal {
             position: absolute;
             top: 15px;
             right: 15px;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: #999;
+            color: #666;
             z-index: 10;
-            transition: color 0.3s;
-        }
-        
-        .close-modal:hover {
-            color: #333;
         }
         
         .modal-title {
             color: #2c3e50;
             margin-bottom: 20px;
             text-align: center;
-            font-size: 1.6rem;
         }
         
         .modal-form {
@@ -541,14 +487,13 @@
             border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background 0.3s;
             margin-top: 10px;
             width: 100%;
         }
         
         .submit-request:hover {
             background: #2980b9;
-            transform: translateY(-2px);
         }
         
         .email-instructions {
@@ -558,7 +503,6 @@
             margin-bottom: 20px;
             border-radius: 4px;
             font-size: 14px;
-            line-height: 1.6;
         }
 
         /* Project link styles */
@@ -596,17 +540,14 @@
 
         .education h3 {
             color: #2c3e50;
-            margin-bottom: 15px;
-            margin-top: 25px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.3rem;
         }
 
         .education p {
-            margin-bottom: 8px;
-            line-height: 1.7;
+            margin-bottom: 5px;
         }
         
         /* Success message */
@@ -619,12 +560,6 @@
             border-radius: 5px;
             margin-top: 20px;
             text-align: center;
-            animation: fadeIn 0.3s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
         
         .success-message.show {
@@ -662,8 +597,12 @@
                 width: 200px;
             }
             
+            .resume-options {
+                flex-direction: column;
+            }
+            
             .modal-content {
-                padding: 25px;
+                padding: 20px;
                 width: 95%;
             }
 
@@ -681,12 +620,6 @@
             .contact-form-container {
                 padding: 25px;
             }
-            
-            .avatar {
-                width: 120px;
-                height: 120px;
-                font-size: 50px;
-            }
         }
     </style>
 </head>
@@ -699,7 +632,8 @@
                 </div>
                 <h1>Hi there, I'm Rotimi!</h1>
                 <p class="tagline">Data Analyst | Power BI Analyst | Junior Data Scientist</p>
-                
+
+    
                 <div class="social-links">
                     <a href="https://github.com/rotimi2020" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -719,6 +653,7 @@
                     <p>I'm a B.Sc. (Hons) Computer Science graduate with an IBM Data Science Professional Certificate. 
                         Currently, I'm exploring advanced data analytics and the ways machine learning can solve real-world problems. 
                         I enjoy uncovering patterns in data and turning them into insights that help people make better decisions.</p>
+                    <br>
                     
                     <!-- Education Section -->
                     <div class="education">
@@ -865,8 +800,6 @@
                         <h3 class="project-title">PowerCo Client Churn & Price Analysis (Excel Version)</h3>
                         <div class="project-tags">
                             <span class="project-tag">Excel</span>
-                            <span class="project-tag">Power Query</span>
-                            <span class="project-tag">Power Pivot</span>
                         </div>
                         <p class="project-desc">Analyzed PowerCo customer data to identify churn drivers and built data models for retention insights using Excel.</p>
                         <p><strong>Technologies:</strong> Power Query, Power Pivot, Pivot Tables, Excel</p>
@@ -986,6 +919,35 @@
         </div>
     </section>
 
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666;">
+                Choose the resume that best matches your opportunity:
+            </p>
+            
+            <div class="resume-options">
+                <div class="resume-option">
+                    <h3>Data Analyst Resume</h3>
+                    <p>Highlights expertise in SQL, Power BI, and data visualization with strong foundations in data cleaning and exploratory analysis.</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Data Analyst">Request This Resume</a>
+                </div>
+
+                <div class="resume-option">
+                    <h3>Power BI Analyst Resume</h3>
+                    <p>Expertise in Power BI and SQL, with skills in dashboards, data models, and turning raw data into meaningful business insights.</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Power BI Analyst">Request This Resume</a>
+                </div>
+
+                <div class="resume-option">
+                    <h3>Junior Data Scientist Resume</h3>
+                    <p>Demonstrates skills in Python, data analysis, and machine learning with practical experience in prediction, evaluation, and visualization.</p>
+                    <a href="#" class="resume-download request-resume-btn" data-resume-type="Junior Data Scientist">Request This Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="stats">
         <div class="container">
             <div class="stats-container">
@@ -1001,7 +963,7 @@
             
             <!-- Enhanced Contact Form -->
             <div class="contact-form-container">
-                <h3 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Send Me a Message</h3>
+                <h3 style="text-align: center; margin-bottom: 20px;">Send Me a Message</h3>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="contactName">Your Name *</label>
@@ -1020,9 +982,7 @@
                             <option value="Job Opportunity">Job Opportunity</option>
                             <option value="Freelance Project">Freelance Project</option>
                             <option value="Collaboration">Collaboration</option>
-                            <option value="Resume Request - Data Analyst">Resume Request - Data Analyst</option>
-                            <option value="Resume Request - Power BI Analyst">Resume Request - Power BI Analyst</option>
-                            <option value="Resume Request - Junior Data Scientist">Resume Request - Junior Data Scientist</option>
+                            <option value="Resume Request">Resume Request</option>
                             <option value="General Inquiry">General Inquiry</option>
                             <option value="Other">Other</option>
                         </select>
@@ -1059,24 +1019,25 @@
         </div>
     </footer>
 
-    <!-- Universal Request Modal (for BSc Certificate) -->
-    <div class="modal" id="requestModal">
+    <!-- Certificate Request Modal -->
+    <div class="modal" id="certificateModal">
         <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <h2 class="modal-title" id="modalTitle">Request Certificate</h2>
+            <span class="close-modal" id="closeCertificateModal">&times;</span>
+            <h2 class="modal-title">Request BSc Certificate</h2>
+            <p>For privacy and security reasons, I don't publicly share my BSc certificate online. Please provide your details below, and I'll be happy to share it directly with legitimate employers.</p>
             
             <div class="email-instructions">
                 <p><strong>Note:</strong> After submitting, your email client will open with a pre-filled message. You must click "Send" in your email client to complete the request.</p>
             </div>
             
-            <form class="modal-form" id="requestForm">
+            <form class="modal-form" id="certificateRequestForm">
                 <div class="form-group">
-                    <label for="requesterName">Your Name *</label>
+                    <label for="requesterName">Your Name</label>
                     <input type="text" id="requesterName" required placeholder="Enter your full name">
                 </div>
                 
                 <div class="form-group">
-                    <label for="requesterEmail">Your Email *</label>
+                    <label for="requesterEmail">Your Email</label>
                     <input type="email" id="requesterEmail" required placeholder="Enter your email address">
                 </div>
                 
@@ -1086,13 +1047,53 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="requestPurpose">Purpose of Request *</label>
-                    <textarea id="requestPurpose" required placeholder="Please briefly explain why you need this..."></textarea>
+                    <label for="requestPurpose">Purpose of Request</label>
+                    <textarea id="requestPurpose" required placeholder="Please briefly explain why you need my certificate..."></textarea>
                 </div>
                 
-                <button type="submit" class="submit-request">
-                    <i class="fas fa-envelope"></i> Open Email Client
-                </button>
+                <button type="submit" class="submit-request">Open Email Client</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Resume Request Modal -->
+    <div class="modal" id="resumeModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeResumeModal">&times;</span>
+            <h2 class="modal-title">Request Resume</h2>
+            
+            <form class="modal-form" id="resumeRequestForm">
+                <div class="form-group">
+                    <label for="resumeType">Resume Type</label>
+                    <select id="resumeType" required>
+                        <option value="">Select which resume you need</option>
+                        <option value="Data Analyst">Data Analyst Resume</option>
+                        <option value="Power BI Analyst">Power BI Analyst Resume</option>
+                        <option value="Junior Data Scientist">Junior Data Scientist Resume</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterName">Your Name</label>
+                    <input type="text" id="resumeRequesterName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterEmail">Your Email</label>
+                    <input type="email" id="resumeRequesterEmail" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeRequesterCompany">Company/Organization</label>
+                    <input type="text" id="resumeRequesterCompany" placeholder="Where do you work?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobInterest">Job Role of Interest</label>
+                    <input type="text" id="jobInterest" placeholder="e.g., Data Analyst, Business Intelligence">
+                </div>
+                
+                <button type="submit" class="submit-request">Send Request</button>
             </form>
         </div>
     </div>
@@ -1160,37 +1161,40 @@
                 });
             }
             
-            // Universal Modal functionality
-            const requestModal = document.getElementById('requestModal');
+            // Certificate Modal functionality
+            const certificateModal = document.getElementById('certificateModal');
             const bscCertificateLink = document.getElementById('bsc-certificate-link');
-            const closeModal = document.getElementById('closeModal');
-            const requestForm = document.getElementById('requestForm');
+            const closeCertificateModal = document.getElementById('closeCertificateModal');
+            const certificateRequestForm = document.getElementById('certificateRequestForm');
             
             if (bscCertificateLink) {
                 bscCertificateLink.addEventListener('click', function(e) {
                     e.preventDefault();
-                    document.getElementById('modalTitle').textContent = 'Request BSc Certificate';
-                    requestModal.style.display = 'flex';
+                    certificateModal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
                 });
             }
             
-            if (closeModal) {
-                closeModal.addEventListener('click', function() {
-                    requestModal.style.display = 'none';
+            if (closeCertificateModal) {
+                closeCertificateModal.addEventListener('click', function() {
+                    certificateModal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 });
             }
             
             window.addEventListener('click', function(e) {
-                if (e.target === requestModal) {
-                    requestModal.style.display = 'none';
+                if (e.target === certificateModal) {
+                    certificateModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+                if (e.target === resumeModal) {
+                    resumeModal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 }
             });
             
-            if (requestForm) {
-                requestForm.addEventListener('submit', function(e) {
+            if (certificateRequestForm) {
+                certificateRequestForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
                     const name = document.getElementById('requesterName').value;
@@ -1207,14 +1211,64 @@
                         window.location.href = mailtoUrl;
                         
                         setTimeout(() => {
-                            requestModal.style.display = 'none';
+                            certificateModal.style.display = 'none';
                             document.body.style.overflow = 'auto';
-                            requestForm.reset();
+                            alert('Your email client should open with a pre-filled message. Please click "Send" to complete your request. Thank you.');
                         }, 500);
                     } catch (error) {
                         alert('Could not open your email client. Please send an email directly to omoseworotimi@gmail.com with your request.');
                         console.error('Error opening email client:', error);
                     }
+                });
+            }
+            
+            // Resume Modal functionality
+            const resumeModal = document.getElementById('resumeModal');
+            const resumeRequestForm = document.getElementById('resumeRequestForm');
+            const closeResumeModal = document.getElementById('closeResumeModal');
+            const requestResumeBtns = document.querySelectorAll('.request-resume-btn');
+            
+            if (requestResumeBtns) {
+                requestResumeBtns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const resumeType = this.getAttribute('data-resume-type');
+                        document.getElementById('resumeType').value = resumeType;
+                        resumeModal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+            }
+            
+            if (closeResumeModal) {
+                closeResumeModal.addEventListener('click', function() {
+                    resumeModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            if (resumeRequestForm) {
+                resumeRequestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const resumeType = document.getElementById('resumeType').value;
+                    const name = document.getElementById('resumeRequesterName').value;
+                    const email = document.getElementById('resumeRequesterEmail').value;
+                    const company = document.getElementById('resumeRequesterCompany').value;
+                    const jobInterest = document.getElementById('jobInterest').value;
+                    
+                    const subject = `Resume Request: ${resumeType}`;
+                    const body = `Hello Rotimi,\n\nI would like to request your ${resumeType}.\n\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nJob Role Interested In: ${jobInterest}\n\nPlease send the resume when convenient. Thank you!`;
+                    
+                    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                    window.location.href = mailtoUrl;
+                    
+                    setTimeout(() => {
+                        resumeModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        alert('Your email client will open with a pre-filled request. Please click "Send" to complete your request.');
+                    }, 500);
                 });
             }
         });
