@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Rotimi Omosewo - Data Analyst | Python • SQL • Power BI Portfolio</title>
-    <meta name="description" content="Data Analyst portfolio showcasing expertise in Python, SQL, Power BI, Excel, and Django. Explore my data analytics projects, dashboards, and certifications.">
-    <meta name="keywords" content="Data Analyst, Python, SQL, Power BI, Excel, Django, Data Visualization, Analytics Portfolio, Rotimi Omosewo, Entry Level Data Analyst">
+    <title>Rotimi Omosewo - Operations Data Analyst | Construction Analytics Portfolio</title>
+    <meta name="description" content="Operations Data Analyst portfolio showcasing expertise in Python, SQL, Power BI, Excel, and Django. Specializing in construction operations analytics, data pipelines, and interactive dashboards.">
+    <meta name="keywords" content="Operations Data Analyst, Construction Analytics, Data Analyst, Python, SQL, Power BI, Excel, Django, Data Visualization, Analytics Portfolio, Rotimi Omosewo">
     <meta name="author" content="Rotimi Omosewo">
     
     <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Rotimi Omosewo - Data Analyst Portfolio">
-    <meta property="og:description" content="Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise.">
+    <meta property="og:title" content="Rotimi Omosewo - Operations Data Analyst Portfolio">
+    <meta property="og:description" content="Operations Data Analyst specializing in construction analytics, Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rotimi2020.github.io">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rotimi Omosewo - Data Analyst Portfolio">
-    <meta name="twitter:description" content="Data Analyst specializing in Python, SQL, Power BI, and Excel.">
+    <meta name="twitter:title" content="Rotimi Omosewo - Operations Data Analyst Portfolio">
+    <meta name="twitter:description" content="Operations Data Analyst specializing in construction analytics, Python, SQL, Power BI, and Excel.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -44,7 +44,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 50%, #3498db 100%);
             color: white;
             padding: 60px 0;
             text-align: center;
@@ -81,6 +81,13 @@
             font-weight: 300;
             margin-bottom: 20px;
             line-height: 1.5;
+        }
+        
+        .tagline .highlight {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-weight: 400;
         }
         
         .social-links {
@@ -239,7 +246,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
-        /* Enhanced Project Card with Image */
         .project-image {
             width: 100%;
             height: 200px;
@@ -267,6 +273,10 @@
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .project-image.construction {
+            background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
         }
         
         .project-image.rossmann {
@@ -372,7 +382,6 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
         
-        /* Enhanced Contact Form */
         .contact-form-container {
             max-width: 600px;
             margin: 30px auto;
@@ -484,7 +493,6 @@
             margin: 5px 0;
         }
         
-        /* Universal Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -580,7 +588,6 @@
             line-height: 1.6;
         }
 
-        /* Project link styles */
         .project-links {
             display: flex;
             gap: 10px;
@@ -628,7 +635,6 @@
             line-height: 1.7;
         }
         
-        /* Success message */
         .success-message {
             display: none;
             background: #d4edda;
@@ -717,7 +723,16 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <h1>Hi there, I'm Rotimi!</h1>
-                <p class="tagline">Data Analyst | Python • SQL • Power BI | Transforming Data into Actionable Insights</p>
+                <p class="tagline">
+                    <span class="highlight">Operations Data Analyst</span> 
+                    <span style="font-weight:300; margin:0 5px;">|</span> 
+                    Python • SQL • Power BI • Django
+                    <br>
+                    <span style="font-size:1rem; font-weight:300; display:block; margin-top:10px; opacity:0.9;">
+                        <i class="fas fa-hard-hat" style="margin-right:8px;"></i>
+                        Turning real-world construction data into actionable business insights
+                    </span>
+                </p>
                 
                 <div class="social-links">
                     <a href="https://github.com/rotimi2020" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -735,15 +750,17 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a Computer Science graduate (B.Sc. Hons, 2019) with an IBM Data Science Professional Certificate, seeking to launch my career as a Data Analyst. Through self-directed learning and hands-on projects, I've developed strong proficiency in Python, SQL, Power BI, and Excel.</p>
+                    <p>I'm a Computer Science graduate (B.Sc. Hons, 2019) with an IBM Data Science Professional Certificate, currently focused on <strong>Operations Data Analytics</strong> — building end-to-end data pipelines that turn messy, real-world operational data into clean insights, interactive dashboards, and deployed web applications.</p>
                     
-                    <p>I've built a diverse portfolio of analytics projects that demonstrate my ability to:</p>
+                    <p>My portfolio showcases a complete analytics workflow using <strong>real construction operations data</strong>, from raw WhatsApp logs to Excel, SQL, Python, Power BI, and a live Django web application. I'm passionate about applying these skills across industries — including construction, healthcare, manufacturing, logistics, energy, and finance.</p>
+                    
+                    <p><strong>What I've built:</strong></p>
                     <ul>
-                        <li>Analyze complex datasets and extract meaningful insights using Python and SQL</li>
-                        <li>Build predictive models and apply machine learning techniques (Scikit-Learn)</li>
-                        <li>Create interactive dashboards and data visualizations (Power BI, Plotly, Django)</li>
-                        <li>Work with real-world data from healthcare, finance, and retail domains</li>
-                        <li>Deploy data applications using Streamlit and Django frameworks</li>
+                        <li>End-to-end ETL pipelines using Python, SQL, and Excel</li>
+                        <li>Interactive dashboards in Power BI and Django</li>
+                        <li>Machine learning models for forecasting and classification</li>
+                        <li>Deployed web applications on PythonAnywhere and Streamlit</li>
+                        <li>Analysed real operational data from construction, healthcare, and retail domains</li>
                     </ul>
                     
                     <p><strong>Technical Skills:</strong></p>
@@ -755,7 +772,7 @@
                         <li><strong>Tools:</strong> Jupyter Notebook, VS Code, Streamlit, Git/GitHub, KNIME</li>
                     </ul>
                     
-                    <p>While I'm early in my professional data analytics journey, my project portfolio demonstrates my technical capabilities, problem-solving skills, and commitment to continuous learning. I'm eager to apply these skills in a Data Analyst role where I can contribute to data-driven decision-making and grow alongside experienced professionals.</p>
+                    <p>I'm seeking a Data Analyst or Operations Analyst role where I can apply data analytics, automation, and business intelligence to improve operational performance and support data-driven decision-making.</p>
                     
                     <!-- Education Section -->
                     <div class="education">
@@ -814,6 +831,7 @@
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="operations">Operations Analytics</button>
                 <button class="filter-btn" data-filter="powerbi">Power BI</button>
                 <button class="filter-btn" data-filter="python">Python</button>
                 <button class="filter-btn" data-filter="datascience">Data Science</button>
@@ -825,6 +843,35 @@
             </div>
             
             <div class="projects-grid">
+                <!-- Construction Operations Analytics - Featured First -->
+                <div class="project-card" data-category="operations powerbi python sql excel django">
+                    <div class="project-image construction">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">🏗️ Construction Operations Analytics</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Operations Analytics</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">DAX</span>
+                        </div>
+                        <p class="project-desc">
+                            End-to-end data analytics pipeline transforming raw WhatsApp construction logs into structured datasets, 
+                            interactive Power BI dashboards, and a deployed Django web application. Tracked ₦4.5M in project costs, 
+                            reconciled 950 bags of cement (95.7% utilisation), and analysed 1,948m of excavation across two sites.
+                        </p>
+                        <p><strong>Technologies:</strong> Python, SQL Server, Power BI, Excel, Django, DAX</p>
+                        <div class="project-links">
+                            <a href="https://rotimi5050.pythonanywhere.com/" class="project-link demo" target="_blank">🚀 Live Demo</a>
+                            <a href="https://github.com/rotimi2020/construction-data-analytics" class="project-link code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card" data-category="powerbi python datascience machinelearning sql">
                     <div class="project-image rossmann">
                         <i class="fas fa-chart-line"></i>
@@ -1046,15 +1093,6 @@
         </div>
     </section>
 
-    <!-- <section id="stats">
-        <div class="container">
-            <div class="stats-container">
-                <h3>GitHub Stats</h3>
-                <img src="https://github-readme-stats.vercel.app/api?username=rotimi2020&show_icons=true&theme=radical" alt="GitHub Statistics for Rotimi" style="max-width: 100%; margin-top: 20px;">
-            </div>
-        </div>
-    </section> -->
-
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect!</h2>
@@ -1113,7 +1151,7 @@
     <footer>
         <div class="container">
             <p>Thank you for visiting my portfolio! 😊</p>
-            <p>&copy; 2025 Rotimi Omosewo - Data Analyst Portfolio</p>
+            <p>&copy; 2025 Rotimi Omosewo - Operations Data Analyst</p>
         </div>
     </footer>
 
