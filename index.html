@@ -804,6 +804,12 @@
             border-left: 4px solid var(--secondary);
             border: 1px solid rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(4px);
+            transition: all 0.3s;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
         }
 
         .achievement-number {
@@ -1314,8 +1320,11 @@
         <div class="container">
             <div class="profile">
 
+                <!-- ===== PHOTO UPLOAD INSTRUCTIONS ===== -->
+                <!-- 1. Prepare a square image (recommended size: 400x400 pixels). -->
+                <!-- 2. Save it in the same folder as this HTML file (e.g., my-photo.jpg). -->
+                <!-- 3. Update the src attribute below from 'avatar-placeholder.jpg' to your file name. -->
                 <div class="avatar">
-                    <!-- Replace src with your actual photo -->
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" />
                 </div>
 
@@ -1362,12 +1371,10 @@
                     </div>
                 </div>
 
-                <!-- Social -->
+                <!-- Social Links (Removed YouTube & Telegram) -->
                 <div class="social-links">
                     <a href="https://github.com/rotimi2020" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@rotimiomosewo7787" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://t.me/AnalyticsRotimi" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                     <a href="mailto:omoseworotimi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
@@ -1546,7 +1553,7 @@
             <div class="projects-grid">
 
                 <!-- Rossmann -->
-                <div class="project-card" data-category="powerbi python datascience machinelearning sql">
+                <div class="project-card" data-category="powerbi python datascience machinelearning sql operations">
                     <div class="project-image rossmann">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -1565,7 +1572,7 @@
                 </div>
 
                 <!-- NHANES -->
-                <div class="project-card" data-category="powerbi python datascience machinelearning sql excel">
+                <div class="project-card" data-category="powerbi python datascience machinelearning sql excel operations">
                     <div class="project-image nhanes">
                         <i class="fas fa-heartbeat"></i>
                     </div>
@@ -1584,7 +1591,7 @@
                 </div>
 
                 <!-- Superstore Django -->
-                <div class="project-card" data-category="python django datascience">
+                <div class="project-card" data-category="python django datascience operations">
                     <div class="project-image django">
                         <i class="fas fa-store"></i>
                     </div>
@@ -1605,7 +1612,7 @@
                 </div>
 
                 <!-- PowerCo -->
-                <div class="project-card" data-category="python datascience machinelearning streamlit">
+                <div class="project-card" data-category="python datascience machinelearning streamlit operations">
                     <div class="project-image powerco">
                         <i class="fas fa-bolt"></i>
                     </div>
@@ -1623,7 +1630,7 @@
                 </div>
 
                 <!-- IBM Capstone -->
-                <div class="project-card" data-category="datascience python machinelearning">
+                <div class="project-card" data-category="datascience python machinelearning operations">
                     <div class="project-image ibm">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
@@ -1758,11 +1765,11 @@
                 </div>
             </div>
 
+            <!-- Contact Links (Removed YouTube & Telegram, Added GitHub) -->
             <div class="contact-links">
                 <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.youtube.com/@rotimiomosewo7787" class="contact-btn" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://github.com/rotimi2020" class="contact-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:omoseworotimi@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://t.me/AnalyticsRotimi" class="contact-btn" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </section>
@@ -1932,7 +1939,7 @@
                 });
             }
 
-            // ---- Run ----
+            // ---- Run Counter ----
             animateCounters();
 
             // ---- Smooth scroll for nav ----
@@ -1952,28 +1959,35 @@
                 });
             });
 
-            // ---- Active nav link on scroll ----
+            // ---- Active nav link on scroll (with performance throttle) ----
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-links a');
+            let ticking = false;
 
             window.addEventListener('scroll', function() {
-                let current = '';
-                sections.forEach(function(section) {
-                    const top = section.offsetTop - 120;
-                    if (window.pageYOffset >= top) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                navLinks.forEach(function(link) {
-                    const href = link.getAttribute('href');
-                    if (href === '#' + current) {
-                        link.style.color = '#2a7de1';
-                        link.classList.add('active-link');
-                    } else {
-                        link.style.color = '';
-                        link.classList.remove('active-link');
-                    }
-                });
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        let current = '';
+                        sections.forEach(function(section) {
+                            const top = section.offsetTop - 120;
+                            if (window.pageYOffset >= top) {
+                                current = section.getAttribute('id');
+                            }
+                        });
+                        navLinks.forEach(function(link) {
+                            const href = link.getAttribute('href');
+                            if (href === '#' + current) {
+                                link.style.color = '#2a7de1';
+                                link.classList.add('active-link');
+                            } else {
+                                link.style.color = '';
+                                link.classList.remove('active-link');
+                            }
+                        });
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
             });
 
         });
