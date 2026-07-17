@@ -6,11 +6,11 @@
 
     <!-- SEO Meta Tags -->
     <title>Rotimi Omosewo – Operations Data Analyst Portfolio</title>
-    <meta name="description" content="Operations Data Analyst specializing in Python, SQL, Power BI, Excel, and Django. Real-world construction analytics, healthcare data science, and retail forecasting.">
+    <meta name="description" content="Operations Data Analyst specializing in Python, SQL, Power BI, Excel, and Django. Real-world analytics across construction, healthcare, retail, and energy.">
     <meta name="keywords" content="Operations Data Analyst, Data Analyst, Python, SQL, Power BI, Excel, Django, Data Visualization, Analytics Portfolio, Rotimi Omosewo">
     <meta name="author" content="Rotimi Omosewo">
 
-    <!-- Open Graph Meta Tags for Social Sharing -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Rotimi Omosewo – Operations Data Analyst Portfolio">
     <meta property="og:description" content="Operations Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise.">
     <meta property="og:type" content="website">
@@ -127,15 +127,25 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
             background: #3498db;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar .placeholder-icon {
             font-size: 60px;
-            margin-bottom: 20px;
             color: white;
-            border: 4px solid white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
@@ -156,13 +166,37 @@
             display: inline-block;
         }
 
+        /* ===== QUICK NOTE ===== */
+        .quick-note {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 18px 24px;
+            margin-top: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 4px solid #f1c40f;
+            text-align: left;
+        }
+
+        .quick-note p {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .quick-note strong {
+            color: #f1c40f;
+        }
+
         /* ===== KPI COUNTERS ===== */
         .kpi-row {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            margin: 30px 0 0;
+            margin: 25px 0 0;
         }
 
         .kpi-item {
@@ -312,7 +346,7 @@
             border-color: var(--secondary);
         }
 
-        /* ===== PROJECTS - FIXED CARD SIZING ===== */
+        /* ===== PROJECTS ===== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -321,7 +355,7 @@
             margin: 0 auto;
         }
 
-        /* ===== FEATURED CARD - Centered, Moderate Width ===== */
+        /* ===== FEATURED CARD ===== */
         .featured-wrapper {
             display: flex;
             justify-content: center;
@@ -442,9 +476,6 @@
         .project-image.ibm {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         }
-        .project-image.streamlit {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-        }
 
         .project-content {
             padding: 20px;
@@ -539,7 +570,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -673,23 +704,6 @@
             font-style: normal;
             margin-top: 10px;
             color: var(--secondary);
-        }
-
-        /* ===== GITHUB WIDGET ===== */
-        .github-widget {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            border: 1px solid var(--border);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .github-widget img {
-            max-width: 100%;
-            border-radius: 8px;
         }
 
         /* ===== CONTACT ===== */
@@ -987,7 +1001,6 @@
             .avatar {
                 width: 120px;
                 height: 120px;
-                font-size: 50px;
             }
 
             .kpi-row {
@@ -1030,8 +1043,13 @@
                 max-width: 450px;
             }
 
-            .github-widget {
-                max-width: 100%;
+            .quick-note {
+                padding: 14px 18px;
+                margin-top: 20px;
+            }
+
+            .quick-note p {
+                font-size: 0.85rem;
             }
         }
 
@@ -1076,6 +1094,10 @@
             .featured-card .project-image {
                 height: 140px;
             }
+
+            .quick-note p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -1099,9 +1121,13 @@
     <header>
         <div class="container">
             <div class="profile">
+
+                <!-- ===== AVATAR WITH PHOTO UPLOAD READY ===== -->
                 <div class="avatar">
-                    <i class="fas fa-user"></i>
+                    <!-- Replace the src below with your actual photo path -->
+                    <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo">
                 </div>
+
                 <h1>Hi there, I'm Rotimi!</h1>
                 <p class="tagline">
                     <span class="highlight">Operations Data Analyst</span> &nbsp;|&nbsp; Python • SQL • Power BI • Django
@@ -1112,7 +1138,17 @@
                     </span>
                 </p>
 
-                <!-- KPI COUNTERS -->
+                <!-- ===== QUICK NOTE – INDUSTRY AGNOSTIC ===== -->
+                <div class="quick-note">
+                    <p>
+                        <strong>📊 Operations Analytics Framework:</strong>
+                        This portfolio demonstrates how raw operational records are transformed into clean datasets, interactive dashboards, and deployed web applications.
+                        <strong>Built on construction data, but the workflow is industry-agnostic</strong> — the same approach applies to
+                        <strong>healthcare, manufacturing, logistics, energy, and finance</strong>.
+                    </p>
+                </div>
+
+                <!-- ===== KPI COUNTERS ===== -->
                 <div class="kpi-row">
                     <div class="kpi-item">
                         <div class="kpi-number" data-count="8">0</div>
@@ -1265,7 +1301,7 @@
                 <button class="filter-btn" data-filter="streamlit">Streamlit</button>
             </div>
 
-            <!-- FEATURED PROJECT -->
+            <!-- ===== FEATURED PROJECT ===== -->
             <div class="featured-wrapper">
                 <div class="featured-card">
                     <div class="project-image construction">
@@ -1298,7 +1334,7 @@
                 </div>
             </div>
 
-            <!-- OTHER PROJECTS GRID -->
+            <!-- ===== OTHER PROJECTS GRID ===== -->
             <div class="projects-grid">
 
                 <!-- Rossmann -->
@@ -1379,28 +1415,6 @@
                         <p class="project-desc">Analyzed PowerCo customer data in Python to identify churn drivers and build predictive models.</p>
                         <p><strong>Technologies:</strong> Python, Pandas, Streamlit, Jupyter Notebook, Scikit Learn</p>
                         <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="project-link code" target="_blank">View Project</a>
-                    </div>
-                </div>
-
-                <!-- NHANES Streamlit -->
-                <div class="project-card" data-category="python machinelearning streamlit">
-                    <div class="project-image streamlit">
-                        <i class="fas fa-laptop-medical"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">NHANES Diabetes Streamlit App</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Streamlit</span>
-                            <span class="project-tag">Web App</span>
-                        </div>
-                        <p class="project-desc">Interactive web app built with Streamlit to explore NHANES data and predict diabetes risk through visualizations and a machine learning model.</p>
-                        <p><strong>Technologies:</strong> Streamlit, Python, Scikit-Learn, Pandas, Plotly</p>
-                        <div class="project-links">
-                            <a href="https://nhanes-diabetes.streamlit.app/" class="project-link demo" target="_blank">🚀 Live Demo</a>
-                            <a href="https://github.com/rotimi2020/rotimi2020.github.io" class="project-link code" target="_blank">View Code</a>
-                        </div>
                     </div>
                 </div>
 
@@ -1501,22 +1515,11 @@
         </div>
     </section>
 
-    <!-- ===== GITHUB ACTIVITY ===== -->
-    <section id="github">
-        <div class="container">
-            <h2 class="section-title">GitHub Activity</h2>
-            <div class="github-widget">
-                <img src="https://github-readme-stats.vercel.app/api?username=rotimi2020&show_icons=true&theme=default&hide_border=true&bg_color=00000000&text_color=333&title_color=3498db&icon_color=3498db" alt="GitHub Stats" loading="lazy" />
-            </div>
-        </div>
-    </section>
-
     <!-- ===== CONTACT ===== -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect!</h2>
 
-            <!-- Enhanced Contact Form -->
             <div class="contact-form-container">
                 <h3 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Send Me a Message</h3>
                 <form class="contact-form" id="contactForm">
