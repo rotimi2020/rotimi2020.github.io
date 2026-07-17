@@ -1,79 +1,971 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
     <title>Rotimi Omosewo – Operations Data Analyst Portfolio</title>
+    <meta name="description" content="Operations Data Analyst specializing in Python, SQL, Power BI, Excel, and Django. Real-world construction analytics, healthcare data science, and retail forecasting.">
+    <meta name="keywords" content="Operations Data Analyst, Data Analyst, Python, SQL, Power BI, Excel, Django, Data Visualization, Analytics Portfolio, Rotimi Omosewo">
+    <meta name="author" content="Rotimi Omosewo">
 
-    <!-- SEO -->
-    <meta name="description" content="Operations Data Analyst specializing in Python, SQL, Power BI, Excel, and Django. Real-world construction analytics, healthcare data science, and retail forecasting." />
-    <link rel="canonical" href="https://rotimi2020.github.io" />
-    <meta property="og:title" content="Rotimi Omosewo – Operations Data Analyst Portfolio" />
-    <meta property="og:description" content="Data analytics portfolio showcasing Python, SQL, Power BI, Django, and real-world construction operations analytics." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rotimi2020.github.io" />
-    <meta property="og:image" content="https://rotimi2020.github.io/images/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Rotimi Omosewo – Operations Data Analyst Portfolio">
+    <meta property="og:description" content="Operations Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rotimi2020.github.io">
 
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Rotimi Omosewo",
-            "jobTitle": "Operations Data Analyst",
-            "url": "https://rotimi2020.github.io",
-            "sameAs": [
-                "https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b",
-                "https://github.com/rotimi2020",
-                "https://www.youtube.com/@rotimiomosewo7787"
-            ]
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rotimi Omosewo – Operations Data Analyst Portfolio">
+    <meta name="twitter:description" content="Operations Data Analyst specializing in Python, SQL, Power BI, and Excel.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Rotimi Omosewo - Data Analyst Portfolio",
-            "description": "Portfolio of data analytics projects including construction operations, healthcare, retail forecasting, and web applications.",
-            "url": "https://rotimi2020.github.io"
+
+        :root {
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #1a2a3a;
+            --text-light: #555;
+            --primary: #1a2a3a;
+            --secondary: #3498db;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --border: #e0e0e0;
+            --tag-bg: #e7f4ff;
+            --tag-text: #2980b9;
         }
-    </script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.ico" />
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/animations.css" />
+        /* ===== STICKY NAVIGATION ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 50%, #3498db 100%);
+            color: white;
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+            border: 4px solid white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .tagline .highlight {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 14px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* ===== KPI COUNTERS ===== */
+        .kpi-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 30px 0 0;
+        }
+
+        .kpi-item {
+            text-align: center;
+        }
+
+        .kpi-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .kpi-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text);
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-text ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-text ul li {
+            margin-bottom: 8px;
+        }
+
+        .about-text strong {
+            color: #2c3e50;
+        }
+
+        .education h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+
+        .education p {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .skill-badge {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .skill-badge:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FILTER BUTTONS ===== */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 18px;
+            background: var(--card-bg);
+            color: var(--text);
+            border: 2px solid var(--border);
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary);
+            color: #fff;
+            border-color: var(--secondary);
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects-grid,
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card,
+        .cert-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover,
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .project-image.construction {
+            background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+        }
+        .project-image.rossmann {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .project-image.nhanes {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        .project-image.django {
+            background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);
+        }
+        .project-image.powerco {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        .project-image.ibm {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        .project-image.streamlit {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+
+        .project-content,
+        .cert-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title,
+        .cert-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-desc,
+        .cert-desc {
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .project-tags,
+        .cert-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .project-tag,
+        .cert-tag {
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .project-link.demo {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .project-link.demo:hover {
+            background: #218838;
+            transform: translateX(5px);
+        }
+
+        .project-link.code {
+            background: #6c757d;
+            color: #fff;
+        }
+
+        .project-link.code:hover {
+            background: #545b62;
+            transform: translateX(5px);
+        }
+
+        .project-link.cert {
+            background: #ffc107;
+            color: #212529;
+        }
+
+        .project-link.cert:hover {
+            background: #e0a800;
+            transform: translateX(5px);
+        }
+
+        /* ===== FEATURED PROJECT ===== */
+        .featured-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .featured-card {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--secondary);
+            transition: 0.3s;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .featured-card .project-image {
+            height: 220px;
+        }
+
+        .featured-card .project-content {
+            padding: 28px;
+        }
+
+        .featured-card .project-title {
+            font-size: 1.6rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .achievement-number {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .achievement-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            font-style: italic;
+            border: 1px solid var(--border);
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            font-style: normal;
+            margin-top: 10px;
+            color: var(--secondary);
+        }
+
+        /* ===== GITHUB WIDGET ===== */
+        .github-widget {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .github-widget img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-form-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 15px;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* ===== MODAL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #999;
+            z-index: 10;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .modal-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .submit-request {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .submit-request:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .email-instructions {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid,
+            .certs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 200px;
+            }
+
+            .modal-content {
+                padding: 25px;
+                width: 95%;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+
+            .project-links .project-link {
+                flex: 1;
+                min-width: unset;
+            }
+
+            .contact-form-container {
+                padding: 25px;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+                font-size: 50px;
+            }
+
+            .kpi-row {
+                gap: 20px;
+            }
+
+            .kpi-number {
+                font-size: 1.6rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .featured-card .project-title {
+                font-size: 1.3rem;
+            }
+
+            .featured-card .project-image {
+                height: 160px;
+            }
+
+            .featured-card .project-content {
+                padding: 20px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .kpi-number {
+                font-size: 1.3rem;
+            }
+
+            .kpi-row {
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ===== PRELOADER ===== -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- ===== STICKY NAV ===== -->
+    <!-- ===== STICKY NAVIGATION ===== -->
     <nav>
         <div class="container">
-            <a href="index.html" class="nav-logo">📊 Rotimi</a>
+            <a href="#" class="nav-logo">📊 Rotimi</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
             </div>
         </div>
     </nav>
@@ -83,12 +975,19 @@
         <div class="container">
             <div class="profile">
                 <div class="avatar">
-                    <img src="images/profile.jpg" alt="Rotimi Omosewo" />
+                    <i class="fas fa-user"></i>
                 </div>
-                <h1>Hi, I'm Rotimi Omosewo</h1>
+                <h1>Hi there, I'm Rotimi!</h1>
                 <p class="tagline">
                     <span class="highlight">Operations Data Analyst</span> &nbsp;|&nbsp; Python • SQL • Power BI • Django
+                    <br>
+                    <span style="font-size:0.9rem; display:block; margin-top:8px; opacity:0.8;">
+                        <i class="fas fa-hard-hat" style="margin-right:6px;"></i>
+                        Turning real-world operational data into actionable business insights
+                    </span>
                 </p>
+
+                <!-- KPI COUNTERS -->
                 <div class="kpi-row">
                     <div class="kpi-item">
                         <div class="kpi-number" data-count="8">0</div>
@@ -103,79 +1002,103 @@
                         <div class="kpi-label">Tools &amp; Technologies</div>
                     </div>
                 </div>
+
+                <div class="social-links" style="display:flex; gap:15px; margin-top:25px; flex-wrap:wrap; justify-content:center;">
+                    <a href="https://github.com/rotimi2020" target="_blank" aria-label="GitHub" style="color:white; font-size:1.5rem; transition:0.3s;"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank" aria-label="LinkedIn" style="color:white; font-size:1.5rem; transition:0.3s;"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@rotimiomosewo7787" target="_blank" aria-label="YouTube" style="color:white; font-size:1.5rem; transition:0.3s;"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/AnalyticsRotimi" target="_blank" aria-label="Telegram" style="color:white; font-size:1.5rem; transition:0.3s;"><i class="fab fa-telegram"></i></a>
+                    <a href="mailto:omoseworotimi@gmail.com" aria-label="Email" style="color:white; font-size:1.5rem; transition:0.3s;"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- ===== ABOUT ===== -->
-    <section id="about" data-aos="fade-up">
+    <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <p>
-                        I'm a <strong>Computer Science graduate</strong> (B.Sc. Hons, 2019) with an <strong>IBM Data Science Professional Certificate</strong>, currently focused on <strong>Operations Data Analytics</strong> — building end-to-end data pipelines that turn messy, real-world operational data into clean insights, interactive dashboards, and deployed web applications.
-                    </p>
-                    <p>
-                        My portfolio showcases a complete analytics workflow using <strong>real construction operations data</strong>, from raw WhatsApp logs to Excel, SQL, Python, Power BI, and a live Django web application. I'm passionate about applying these skills across industries — including <strong>construction, healthcare, manufacturing, logistics, energy, and finance</strong>.
-                    </p>
-                </div>
-                <div class="about-card">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Computer Science graduate (B.Sc. Hons, 2019) with an <strong>IBM Data Science Professional Certificate</strong>, currently focused on <strong>Operations Data Analytics</strong> — building end-to-end data pipelines that turn messy, real-world operational data into clean insights, interactive dashboards, and deployed web applications.</p>
+
+                    <p>My portfolio showcases a complete analytics workflow using <strong>real construction operations data</strong>, from raw WhatsApp logs to Excel, SQL, Python, Power BI, and a live Django web application. I'm passionate about applying these skills across industries — including <strong>construction, healthcare, manufacturing, logistics, energy, and finance</strong>.</p>
+
                     <p><strong>What I've built:</strong></p>
                     <ul>
                         <li>End-to-end ETL pipelines using Python, SQL, and Excel</li>
                         <li>Interactive dashboards in Power BI and Django</li>
                         <li>Machine learning models for forecasting and classification</li>
                         <li>Deployed web applications on PythonAnywhere and Streamlit</li>
-                        <li>Analysed real operational data from construction, healthcare, and retail</li>
+                        <li>Analysed real operational data from construction, healthcare, and retail domains</li>
                     </ul>
-                    <p style="margin-top:16px;">
-                        <strong>Education:</strong> B.Sc. (Hons.) Computer Science – National Open University, 2019
-                    </p>
+
+                    <p><strong>Technical Skills:</strong></p>
+                    <ul>
+                        <li><strong>Programming & Analysis:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), Django</li>
+                        <li><strong>Database:</strong> SQL, Microsoft SQL Server</li>
+                        <li><strong>Visualization & BI:</strong> Power BI, Excel (Power Query, Power Pivot), Plotly</li>
+                        <li><strong>Machine Learning:</strong> Scikit-Learn, predictive modeling, time-series forecasting</li>
+                        <li><strong>Tools:</strong> Jupyter Notebook, VS Code, Streamlit, Git/GitHub, KNIME</li>
+                    </ul>
+
+                    <p>I'm seeking a <strong>Data Analyst</strong> or <strong>Operations Analyst</strong> role where I can apply data analytics, automation, and business intelligence to improve operational performance and support data-driven decision-making.</p>
+
+                    <!-- Education Section -->
+                    <div class="education">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <p><strong>B.Sc. (Hons.) in Computer Science</strong></p>
+                        <p>National Open University, 2019</p>
+                        <p><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Database Systems, Data Analysis, Fundamentals of Machine Learning</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills" data-aos="fade-up">
+    <section id="skills">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
-                <span class="skill-badge"><i class="fas fa-file-excel"></i> Excel</span>
-                <span class="skill-badge"><i class="fas fa-chart-pie"></i> Power BI</span>
-                <span class="skill-badge"><i class="fab fa-python"></i> Django</span>
-                <span class="skill-badge"><i class="fas fa-table"></i> Pandas</span>
-                <span class="skill-badge"><i class="fas fa-calculator"></i> NumPy</span>
-                <span class="skill-badge"><i class="fas fa-chart-area"></i> Matplotlib</span>
-                <span class="skill-badge"><i class="fas fa-chart-line"></i> Seaborn</span>
-                <span class="skill-badge"><i class="fas fa-robot"></i> Scikit-Learn</span>
-                <span class="skill-badge"><i class="fas fa-magic"></i> PyCaret</span>
-                <span class="skill-badge"><i class="fas fa-rocket"></i> Streamlit</span>
-                <span class="skill-badge"><i class="fas fa-server"></i> SQL Server</span>
-                <span class="skill-badge"><i class="fas fa-code"></i> VS Code</span>
-                <span class="skill-badge"><i class="fas fa-book"></i> Jupyter</span>
-                <span class="skill-badge"><i class="fas fa-project-diagram"></i> KNIME</span>
+            <div class="skills">
+                <div class="skill-badge"><i class="fas fa-robot"></i> Scikit-Learn</div>
+                <div class="skill-badge"><i class="fas fa-chart-area"></i> Matplotlib</div>
+                <div class="skill-badge"><i class="fas fa-chart-line"></i> Seaborn</div>
+                <div class="skill-badge"><i class="fas fa-table"></i> Pandas</div>
+                <div class="skill-badge"><i class="fas fa-calculator"></i> NumPy</div>
+                <div class="skill-badge"><i class="fas fa-chart-pie"></i> Plotly</div>
+                <div class="skill-badge"><i class="fas fa-broom"></i> Data Cleaning</div>
+                <div class="skill-badge"><i class="fas fa-search"></i> Exploratory Data Analysis</div>
+                <div class="skill-badge"><i class="fas fa-square-root-alt"></i> Statistical Analysis</div>
+                <div class="skill-badge"><i class="fas fa-brain"></i> Machine Learning</div>
+                <div class="skill-badge"><i class="fas fa-eye"></i> Data Visualization</div>
             </div>
+        </div>
+    </section>
 
-            <h2 class="section-title" style="margin-top:50px;">Tech Stack</h2>
-            <div class="tech-grid">
-                <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-                <div class="tech-item"><i class="fas fa-database"></i> SQL Server</div>
-                <div class="tech-item"><i class="fas fa-file-excel"></i> Excel</div>
-                <div class="tech-item"><i class="fas fa-chart-pie"></i> Power BI</div>
-                <div class="tech-item"><i class="fab fa-python"></i> Django</div>
-                <div class="tech-item"><i class="fas fa-cloud"></i> PythonAnywhere</div>
-                <div class="tech-item"><i class="fas fa-rocket"></i> Streamlit</div>
-                <div class="tech-item"><i class="fab fa-git-alt"></i> Git/GitHub</div>
+    <!-- ===== TOOLS & TECHNOLOGIES ===== -->
+    <section id="tools">
+        <div class="container">
+            <h2 class="section-title">Tools &amp; Technologies</h2>
+            <div class="skills">
+                <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-badge"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-badge"><i class="fas fa-file-excel"></i> Microsoft Excel</div>
+                <div class="skill-badge"><i class="fab fa-python"></i> Django</div>
+                <div class="skill-badge"><i class="fas fa-magic"></i> PyCaret</div>
+                <div class="skill-badge"><i class="fas fa-project-diagram"></i> KNIME</div>
+                <div class="skill-badge"><i class="fas fa-chart-bar"></i> SPSS Modeler</div>
+                <div class="skill-badge"><i class="fas fa-cloud"></i> Azure Machine Learning</div>
+                <div class="skill-badge"><i class="fas fa-server"></i> Microsoft SQL Server</div>
+                <div class="skill-badge"><i class="fas fa-code"></i> Visual Studio Code</div>
+                <div class="skill-badge"><i class="fas fa-book"></i> Jupyter Notebook</div>
+                <div class="skill-badge"><i class="fas fa-rocket"></i> Streamlit</div>
             </div>
         </div>
     </section>
 
     <!-- ===== ACHIEVEMENTS ===== -->
-    <section id="achievements" data-aos="fade-up">
+    <section id="achievements">
         <div class="container">
             <h2 class="section-title">Featured Achievements</h2>
             <div class="achievements-grid">
@@ -200,35 +1123,39 @@
     </section>
 
     <!-- ===== PROJECTS ===== -->
-    <section id="projects" data-aos="fade-up">
+    <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="operations">Operations</button>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="operations">Operations Analytics</button>
                 <button class="filter-btn" data-filter="powerbi">Power BI</button>
                 <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+                <button class="filter-btn" data-filter="machinelearning">Machine Learning</button>
+                <button class="filter-btn" data-filter="sql">SQL</button>
+                <button class="filter-btn" data-filter="excel">Excel</button>
                 <button class="filter-btn" data-filter="django">Django</button>
-                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="streamlit">Streamlit</button>
             </div>
 
             <!-- FEATURED PROJECT -->
             <div class="featured-wrapper">
                 <div class="featured-card">
-                    <div class="project-image" onclick="openLightbox('images/construction.jpg')">
-                        <img src="images/construction.jpg" alt="Construction Operations Dashboard" />
-                        <div class="overlay-icon"><i class="fas fa-hard-hat"></i></div>
+                    <div class="project-image construction">
+                        <i class="fas fa-hard-hat"></i>
                     </div>
                     <div class="project-content">
                         <span class="featured-badge">⭐ Featured Project</span>
-                        <h3 class="project-title">Construction Operations Analytics</h3>
+                        <h3 class="project-title">🏗️ Construction Operations Analytics</h3>
                         <div class="project-tags">
                             <span class="project-tag">Operations Analytics</span>
                             <span class="project-tag">Python</span>
                             <span class="project-tag">SQL</span>
                             <span class="project-tag">Power BI</span>
                             <span class="project-tag">Django</span>
+                            <span class="project-tag">DAX</span>
                         </div>
                         <p class="project-desc">
                             End-to-end data pipeline transforming real WhatsApp construction logs into structured datasets,
@@ -237,113 +1164,139 @@
                             <br><br>
                             <strong>🔁 Industry Agnostic:</strong> Same workflow applies to healthcare, manufacturing, logistics, energy, and finance.
                         </p>
+                        <p><strong>Technologies:</strong> Python, SQL Server, Power BI, Excel, Django, DAX</p>
                         <div class="project-links">
                             <a href="https://rotimi5050.pythonanywhere.com/" class="project-link demo" target="_blank">🚀 Live Demo</a>
-                            <a href="projects/construction.html" class="project-link code">📁 Project Details</a>
-                            <a href="https://github.com/rotimi2020/construction-data-analytics" class="project-link code" target="_blank">📁 Code</a>
+                            <a href="https://github.com/rotimi2020/construction-data-analytics" class="project-link code" target="_blank">📁 View Code</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- OTHER PROJECTS -->
+            <!-- OTHER PROJECTS GRID -->
             <div class="projects-grid">
 
                 <!-- Rossmann -->
-                <div class="project-card" data-category="powerbi python ml">
-                    <div class="project-image" onclick="openLightbox('images/rossmann.jpg')">
-                        <img src="images/rossmann.jpg" alt="Rossmann Sales Dashboard" />
-                        <div class="overlay-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="project-card" data-category="powerbi python datascience machinelearning sql">
+                    <div class="project-image rossmann">
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Rossmann Sales Forecasting</h3>
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">ML</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">SQL</span>
                         </div>
-                        <p class="project-desc">Time-series forecasting with XGBoost, Prophet, and PyCaret – deployed in Power BI.</p>
-                        <a href="projects/rossmann.html" class="project-link code">View Project</a>
-                        <a href="https://github.com/rotimi2020/rossmann-store-sales" class="project-link code" target="_blank">Code</a>
+                        <p class="project-desc">Developed time-series models to forecast store sales, analyze promotional impact, and benchmark performance.</p>
+                        <p><strong>Technologies:</strong> SQL, Python, Power BI</p>
+                        <a href="https://github.com/rotimi2020/rossmann-store-sales/tree/main" class="project-link code" target="_blank">View Project</a>
                     </div>
                 </div>
 
-                <!-- NHANES -->
-                <div class="project-card" data-category="python ml powerbi">
-                    <div class="project-image" onclick="openLightbox('images/nhanes.jpg')">
-                        <img src="images/nhanes.jpg" alt="NHANES Diabetes Dashboard" />
-                        <div class="overlay-icon"><i class="fas fa-heartbeat"></i></div>
+                <!-- NHANES Diabetes -->
+                <div class="project-card" data-category="powerbi python datascience machinelearning sql excel">
+                    <div class="project-image nhanes">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">NHANES Diabetes Analysis</h3>
+                        <h3 class="project-title">NHANES Diabetes Analysis &amp; Prediction</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">ML</span>
                             <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Excel</span>
                         </div>
-                        <p class="project-desc">Health data analysis and diabetes risk prediction using LightGBM.</p>
-                        <a href="projects/nhanes.html" class="project-link code">View Project</a>
-                        <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction" class="project-link code" target="_blank">Code</a>
+                        <p class="project-desc">Explored NHANES health data to uncover risk factors for diabetes and built predictive models for risk assessment.</p>
+                        <p><strong>Technologies:</strong> Power BI, Python, Excel, Scikit Learn</p>
+                        <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="project-link code" target="_blank">View Project</a>
                     </div>
                 </div>
 
                 <!-- Superstore Django -->
-                <div class="project-card" data-category="django python">
-                    <div class="project-image" onclick="openLightbox('images/superstore.jpg')">
-                        <img src="images/superstore.jpg" alt="Superstore Django Dashboard" />
-                        <div class="overlay-icon"><i class="fas fa-store"></i></div>
+                <div class="project-card" data-category="python django datascience">
+                    <div class="project-image django">
+                        <i class="fas fa-store"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Superstore Django App</h3>
+                        <h3 class="project-title">Superstore Viz Django App</h3>
                         <div class="project-tags">
-                            <span class="project-tag">Django</span>
                             <span class="project-tag">Python</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">Visualization</span>
+                            <span class="project-tag">Dashboard</span>
                         </div>
-                        <p class="project-desc">Interactive web dashboard with live charts and filters – deployed on PythonAnywhere.</p>
+                        <p class="project-desc">Interactive web dashboard built with Django to explore Superstore data and present business insights through visualizations and analytics components.</p>
+                        <p><strong>Technologies:</strong> Django, Python, Pandas, Plotly</p>
                         <div class="project-links">
                             <a href="https://rotimi.pythonanywhere.com/" class="project-link demo" target="_blank">🚀 Live Demo</a>
-                            <a href="projects/superstore.html" class="project-link code">View Project</a>
-                            <a href="https://github.com/rotimi2020/superstore-dashboard" class="project-link code" target="_blank">Code</a>
+                            <a href="https://github.com/rotimi2020/superstore-dashboard" class="project-link code" target="_blank">View Code</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PowerCo -->
-                <div class="project-card" data-category="python ml">
-                    <div class="project-image" onclick="openLightbox('images/powerco.jpg')">
-                        <img src="images/powerco.jpg" alt="PowerCo Churn Dashboard" />
-                        <div class="overlay-icon"><i class="fas fa-bolt"></i></div>
+                <!-- PowerCo Python -->
+                <div class="project-card" data-category="python datascience machinelearning streamlit">
+                    <div class="project-image powerco">
+                        <i class="fas fa-bolt"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">PowerCo Churn Analysis</h3>
+                        <h3 class="project-title">PowerCo Client Churn &amp; Price Analysis (Python)</h3>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">ML</span>
-                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">Machine Learning</span>
                         </div>
-                        <p class="project-desc">Predictive churn modelling and price sensitivity analysis in Python and Excel.</p>
-                        <a href="projects/powerco.html" class="project-link code">View Project</a>
-                        <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="project-link code" target="_blank">Code</a>
+                        <p class="project-desc">Analyzed PowerCo customer data in Python to identify churn drivers and build predictive models.</p>
+                        <p><strong>Technologies:</strong> Python, Pandas, Streamlit, Jupyter Notebook, Scikit Learn</p>
+                        <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="project-link code" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <!-- NHANES Streamlit -->
+                <div class="project-card" data-category="python machinelearning streamlit">
+                    <div class="project-image streamlit">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NHANES Diabetes Streamlit App</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Streamlit</span>
+                            <span class="project-tag">Web App</span>
+                        </div>
+                        <p class="project-desc">Interactive web app built with Streamlit to explore NHANES data and predict diabetes risk through visualizations and a machine learning model.</p>
+                        <p><strong>Technologies:</strong> Streamlit, Python, Scikit-Learn, Pandas, Plotly</p>
+                        <div class="project-links">
+                            <a href="https://nhanes-diabetes.streamlit.app/" class="project-link demo" target="_blank">🚀 Live Demo</a>
+                            <a href="https://github.com/rotimi2020/rotimi2020.github.io" class="project-link code" target="_blank">View Code</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- IBM Capstone -->
-                <div class="project-card" data-category="python ml">
-                    <div class="project-image" onclick="openLightbox('images/ibm.jpg')">
-                        <img src="images/ibm.jpg" alt="IBM Capstone" />
-                        <div class="overlay-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="project-card" data-category="datascience python machinelearning">
+                    <div class="project-image ibm">
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">IBM Data Science Capstone</h3>
+                        <h3 class="project-title">IBM Data Science Capstone Project</h3>
                         <div class="project-tags">
+                            <span class="project-tag">Data Science</span>
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">ML</span>
+                            <span class="project-tag">Machine Learning</span>
                             <span class="project-tag">Clustering</span>
                         </div>
-                        <p class="project-desc">K-Means clustering and location optimization – full data science lifecycle.</p>
+                        <p class="project-desc">Applied machine learning (K-Means) and data analysis to solve location optimization problems, covering the full data science lifecycle.</p>
+                        <p><strong>Technologies:</strong> Python, Pandas, Scikit-Learn, Folium, Jupyter</p>
                         <div class="project-links">
-                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="project-link cert" target="_blank">Certificate</a>
-                            <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1" class="project-link code" target="_blank">Badge</a>
+                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="project-link cert" target="_blank">View Certificate</a>
+                            <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1?utm_source=IBM&utm_medium=institutions&utm_campaign=IBMBadge5" class="project-link code" target="_blank">View Badge</a>
                         </div>
                     </div>
                 </div>
@@ -353,43 +1306,49 @@
     </section>
 
     <!-- ===== CERTIFICATIONS ===== -->
-    <section id="certifications" data-aos="fade-up">
+    <section id="certifications">
         <div class="container">
             <h2 class="section-title">Certifications &amp; Training</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">IBM Data Science Professional Certificate</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">Data Wrangling</span>
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Python</span>
+
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">IBM Data Science Professional Certificate</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Data Wrangling</span>
+                            <span class="cert-tag">Databases &amp; SQL</span>
+                            <span class="cert-tag">Python</span>
+                            <span class="cert-tag">Open Source Tools</span>
                         </div>
-                        <p class="project-desc">Comprehensive data science program covering methodology, Python, SQL, and ML.</p>
-                        <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="project-link cert" target="_blank">View Certificate</a>
+                        <p class="cert-desc">Completed a comprehensive program in data science, covering methodology, Python, SQL, data visualization, and machine learning.</p>
+                        <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="cert-link" target="_blank">View Certificate</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">PowerCo SME Churn Virtual Internship</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">Business Understanding</span>
-                            <span class="project-tag">EDA</span>
+
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">PowerCo SME Churn Analysis Virtual Internship</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Business Understanding</span>
+                            <span class="cert-tag">Model Analysis</span>
+                            <span class="cert-tag">Data Visualization</span>
                         </div>
-                        <p class="project-desc">Forage virtual internship delivering churn and diversity insights.</p>
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="project-link cert" target="_blank">View Certificate</a>
+                        <p class="cert-desc">Forage virtual internship using business understanding, EDA, and communication to deliver churn and diversity insights.</p>
+                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="cert-link" target="_blank">View Certificate</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">B.Sc. (Hons.) Computer Science</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">Data Structures</span>
-                            <span class="project-tag">Databases</span>
-                            <span class="project-tag">ML</span>
+
+                <div class="cert-card">
+                    <div class="cert-content">
+                        <h3 class="cert-title">B.Sc. (Hons.) Computer Science</h3>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Computer Science</span>
+                            <span class="cert-tag">Data Structures</span>
+                            <span class="cert-tag">Databases</span>
+                            <span class="cert-tag">Machine Learning</span>
                         </div>
-                        <p class="project-desc">Undergraduate degree covering algorithms, software engineering, and ML fundamentals.</p>
-                        <a href="#" class="project-link code" id="bsc-cert-link">Request Certificate</a>
+                        <p class="cert-desc">Undergraduate degree covering programming, algorithms, database systems, software engineering, and fundamentals of machine learning.</p>
+                        <a href="#" class="cert-link" id="bsc-certificate-link">Request Certificate</a>
                     </div>
                 </div>
             </div>
@@ -397,7 +1356,7 @@
     </section>
 
     <!-- ===== TESTIMONIALS ===== -->
-    <section id="testimonials" data-aos="fade-up">
+    <section id="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonials</h2>
             <div class="testimonial-grid">
@@ -418,7 +1377,7 @@
     </section>
 
     <!-- ===== GITHUB ACTIVITY ===== -->
-    <section id="github" data-aos="fade-up">
+    <section id="github">
         <div class="container">
             <h2 class="section-title">GitHub Activity</h2>
             <div class="github-widget">
@@ -428,45 +1387,57 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" data-aos="fade-up">
+    <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect!</h2>
 
+            <!-- Enhanced Contact Form -->
             <div class="contact-form-container">
-                <h3 style="text-align:center; margin-bottom:16px;">Send Me a Message</h3>
-                <form class="contact-form" action="https://formspree.io/f/xpzvgzvn" method="POST">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Send Me a Message</h3>
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Your full name" />
+                        <label for="contactName">Your Name *</label>
+                        <input type="text" id="contactName" name="name" required placeholder="Enter your full name">
                     </div>
+
                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+                        <label for="contactEmail">Your Email *</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="your.email@example.com">
                     </div>
+
                     <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <select id="subject" name="subject" required>
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" name="subject" required>
                             <option value="">Select a subject</option>
                             <option value="Job Opportunity">Job Opportunity</option>
                             <option value="Freelance Project">Freelance Project</option>
                             <option value="Collaboration">Collaboration</option>
-                            <option value="Resume Request">Resume Request</option>
+                            <option value="Resume Request - Data Analyst">Resume Request - Data Analyst</option>
                             <option value="General Inquiry">General Inquiry</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
+
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, opportunity, or inquiry..."></textarea>
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="message" required placeholder="Tell me about your project, opportunity, or inquiry..."></textarea>
                     </div>
-                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I'll get back to you soon!
+                </div>
             </div>
 
             <div class="contact-links">
                 <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.youtube.com/@rotimiomosewo7787" class="contact-btn" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
                 <a href="mailto:omoseworotimi@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://github.com/rotimi2020" class="contact-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="assets/Rotimi_Omosewo_CV.pdf" class="contact-btn cv-btn" download><i class="fas fa-file-pdf"></i> Download CV</a>
+                <a href="https://t.me/AnalyticsRotimi" class="contact-btn" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </section>
@@ -474,25 +1445,235 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
+            <p>Thank you for visiting my portfolio! 😊</p>
             <p>&copy; 2026 Rotimi Omosewo – Operations Data Analyst</p>
-            <p style="font-size:0.85rem; opacity:0.6;">Built with 💙 in Nigeria</p>
         </div>
     </footer>
 
-    <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-        <img id="lightboxImg" src="" alt="Project preview" />
+    <!-- ===== UNIVERSAL MODAL (for BSc Certificate) ===== -->
+    <div class="modal" id="requestModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 class="modal-title" id="modalTitle">Request Certificate</h2>
+
+            <div class="email-instructions">
+                <p><strong>Note:</strong> After submitting, your email client will open with a pre-filled message. You must click "Send" in your email client to complete the request.</p>
+            </div>
+
+            <form class="modal-form" id="requestForm">
+                <div class="form-group">
+                    <label for="requesterName">Your Name *</label>
+                    <input type="text" id="requesterName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="requesterEmail">Your Email *</label>
+                    <input type="email" id="requesterEmail" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="requesterCompany">Company/Organization</label>
+                    <input type="text" id="requesterCompany" placeholder="Where do you work?">
+                </div>
+
+                <div class="form-group">
+                    <label for="requestPurpose">Purpose of Request *</label>
+                    <textarea id="requestPurpose" required placeholder="Please briefly explain why you need this..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-request">
+                    <i class="fas fa-envelope"></i> Open Email Client
+                </button>
+            </form>
+        </div>
     </div>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // ===== KPI COUNTER ANIMATION =====
+            function animateCounters() {
+                const counters = document.querySelectorAll('.kpi-number');
+                counters.forEach(function(counter) {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    if (isNaN(target)) return;
+                    const duration = 1200;
+                    const start = performance.now();
+
+                    function updateCounter(time) {
+                        const progress = Math.min((time - start) / duration, 1);
+                        const current = Math.floor(progress * target);
+                        counter.textContent = current;
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+
+            // ===== PROJECT FILTERING =====
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    if (filterValue === 'all') {
+                        projectCards.forEach(function(card) {
+                            card.style.display = 'flex';
+                        });
+                    } else {
+                        projectCards.forEach(function(card) {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                card.style.display = 'flex';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // ===== CONTACT FORM =====
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('contactName').value;
+                    const email = document.getElementById('contactEmail').value;
+                    const subject = document.getElementById('contactSubject').value;
+                    const message = document.getElementById('contactMessage').value;
+
+                    const emailSubject = 'Portfolio Contact: ' + subject;
+                    const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject + '\n\nMessage:\n' +
+                        message;
+
+                    window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
+                        emailSubject) + '&body=' + encodeURIComponent(emailBody);
+
+                    successMessage.classList.add('show');
+                    contactForm.reset();
+
+                    setTimeout(function() {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                });
+            }
+
+            // ===== MODAL FUNCTIONALITY =====
+            const requestModal = document.getElementById('requestModal');
+            const bscCertificateLink = document.getElementById('bsc-certificate-link');
+            const closeModal = document.getElementById('closeModal');
+            const requestForm = document.getElementById('requestForm');
+
+            if (bscCertificateLink) {
+                bscCertificateLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.getElementById('modalTitle').textContent = 'Request BSc Certificate';
+                    requestModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if (closeModal) {
+                closeModal.addEventListener('click', function() {
+                    requestModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+
+            window.addEventListener('click', function(e) {
+                if (e.target === requestModal) {
+                    requestModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            if (requestForm) {
+                requestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('requesterName').value;
+                    const email = document.getElementById('requesterEmail').value;
+                    const company = document.getElementById('requesterCompany').value;
+                    const purpose = document.getElementById('requestPurpose').value;
+
+                    const subject = 'BSc Certificate Request';
+                    const body = 'Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ' +
+                        name + '\nEmail: ' + email + '\nCompany: ' + company + '\nPurpose: ' + purpose +
+                        '\n\nPlease let me know how you would like to proceed.';
+
+                    window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(subject) +
+                        '&body=' + encodeURIComponent(body);
+
+                    setTimeout(function() {
+                        requestModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                        requestForm.reset();
+                    }, 500);
+                });
+            }
+
+            // ===== RUN COUNTER ON LOAD =====
+            animateCounters();
+
+            // ===== SMOOTH SCROLL FOR NAV =====
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            const navHeight = document.querySelector('nav').offsetHeight || 60;
+                            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset -
+                                navHeight;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // ===== ACTIVE NAV LINK ON SCROLL =====
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(function(section) {
+                    const sectionTop = section.offsetTop - 120;
+                    if (window.pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(function(link) {
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current) {
+                        link.style.color = '#3498db';
+                    } else {
+                        link.style.color = '';
+                    }
+                });
+            });
+
+        });
     </script>
-    <script src="js/counter.js"></script>
-    <script src="js/filter.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/darkmode.js"></script>
-    <script src="js/main.js"></script>
 
 </body>
 </html>
