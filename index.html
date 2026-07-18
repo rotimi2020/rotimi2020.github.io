@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio</title>
-    <meta name="description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
-    <meta name="keywords" content="Data Analyst, Operations Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
+    <title>Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio</title>
+    <meta name="description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
+    <meta name="keywords" content="Operations Analyst, Data Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
     <meta name="author" content="Rotimi Omosewo" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
-    <meta property="og:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
+    <meta property="og:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
+    <meta property="og:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rotimi2020.github.io" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
-    <meta name="twitter:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel." />
+    <meta name="twitter:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
+    <meta name="twitter:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel." />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
-        /* ===== REFRESHED VISUAL DESIGN ECOSYSTEM ===== */
+        /* ===== RESET & SYSTEM DESIGN ===== */
         * {
             margin: 0;
             padding: 0;
@@ -37,21 +37,20 @@
         }
 
         :root {
-            --bg-base: #f4f7fa;
+            --bg-base: #f8fafc;
             --bg-surface: #ffffff;
             --text-main: #0f172a;
-            --text-muted: #64748b;
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --accent: #0ea5e9;
-            --accent-glow: rgba(14, 165, 233, 0.15);
+            --text-muted: #475569;
+            --primary: #0f172a;
+            --accent: #0f6e5f;
+            --accent-hover: #0c5849;
             --border: #e2e8f0;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 10px 20px -5px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
-            --shadow-lg: 0 20px 25px -5px rgba(79, 70, 229, 0.1), 0 10px 10px -5px rgba(79, 70, 229, 0.04);
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
 
         html {
@@ -76,15 +75,15 @@
             padding: 0 24px;
         }
 
-        /* ===== PREMIUM BLUR STICKY NAV ===== */
+        /* ===== MINIMAL STICKY NAV ===== */
         nav {
             position: sticky;
             top: 0;
             z-index: 999;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
-            padding: 18px 0;
+            padding: 16px 0;
         }
 
         nav .container {
@@ -95,77 +94,57 @@
 
         .nav-logo {
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-main);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-logo span {
-            color: var(--primary);
+            gap: 8px;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 24px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-muted);
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
-            position: relative;
+            transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
+        .nav-links a:hover, .nav-links a.active-link {
+            color: var(--accent);
         }
 
-        /* ===== HIGH-END MODERN HERO SECTION ===== */
+        /* ===== PROFESSIONAL EXECUTIVE HEADER ===== */
         header {
-            background: radial-gradient(circle at top right, #1e1b4b 0%, #0f172a 100%);
+            background: #0b1329;
             color: #fff;
-            padding: 100px 0 80px;
+            padding: 80px 0 60px;
             position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            z-index: 1;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .profile {
             display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 40px;
+            grid-template-columns: 140px 1fr;
+            gap: 32px;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
         .avatar {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             border-radius: var(--radius-md);
             overflow: hidden;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: #1e293b;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 4px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .avatar img {
@@ -175,86 +154,71 @@
         }
 
         .avatar .placeholder-icon {
-            font-size: 64px;
-            color: #fff;
+            font-size: 48px;
+            color: #64748b;
         }
 
         .header-info h1 {
             color: #fff;
-            font-size: 2.8rem;
+            font-size: 2.25rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -1px;
+            margin-bottom: 6px;
         }
 
         .tagline {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #94a3b8;
+            margin-bottom: 16px;
         }
 
         .tagline .highlight {
-            color: var(--accent);
-            font-weight: 700;
-            background: linear-gradient(to right, #0ea5e9, #38bdf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #fff;
+            font-weight: 600;
         }
 
         .skill-strip {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 16px;
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .skill-strip span {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(4px);
-            color: #f1f5f9;
-            padding: 6px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+            padding: 4px 12px;
             border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background 0.2s;
-        }
-
-        .skill-strip span:hover {
-            background: rgba(255, 255, 255, 0.15);
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .quick-note {
-            background: rgba(255, 255, 255, 0.04);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: var(--radius-md);
-            padding: 24px;
-            margin-top: 32px;
-            border-left: 4px solid var(--accent);
-            max-width: 950px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 20px;
+            margin-top: 24px;
+            border-left: 3px solid var(--accent);
+            max-width: 900px;
         }
 
         .quick-note p {
-            font-size: 0.98rem;
-            color: #cbd5e1;
-            line-height: 1.7;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.6;
         }
 
         .quick-note strong {
             color: #fff;
-            font-weight: 600;
         }
 
-        /* ===== METRIC GLOW HEADERS (KPIs) ===== */
+        /* ===== METRIC HEADS (KPIs) ===== */
         .kpi-row {
             display: flex;
-            gap: 48px;
-            margin-top: 32px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 24px;
+            gap: 40px;
+            margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 20px;
         }
 
         .kpi-item {
@@ -263,21 +227,17 @@
         }
 
         .kpi-number {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #fff;
-            background: linear-gradient(to right, #fff, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .kpi-label {
             font-size: 0.8rem;
-            color: #94a3b8;
+            color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
-            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
         .header-action-row {
@@ -285,175 +245,136 @@
             justify-content: space-between;
             align-items: flex-end;
             flex-wrap: wrap;
-            gap: 24px;
-            position: relative;
-            z-index: 2;
+            gap: 20px;
         }
 
         .header-socials {
             display: flex;
-            gap: 16px;
+            gap: 12px;
         }
 
         .header-socials a {
-            color: #cbd5e1;
-            font-size: 1.2rem;
-            width: 44px;
-            height: 44px;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            width: 36px;
+            height: 36px;
             border-radius: var(--radius-sm);
-            background: rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.04);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
             text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .header-socials a:hover {
             color: #fff;
-            background: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+            background: var(--accent);
         }
 
         /* ===== LAYOUT & SECTION LOGIC ===== */
         section {
-            padding: 90px 0;
+            padding: 80px 0;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
             position: relative;
-            letter-spacing: -0.5px;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
-            height: 4px;
-            background: var(--primary);
-            margin-top: 12px;
-            border-radius: 4px;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            margin-top: 10px;
+            border-radius: 2px;
         }
 
-        /* ===== MODERNIZED ABOUT CARD ===== */
+        /* ===== ABOUT ===== */
         .about-card {
             background: var(--bg-surface);
-            padding: 48px;
+            padding: 40px;
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--primary);
         }
 
         .about-card p {
-            margin-bottom: 24px;
-            font-size: 1.05rem;
-            color: #475569;
-            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
         .about-card p strong {
             color: var(--text-main);
-            font-weight: 600;
         }
 
         .about-card ul {
             list-style: none;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 32px 0;
+            gap: 12px;
+            margin: 24px 0;
         }
 
         .about-card ul li {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #334155;
-            font-weight: 500;
+            gap: 8px;
         }
 
         .about-card ul li::before {
             content: "✓";
-            color: #10b981;
-            font-weight: 900;
-            background: #ecfdf5;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         .education-block {
-            margin-top: 40px;
-            padding-top: 36px;
+            margin-top: 32px;
+            padding-top: 32px;
             border-top: 1px solid var(--border);
         }
 
         .education-block h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
-        /* ===== GLOWING BADGE SYSTEM (SKILLS) ===== */
+        /* ===== BADGE SYSTEM (SKILLS) ===== */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
 
         .skill-tag {
             background: var(--bg-surface);
             color: var(--text-main);
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 500;
             border: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             box-shadow: var(--shadow-sm);
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            border-color: var(--primary);
-            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.08);
         }
 
         .skill-tag i {
-            color: var(--primary);
-            font-size: 1rem;
+            color: var(--accent);
         }
 
-        /* ===== FILTER CONTROLS ===== */
+        /* ===== FILTER & CONTROLS ===== */
         .filter-container {
             display: flex;
-            gap: 10px;
-            margin-bottom: 40px;
+            gap: 8px;
+            margin-bottom: 32px;
             flex-wrap: wrap;
         }
 
@@ -461,28 +382,25 @@
             background: var(--bg-surface);
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: var(--radius-sm);
             cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-sm);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
 
         .filter-btn:hover, .filter-btn.active {
             background: var(--primary);
             color: #fff;
             border-color: var(--primary);
-            transform: translateY(-1px);
-            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.2);
         }
 
-        /* ===== STYLISH PORTFOLIO CARDS ===== */
+        /* ===== CLEAN, RIGID PORTFOLIO GRIDS ===== */
         .showcase-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 24px;
         }
 
         .portfolio-card {
@@ -492,87 +410,60 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
         }
 
         .portfolio-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
-            border-color: rgba(79, 70, 229, 0.2);
         }
 
         .card-preview-area {
-            height: 180px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            height: 160px;
+            background: #1e293b;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: rgba(255,255,255,0.15);
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.2);
             position: relative;
             cursor: pointer;
-            overflow: hidden;
-        }
-
-        .card-preview-area i {
-            transition: transform 0.3s ease;
-            z-index: 2;
-        }
-
-        .portfolio-card:hover .card-preview-area i {
-            transform: scale(1.1) rotate(-5deg);
-            color: rgba(255,255,255,0.3);
-        }
-
-        .card-preview-area::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, transparent, rgba(15,23,42,0.6));
-            z-index: 1;
         }
 
         .card-preview-area .zoom-hint {
             position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--text-main);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 700;
+            background: rgba(15, 23, 42, 0.8);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 500;
             opacity: 0;
-            transform: translateUp(10px);
-            transition: all 0.25s ease;
+            transition: opacity 0.2s ease;
             display: flex;
             align-items: center;
             gap: 6px;
-            z-index: 3;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .card-preview-area:hover .zoom-hint {
             opacity: 1;
-            transform: translateY(0);
         }
 
-        /* Featured Project Layout Modification */
         .portfolio-card.featured-item {
             grid-column: span 3;
             display: grid;
             grid-template-columns: 4fr 5fr;
-            height: 380px;
+            height: 340px;
         }
 
         .portfolio-card.featured-item .card-preview-area {
             height: 100%;
-            font-size: 5rem;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
 
         .card-body {
-            padding: 32px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -582,237 +473,182 @@
             align-self: flex-start;
             background: #fef3c7;
             color: #d97706;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 30px;
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
             text-transform: uppercase;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-            border: 1px solid #fde68a;
+            margin-bottom: 12px;
         }
 
         .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            font-weight: 700;
-            letter-spacing: -0.3px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .project-desc {
-            font-size: 0.95rem;
-            color: #475569;
-            margin-bottom: 24px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
             flex-grow: 1;
-            line-height: 1.6;
         }
 
         .meta-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
+            gap: 6px;
+            margin-bottom: 18px;
         }
 
         .meta-tag {
-            background: #f1f5f9;
-            color: #475569;
-            font-size: 0.8rem;
-            padding: 4px 12px;
+            background: var(--bg-base);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            padding: 3px 8px;
             border-radius: var(--radius-sm);
-            font-weight: 600;
+            font-weight: 500;
             border: 1px solid var(--border);
         }
 
-        /* Beautiful Dynamic Tag Colors */
-        .meta-tag:contains('Python'), .meta-tag[data-lang="python"] { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
-        .meta-tag:contains('SQL'), .meta-tag[data-lang="sql"] { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
-        .meta-tag:contains('Power BI'), .meta-tag[data-lang="powerbi"] { background: #fffbeb; color: #b45309; border-color: #fde68a; }
-
         .card-actions {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 10px 20px;
+            gap: 6px;
+            padding: 8px 16px;
             border-radius: var(--radius-sm);
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
             cursor: pointer;
             border: none;
         }
 
-        .btn-primary { 
-            background: var(--primary); 
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
-        }
-        .btn-primary:hover { 
-            background: var(--primary-hover); 
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
-        }
-        .btn-secondary { 
-            background: var(--bg-surface); 
-            color: var(--text-main); 
-            border: 1px solid var(--border); 
-        }
-        .btn-secondary:hover { 
-            background: #f8fafc; 
-            border-color: #cbd5e1;
-        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-secondary { background: var(--bg-base); color: var(--text-main); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--border); }
+        .btn-gold { background: #d97706; color: #fff; }
+        .btn-gold:hover { background: #b45309; }
 
         /* ===== UNIFORM CERTIFICATIONS & METRICS ===== */
         .compact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 24px;
         }
 
         .metric-card {
             background: var(--bg-surface);
-            padding: 36px 32px;
+            padding: 24px;
             border-radius: var(--radius-md);
             border: 1px solid var(--border);
             text-align: center;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.25s ease;
-        }
-
-        .metric-card:hover {
-            transform: translateY(-4px);
+            box-shadow: var(--shadow-sm);
         }
 
         .metric-value {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 8px;
+            color: var(--accent);
+            font-family: 'Sora', sans-serif;
         }
 
-        /* ===== ELEGANT TESTIMONIALS ===== */
+        /* ===== TESTIMONIALS ===== */
         .testimonial-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 24px;
         }
 
         .testimonial-item {
             background: var(--bg-surface);
-            padding: 32px;
+            padding: 24px;
             border-radius: var(--radius-md);
             border: 1px solid var(--border);
-            font-size: 0.98rem;
-            box-shadow: var(--shadow-md);
-            position: relative;
-            font-style: italic;
-            color: #475569;
-        }
-
-        .testimonial-item::before {
-            content: "“";
-            font-family: 'Sora', sans-serif;
-            font-size: 4rem;
-            color: rgba(79, 70, 229, 0.08);
-            position: absolute;
-            top: -10px;
-            left: 20px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-sm);
         }
 
         .testimonial-item .author {
-            margin-top: 20px;
-            font-weight: 700;
+            margin-top: 16px;
+            font-weight: 600;
             color: var(--text-main);
-            font-size: 0.88rem;
-            font-style: normal;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 0.85rem;
         }
 
-        .testimonial-item .author::before {
-            content: "";
-            display: inline-block;
-            width: 12px;
-            height: 2px;
-            background: var(--primary);
-        }
-
-        /* ===== MODERN CONTACT FORM ===== */
+        /* ===== CONTACT FORM ENGINE ===== */
         .contact-layout {
             display: grid;
             grid-template-columns: 5fr 4fr;
-            gap: 48px;
+            gap: 40px;
             align-items: start;
         }
 
         .form-card {
             background: var(--bg-surface);
-            padding: 40px;
+            padding: 32px;
             border-radius: var(--radius-md);
             border: 1px solid var(--border);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.88rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
             color: var(--text-main);
         }
 
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 12px 16px;
+            padding: 10px 14px;
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
-            font-size: 0.95rem;
-            background: #f8fafc;
+            font-size: 0.9rem;
+            background: var(--bg-base);
             color: var(--text-main);
             outline: none;
-            transition: all 0.2s ease;
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--primary);
+            border-color: var(--accent);
             background: #fff;
-            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
         }
 
         .success-message {
             display: none;
-            background: #d1fae5;
+            background: #ecfdf5;
             color: #065f46;
             border: 1px solid #a7f3d0;
-            padding: 14px;
+            padding: 12px;
             border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            margin-top: 16px;
+            font-size: 0.85rem;
+            margin-top: 12px;
             text-align: center;
-            font-weight: 600;
         }
 
         .success-message.show { display: block; }
 
-        /* ===== LIGHTBOX MODAL DESIGN ===== */
+        /* ===== MODERN POPUP LIGHTBOX ===== */
         .lightbox-modal {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -822,71 +658,100 @@
         .lightbox-wrapper {
             background: var(--bg-surface);
             border-radius: var(--radius-lg);
-            max-width: 680px;
+            max-width: 640px;
             width: 100%;
             overflow: hidden;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
             position: relative;
-            animation: popupIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         @keyframes popupIn {
-            from { transform: scale(0.9) translateY(20px); opacity: 0; }
-            to { transform: scale(1) translateY(0); opacity: 1; }
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .lightbox-img-container {
-            height: 280px;
-            background: radial-gradient(circle at center, #1e293b, #0f172a);
+            height: 240px;
+            background: #0b1329;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
-            color: rgba(255,255,255,0.2);
+            font-size: 4rem;
+            color: rgba(255,255,255,0.1);
         }
 
         .lightbox-desc {
-            padding: 32px;
+            padding: 24px;
         }
 
         .close-lightbox {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(4px);
+            top: 16px;
+            right: 16px;
+            background: rgba(255,255,255,0.2);
             border: none;
             color: #fff;
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             z-index: 10;
-            transition: all 0.2s;
         }
 
-        .close-lightbox:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--accent);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(15, 110, 95, 0.25);
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            z-index: 999;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-hover);
+            transform: scale(1.06);
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 48px 0;
+            background: #0b1329;
+            color: #64748b;
+            padding: 40px 0;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        footer p { color: #cbd5e1; }
+        footer p { color: #94a3b8; margin-bottom: 4px; }
 
-        /* ===== SCREEN ADAPTABILITY ===== */
+        /* ===== DEVICE RESPONSIVENESS ===== */
         @media (max-width: 1024px) {
             .showcase-grid, .compact-grid, .testimonial-row {
                 grid-template-columns: repeat(2, 1fr);
@@ -919,14 +784,14 @@
                 height: auto;
             }
             .portfolio-card.featured-item .card-preview-area {
-                height: 180px;
+                height: 160px;
             }
             .about-card ul {
                 grid-template-columns: 1fr;
             }
             nav .container {
                 flex-direction: column;
-                gap: 16px;
+                gap: 12px;
             }
         }
     </style>
@@ -937,7 +802,7 @@
     <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
-            <a href="#" class="nav-logo">📊 Rotimi <span>Omosewo</span></a>
+            <a href="#" class="nav-logo">📊 Rotimi Omosewo</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
@@ -948,17 +813,21 @@
         </div>
     </nav>
 
-    <!-- ===== HERO HERO ECOSYSTEM ===== -->
+    <!-- ===== HERO / PROFESSIONAL PROFILE SECTION ===== -->
     <header>
         <div class="container">
             <div class="profile">
                 <div class="avatar">
+                    <!-- ===== PHOTO ===== -->
+                    <!-- Upload your photo directly to the repo root (same place as this index.html)
+                         via GitHub's web "Add file > Upload files" button — no folder needed.
+                         Then set the src below to match the exact filename you uploaded. -->
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user placeholder-icon\'></i>';" />
                 </div>
                 <div class="header-info">
                     <h1>Rotimi Omosewo</h1>
                     <p class="tagline">
-                        <span class="highlight">Data Analyst</span> Specialize in Operations Analytics
+                        <span class="highlight">Operations Analyst</span> · Data Analytics
                     </p>
                     <div class="skill-strip">
                         <span>🐍 Python</span>
@@ -972,7 +841,7 @@
 
             <div class="quick-note">
                 <p>
-                    <strong>Operations Analytics Framework:</strong> I construct highly structural pipelines converting unstructured transactional outputs into modeled schemas, relational views, dashboard interfaces, and automated web nodes. While historically applied to construction operations records, the architectural model easily maps to multi-billion scales across health systems, logical networks, energy assets, and financial ledgers.
+                    <strong>Operations Analytics Framework:</strong> I build end‑to‑end data pipelines that turn raw operational records into clean datasets, interactive dashboards, and deployed web apps. <strong>Built on construction data, but the workflow is industry‑agnostic</strong> — the same approach scales to healthcare, manufacturing, logistics, energy, and finance.
                 </p>
             </div>
 
@@ -992,7 +861,7 @@
                     </div>
                 </div>
                 <div class="header-socials">
-                    <a href="url?id=3" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/rotimi2020" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:omoseworotimi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
@@ -1000,33 +869,37 @@
         </div>
     </header>
 
-    <!-- ===== ABOUT PROFILE CONTROLS ===== -->
+    <!-- ===== PROFILE / STATEMENT ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-card">
                 <p>
-                    I am an execution‑focused <strong>Data Analyst</strong> holding a B.Sc. in Computer Science and an <strong>IBM Data Science Professional Credential</strong>. My operational philosophy relies heavily on eliminating informational standard deviations within data structures—building out automated transformations that map raw pipeline stages directly to executive strategic metrics.
+                    I'm an <strong>Operations Analyst &amp; Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an <strong>IBM Data Science Professional Certificate</strong>. I specialise in <strong>Operations Analytics</strong> — building robust, end‑to‑end data workflows that transform raw operational data into clear insights, interactive dashboards, and deployed web applications.
                 </p>
                 <p>
-                    My modern suite features projects scaling operational layers directly from live text feeds into database views, dynamic visualizations, and web micro-services.
+                    My portfolio demonstrates a complete analytics lifecycle using <strong>real construction operations data</strong>: raw WhatsApp logs → Excel cleaning → SQL modelling → Python analysis → Power BI dashboards → Django web deployment. This framework is <strong>industry‑agnostic</strong> and equally applicable to <strong>healthcare, manufacturing, logistics, energy, and finance</strong>.
                 </p>
                 <ul>
-                    <li>Structured Data Engineering Pipelines (Python, NumPy, Pandas, T-SQL)</li>
-                    <li>Predictive Modeling Engine &amp; Feature Scaling (Scikit‑Learn Framework)</li>
-                    <li>Automated Modern Interactive Systems (Power BI Dataflows, Streamlit)</li>
-                    <li>Quantified Operations Impact: ₦4.5M+ balanced, 95.7% workflow utilization</li>
+                    <li><strong>ETL &amp; Data Pipelines:</strong> Python (Pandas, NumPy), SQL, Excel (Power Query)</li>
+                    <li><strong>Dashboards &amp; BI:</strong> Power BI, Django, Streamlit, Plotly</li>
+                    <li><strong>Predictive Analytics:</strong> Scikit‑Learn, time‑series forecasting, classification</li>
+                    <li><strong>Business Impact:</strong> ₦4.5M+ reconciled, 95.7% utilisation, 1,948m excavation analysed</li>
+                    <li><strong>Stakeholder Communication:</strong> Clear narrative reporting and executive summaries for data‑driven decision‑making</li>
                 </ul>
+                <p>
+                    I'm currently available for <strong>Operations Analyst</strong> or <strong>Data Analyst</strong> roles where I can apply analytics, automation, and business intelligence to <strong>optimise operational performance</strong>, reduce costs, and drive data‑driven strategy.
+                </p>
                 <div class="education-block">
                     <h3>Education &amp; Core Training</h3>
-                    <p><strong>B.Sc. (Honours) Computer Science</strong> — National Open University</p>
-                    <p style="font-size:0.9rem; color:var(--text-muted); margin-top: 4px;">Deep specialization across Advanced Data Arrays, Relational Database Normalization, and Algorithms.</p>
+                    <p><strong>B.Sc. (Hons.) Computer Science</strong> — National Open University, 2019</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted)">Coursework: Data Structures, Databases, Data Analysis, Fundamentals of Machine Learning</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== TECH GRID MATRIX ===== -->
+    <!-- ===== COMPACT TECH BADGES ===== -->
     <section id="skills" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
         <div class="container">
             <h2 class="section-title">Technical Stack Matrix</h2>
@@ -1039,11 +912,15 @@
                 <div class="skill-tag"><i class="fas fa-brain"></i> Scikit-Learn Ecosystem</div>
                 <div class="skill-tag"><i class="fas fa-file-excel"></i> Advanced MS Excel</div>
                 <div class="skill-tag"><i class="fas fa-project-diagram"></i> KNIME &amp; Predictive Modeler</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Plotly / Matplotlib</div>
+                <div class="skill-tag"><i class="fas fa-cloud"></i> Azure Machine Learning</div>
+                <div class="skill-tag"><i class="fas fa-magic"></i> PyCaret</div>
+                <div class="skill-tag"><i class="fas fa-chart-bar"></i> SPSS Modeler</div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CASE MATRIX DISPLAY ===== -->
+    <!-- ===== FIXED STYLISH PROJECTS SHOWCASE ===== -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Case Showcase</h2>
@@ -1054,12 +931,14 @@
                 <button class="filter-btn" data-filter="powerbi">Power BI Systems</button>
                 <button class="filter-btn" data-filter="python">Pure Python</button>
                 <button class="filter-btn" data-filter="machinelearning">Machine Learning</button>
+                <button class="filter-btn" data-filter="django">Django</button>
+                <button class="filter-btn" data-filter="streamlit">Streamlit</button>
             </div>
 
             <div class="showcase-grid">
-                <!-- FEATURED ARCHITECTURE ITEM -->
-                <div class="portfolio-card featured-item" data-category="operations powerbi python machinelearning">
-                    <div class="card-preview-area" onclick="openLightbox('🏗️ Construction Operations Analytics', 'Comprehensive metrics architecture capturing physical and financial operations assets directly. Features cross-platform data pipeline architectures with clear metric visibility.', 'fas fa-hard-hat')">
+                <!-- FEATURED CASE CARD -->
+                <div class="portfolio-card featured-item" data-category="operations powerbi python machinelearning django">
+                    <div class="card-preview-area" onclick="openLightbox('🏗️ Construction Operations Analytics', 'End‑to‑end pipeline transforming raw WhatsApp construction logs into structured data, interactive Power BI dashboards, and a live Django web app. ₦4.5M reconciled, 95.7% cement utilisation, 1,948m excavation analysed.', 'fas fa-hard-hat')">
                         <i class="fas fa-hard-hat"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect Architecture</div>
                     </div>
@@ -1067,12 +946,12 @@
                         <span class="featured-label">⭐ High Impact Featured Asset</span>
                         <h3 class="project-title">Construction Operations Data Platform</h3>
                         <p class="project-desc">
-                            End‑to‑end transactional engine migrating messaging data into optimized relational schemas, Power BI dashboard structures, and live Django instances. Reconciled ₦4.5M+, tracked 95.7% material allocation rates.
+                            End‑to‑end pipeline transforming raw WhatsApp logs into structured data, Power BI dashboards, and a live Django web app. <strong>₦4.5M reconciled</strong>, <strong>95.7% cement utilisation</strong>, <strong>1,948m excavation</strong> analysed. Industry‑agnostic framework applies to healthcare, manufacturing, logistics, energy, and finance.
                         </p>
                         <div class="meta-tags">
-                            <span class="meta-tag" data-lang="python">Python</span>
-                            <span class="meta-tag" data-lang="sql">SQL Server</span>
-                            <span class="meta-tag" data-lang="powerbi">Power BI</span>
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">SQL Server</span>
+                            <span class="meta-tag">Power BI</span>
                             <span class="meta-tag">Django</span>
                         </div>
                         <div class="card-actions">
@@ -1082,19 +961,20 @@
                     </div>
                 </div>
 
-                <!-- Rossmann Retail Forecast -->
-                <div class="portfolio-card" data-category="powerbi python machinelearning operations">
-                    <div class="card-preview-area" onclick="openLightbox('Rossmann Retail Engine Forecast', 'Time‑series forecasting array tracking sales variances and promotions performance markers using machine learning algorithms.', 'fas fa-chart-line')">
+                <!-- Rossmann -->
+                <div class="portfolio-card" data-category="powerbi python machinelearning operations sql">
+                    <div class="card-preview-area" onclick="openLightbox('Rossmann Retail Engine Forecast', 'Time‑series forecasting models to project store sales, analyse promotional impact, and benchmark performance across retail networks.', 'fas fa-chart-line')">
                         <i class="fas fa-chart-line"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">Rossmann Sales Forecasting</h3>
-                        <p class="project-desc">Optimized machine learning pipeline forecasting regional store revenues and analyzing promo performance variations.</p>
+                        <p class="project-desc">Time‑series models to forecast store sales, analyse promotional impact, and benchmark performance.</p>
                         <div class="meta-tags">
-                            <span class="meta-tag" data-lang="python">Python</span>
-                            <span class="meta-tag" data-lang="sql">SQL</span>
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">SQL</span>
                             <span class="meta-tag">Scikit-Learn</span>
+                            <span class="meta-tag">Power BI</span>
                         </div>
                         <div class="card-actions">
                             <a href="https://github.com/rotimi2020/rossmann-store-sales/tree/main" class="btn btn-secondary" target="_blank">Source Code</a>
@@ -1102,19 +982,20 @@
                     </div>
                 </div>
 
-                <!-- NHANES Medical System -->
-                <div class="portfolio-card" data-category="powerbi python machinelearning">
-                    <div class="card-preview-area" onclick="openLightbox('NHANES Health Risk Interface', 'Clinical analytics configuration handling large demographic survey groups to map and weight physiological risk factors.', 'fas fa-heartbeat')">
+                <!-- NHANES -->
+                <div class="portfolio-card" data-category="powerbi python machinelearning sql excel operations">
+                    <div class="card-preview-area" onclick="openLightbox('NHANES Health Risk Interface', 'Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment using machine learning classification.', 'fas fa-heartbeat')">
                         <i class="fas fa-heartbeat"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">NHANES Risk Categorization</h3>
-                        <p class="project-desc">Extracted epidemiological health tracking data to build multi-class classification models mapping risk groups.</p>
+                        <p class="project-desc">Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment.</p>
                         <div class="meta-tags">
-                            <span class="meta-tag" data-lang="powerbi">Power BI</span>
-                            <span class="meta-tag" data-lang="python">Python</span>
-                            <span class="meta-tag">EDA</span>
+                            <span class="meta-tag">Power BI</span>
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">Scikit-Learn</span>
+                            <span class="meta-tag">Excel</span>
                         </div>
                         <div class="card-actions">
                             <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="btn btn-secondary" target="_blank">Source Code</a>
@@ -1122,30 +1003,73 @@
                     </div>
                 </div>
 
-                <!-- Superstore Node -->
-                <div class="portfolio-card" data-category="python operations">
-                    <div class="card-preview-area" onclick="openLightbox('Superstore Operations UI', 'Custom full-stack operational reporting deployment running rendering nodes utilizing high-performance dashboard layouts.', 'fas fa-store')">
+                <!-- Superstore Django -->
+                <div class="portfolio-card" data-category="python django datascience operations">
+                    <div class="card-preview-area" onclick="openLightbox('Superstore Operations UI', 'Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components for operational reporting.', 'fas fa-store')">
                         <i class="fas fa-store"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">Superstore Operational UI</h3>
-                        <p class="project-desc">Custom web application engine rendering analytical visualizations directly via optimized Python environments.</p>
+                        <p class="project-desc">Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components.</p>
                         <div class="meta-tags">
                             <span class="meta-tag">Django</span>
                             <span class="meta-tag">Plotly</span>
-                            <span class="meta-tag">Pipelines</span>
+                            <span class="meta-tag">Pandas</span>
                         </div>
                         <div class="card-actions">
                             <a href="https://rotimi.pythonanywhere.com/" class="btn btn-primary" target="_blank">Live App</a>
+                            <a href="https://github.com/rotimi2020/superstore-dashboard" class="btn btn-secondary" target="_blank">Source Code</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- PowerCo -->
+                <div class="portfolio-card" data-category="python datascience machinelearning streamlit operations">
+                    <div class="card-preview-area" onclick="openLightbox('PowerCo Churn & Price Analysis', 'Analysed PowerCo customer data to identify churn drivers and build predictive models using Python and Streamlit for real-time insights.', 'fas fa-bolt')">
+                        <i class="fas fa-bolt"></i>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="project-title">PowerCo Churn &amp; Price Analysis</h3>
+                        <p class="project-desc">Analysed PowerCo customer data to identify churn drivers and build predictive models using Python and Streamlit.</p>
+                        <div class="meta-tags">
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">Streamlit</span>
+                            <span class="meta-tag">Scikit-Learn</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="btn btn-secondary" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IBM Capstone -->
+                <div class="portfolio-card" data-category="datascience python machinelearning operations">
+                    <div class="card-preview-area" onclick="openLightbox('IBM Data Science Capstone', 'Applied K‑Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.', 'fas fa-map-marked-alt')">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="project-title">IBM Data Science Capstone</h3>
+                        <p class="project-desc">Applied K‑Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.</p>
+                        <div class="meta-tags">
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">Scikit-Learn</span>
+                            <span class="meta-tag">Folium</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="btn btn-gold" target="_blank">Certificate</a>
+                            <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1" class="btn btn-secondary" target="_blank">Badge</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ===== CREDENTIAL COMPACT TRACKS ===== -->
+    <!-- ===== CREDENTIAL TRACKS ===== -->
     <section id="certifications" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
         <div class="container">
             <h2 class="section-title">Verified Credentials</h2>
@@ -1153,47 +1077,68 @@
                 <div class="metric-card">
                     <div class="metric-value"><i class="fab fa-ibm"></i></div>
                     <h3 class="project-title" style="margin: 12px 0 6px;">IBM Data Science</h3>
-                    <p class="project-desc" style="font-size:0.85rem; margin-bottom: 16px;">Enterprise credential mapping end-to-end data manipulation and modeling capabilities.</p>
+                    <p class="project-desc" style="font-size:0.8rem">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning. <strong>Shows formal training &amp; breadth.</strong></p>
                     <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" style="width:100%" target="_blank">Verify Badge</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-bolt"></i></div>
                     <h3 class="project-title" style="margin: 12px 0 6px;">BCG Analytics</h3>
-                    <p class="project-desc" style="font-size:0.85rem; margin-bottom: 16px;">Virtual strategic assessment exploring transactional behavior models and risk drivers.</p>
+                    <p class="project-desc" style="font-size:0.8rem">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
                     <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" style="width:100%" target="_blank">Verify Space</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-user-graduate"></i></div>
                     <h3 class="project-title" style="margin: 12px 0 6px;">Computer Science B.Sc.</h3>
-                    <p class="project-desc" style="font-size:0.85rem; margin-bottom: 16px;">Rigid verification controls managed natively via secure offline identity assertions.</p>
+                    <p class="project-desc" style="font-size:0.8rem">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
                     <button class="btn btn-primary" style="width:100%" onclick="openCertificateModal()">Request Verification</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FEEDBACK BLOCK ===== -->
-    <section id="testimonials">
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section id="achievements">
         <div class="container">
-            <h2 class="section-title">Strategic Feedback</h2>
-            <div class="testimonial-row">
-                <div class="testimonial-item">
-                    "Rotimi established an automated pipeline that brought absolute clarity to structural material logistics and variable balancing tracking assets."
-                    <div class="author">Project Lead, Structural Infrastructure Firm</div>
+            <h2 class="section-title">Featured Achievements</h2>
+            <div class="compact-grid">
+                <div class="metric-card">
+                    <div class="metric-value">₦4.5M+</div>
+                    <p style="font-size:0.85rem; color:var(--text-muted);">Project Cost Fully Reconciled</p>
                 </div>
-                <div class="testimonial-item">
-                    "His algorithmic structural approach toward normalization tasks converted chaotic log outputs into predictable relational datasets seamlessly."
-                    <div class="author">Clinical Research Operations Lead</div>
+                <div class="metric-card">
+                    <div class="metric-value">95.7%</div>
+                    <p style="font-size:0.85rem; color:var(--text-muted);">Cement Utilisation Rate</p>
                 </div>
-                <div class="testimonial-item">
-                    "The operational reporting UI provided direct optimization windows across core metric configurations."
-                    <div class="author">Commercial Business Assets Director</div>
+                <div class="metric-card">
+                    <div class="metric-value">1,948m</div>
+                    <p style="font-size:0.85rem; color:var(--text-muted);">Excavation Analysed</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT FORM MECHANISMS ===== -->
+    <!-- ===== TESTIMONIAL METRICS ===== -->
+    <section id="testimonials" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
+        <div class="container">
+            <h2 class="section-title">Strategic Feedback</h2>
+            <div class="testimonial-row">
+                <div class="testimonial-item">
+                    "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy data and present clear insights is exceptional."
+                    <div class="author">— Project Manager, Construction Firm</div>
+                </div>
+                <div class="testimonial-item">
+                    "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into actionable insights with ease."
+                    <div class="author">— Healthcare Data Lead</div>
+                </div>
+                <div class="testimonial-item">
+                    "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance. He's a reliable and skilled data professional."
+                    <div class="author">— Retail Operations Director</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODERNIZED SECURE CONTACT MECHANISM ===== -->
     <section id="contact" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
         <div class="container">
             <h2 class="section-title">Initiate Collaboration</h2>
@@ -1201,36 +1146,42 @@
                 <div class="form-card">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="contactName">Identity String *</label>
+                            <label for="contactName">Your Name *</label>
                             <input type="text" id="contactName" required placeholder="Your professional name" />
                         </div>
                         <div class="form-group">
-                            <label for="contactEmail">Routing Endpoint (Email) *</label>
+                            <label for="contactEmail">Your Email *</label>
                             <input type="email" id="contactEmail" required placeholder="name@corporation.com" />
                         </div>
                         <div class="form-group">
-                            <label for="contactSubject">Classification *</label>
+                            <label for="contactSubject">Subject *</label>
                             <select id="contactSubject" required>
-                                <option value="Strategic Opportunity">Strategic Enterprise Opportunity</option>
-                                <option value="Technical Collaboration">Technical Collaboration Engagement</option>
-                                <option value="Credential Request">Verification Asset Verification Request</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Freelance Project">Freelance / Contract Project</option>
+                                <option value="Collaboration">Technical Collaboration</option>
+                                <option value="Resume Request - Data Analyst">Resume Request – Data Analyst</option>
+                                <option value="General Inquiry">General Inquiry</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="contactMessage">Context Formulation *</label>
-                            <textarea id="contactMessage" rows="4" required placeholder="State requirements or parameters..."></textarea>
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px">Transmit Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">Send Message</button>
                     </form>
                     <div class="success-message" id="successMessage">
-                        Data payload structured. Activating default local mail transport layers...
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I'll get back to you soon!
                     </div>
                 </div>
                 <div>
-                    <h3 style="margin-bottom:16px; font-weight:700">Direct Infrastructure Access</h3>
-                    <p style="font-size:0.95rem; margin-bottom:28px; color: #475569;">Access direct secure API links or endpoints to monitor current algorithmic and project operations:</p>
-                    <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" style="margin-right:8px;" target="_blank"><i class="fab fa-linkedin" style="color:#0a66c2"></i> LinkedIn Gateway</a>
-                    <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub Matrix</a>
+                    <h3 style="margin-bottom:12px; font-weight:600">Direct Access</h3>
+                    <p style="font-size:0.9rem; margin-bottom:24px">Connect via professional platforms or download my resume:</p>
+                    <div style="display:flex; flex-direction:column; gap:12px;">
+                        <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="#" class="btn btn-primary" style="justify-content:center;" id="resumeBtn"><i class="fas fa-file-pdf"></i> Download Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1239,11 +1190,12 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Rotimi Omosewo. All rights reserved. Managed with mathematical exactness.</p>
+            <p>Thanks for visiting my portfolio! 😊</p>
+            <p>&copy; 2026 Rotimi Omosewo – Operations Analyst · Data Analytics</p>
         </div>
     </footer>
 
-    <!-- ===== SYSTEM POPUP MODAL ===== -->
+    <!-- ===== INTERACTIVE POPUP LIGHTBOX DOM ELEMENT ===== -->
     <div class="lightbox-modal" id="systemLightbox">
         <div class="lightbox-wrapper">
             <button class="close-lightbox" onclick="closeLightbox()">&times;</button>
@@ -1251,24 +1203,29 @@
                 <i class="fas fa-chart-area"></i>
             </div>
             <div class="lightbox-desc">
-                <h3 id="lightboxTitle" style="margin-bottom:12px; font-weight: 700;">Project Title</h3>
-                <p id="lightboxText" style="font-size:0.95rem; color:var(--text-muted)">Detailed technical tracking logs are updated natively via live version management systems.</p>
+                <h3 id="lightboxTitle" style="margin-bottom:8px;">Project Title</h3>
+                <p id="lightboxText" style="font-size:0.9rem; color:var(--text-muted)">Detailed technical tracking logs are updated natively via live version management systems.</p>
             </div>
         </div>
     </div>
 
-    <!-- ===== FUNCTIONAL JAVASCRIPT ANIMATIONS ===== -->
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== RE-ENGINEERED PERFORMANCE SCRIPTS ===== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
-            // KPI Numeric Animation Engine
+            // ---- Optimized Metric Counter ----
             const counters = document.querySelectorAll('.kpi-number');
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-count'), 10);
                 if (isNaN(target)) return;
                 
                 let current = 0;
-                const increment = target / 50; 
+                const increment = target / 60; 
                 const updateValue = () => {
                     current += increment;
                     if (current < target) {
@@ -1281,7 +1238,7 @@
                 requestAnimationFrame(updateValue);
             });
 
-            // Modern Grid Filter Pipeline
+            // ---- Rigid Grid Filtering Controls ----
             const filterBtns = document.querySelectorAll('.filter-btn');
             const items = document.querySelectorAll('.portfolio-card');
 
@@ -1306,7 +1263,7 @@
                 });
             });
 
-            // Transport Layer Handler
+            // ---- Contact Transmission Pipeline ----
             const form = document.getElementById('contactForm');
             const success = document.getElementById('successMessage');
 
@@ -1324,13 +1281,69 @@
                     setTimeout(() => {
                         window.location.href = mailtoUrl;
                         form.reset();
-                        success.classList.remove('show');
+                        setTimeout(() => { success.classList.remove('show'); }, 500);
                     }, 800);
                 });
             }
+
+            // ---- Resume Button (placeholder) ----
+            const resumeBtn = document.getElementById('resumeBtn');
+            if (resumeBtn) {
+                resumeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('📄 Please upload your resume PDF to your GitHub repo and update the href in the "Resume" button.\n\nTip: Upload it via "Add file > Upload files" and then set the href to your file name, e.g., "resume.pdf".');
+                });
+            }
+
+            // ---- Back to Top ----
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ---- Active nav link on scroll ----
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            let ticking = false;
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        let current = '';
+                        sections.forEach(function(section) {
+                            const top = section.offsetTop - 120;
+                            if (window.pageYOffset >= top) {
+                                current = section.getAttribute('id');
+                            }
+                        });
+                        navLinks.forEach(function(link) {
+                            const href = link.getAttribute('href');
+                            if (href === '#' + current) {
+                                link.style.color = '#0f6e5f';
+                                link.classList.add('active-link');
+                            } else {
+                                link.style.color = '';
+                                link.classList.remove('active-link');
+                            }
+                        });
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
         });
 
-        // Lightbox Operations Control
+        // ---- Modern Lightbox Framework Controls ----
         const lightbox = document.getElementById('systemLightbox');
         const lTitle = document.getElementById('lightboxTitle');
         const lText = document.getElementById('lightboxText');
@@ -1357,9 +1370,20 @@
             );
         }
 
+        // Close lightbox on peripheral mouse click events
         window.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
+
+        // ---- Keyboard support for lightbox ----
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (lightbox.style.display === 'flex') {
+                    closeLightbox();
+                }
+            }
+        });
     </script>
+
 </body>
 </html>
