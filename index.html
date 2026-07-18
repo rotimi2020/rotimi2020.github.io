@@ -103,20 +103,19 @@
             position: relative; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* ===== CENTERED HEADER ===== */
+        /* ===== LEFT-ALIGNED HEADER (as before) ===== */
         .profile {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 32px;
             align-items: center;
-            text-align: center;
-            gap: 16px;
+            text-align: left;
         }
 
         .avatar {
             width: 140px; height: 140px; border-radius: var(--radius-md); overflow: hidden;
             background: #1e293b; display: flex; align-items: center; justify-content: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 0 auto;
         }
 
         .avatar img { width: 100%; height: 100%; object-fit: cover; }
@@ -145,7 +144,7 @@
             100% { box-shadow: 0 0 0 0 rgba(46, 204, 154, 0); }
         }
 
-        .skill-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; justify-content: center; }
+        .skill-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; justify-content: flex-start; }
 
         .skill-strip span {
             background: rgba(255, 255, 255, 0.06); color: #cbd5e1; padding: 4px 12px;
@@ -156,19 +155,18 @@
         .quick-note {
             background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-md);
             padding: 20px; margin-top: 24px; border-left: 3px solid var(--accent);
-            max-width: 820px; margin-left: auto; margin-right: auto;
-            text-align: left;
+            max-width: 900px; text-align: left;
         }
 
         .quick-note p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
         .quick-note strong { color: #fff; }
 
-        .kpi-row { display: flex; gap: 40px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; flex-wrap: wrap; justify-content: center; }
-        .kpi-item { display: flex; flex-direction: column; align-items: center; }
+        .kpi-row { display: flex; gap: 40px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; flex-wrap: wrap; justify-content: flex-start; }
+        .kpi-item { display: flex; flex-direction: column; }
         .kpi-number { font-size: 1.8rem; font-weight: 700; color: #fff; }
         .kpi-label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
-        .header-action-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; flex-direction: column; }
+        .header-action-row { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
         .header-socials { display: flex; gap: 12px; }
 
         .header-socials a {
@@ -240,7 +238,6 @@
             transition: transform 0.25s ease, box-shadow 0.25s ease; position: relative;
         }
 
-        /* ===== CARD ZOOM-OUT HOVER EFFECT (handled by JS) ===== */
         .portfolio-card.zoom-out {
             transform: scale(0.96);
             box-shadow: var(--shadow-sm);
@@ -311,13 +308,19 @@
 
         .compact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
+        /* ===== FIXED CERTIFICATION CARDS ===== */
         .metric-card {
             background: var(--bg-surface); padding: 24px; border-radius: var(--radius-md);
             border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm);
+            display: flex; flex-direction: column;
         }
 
+        .metric-card .project-title { margin: 12px 0 6px; }
+        .metric-card .project-desc { flex-grow: 1; margin-bottom: 16px; }
+        .metric-card .btn { width: 100%; margin-top: auto; }
+
         .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
-        .metric-card .meta-tags { justify-content: center; }
+        .metric-card .meta-tags { justify-content: center; margin-top: 8px; }
 
         /* ===== TESTIMONIALS ===== */
         .testimonial-grid {
@@ -438,6 +441,7 @@
         }
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .showcase-grid, .compact-grid, .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -446,14 +450,59 @@
         }
 
         @media (max-width: 768px) {
-            .profile { gap: 12px; }
-            .skill-strip, .kpi-row { justify-content: center; }
-            .showcase-grid, .compact-grid, .testimonial-grid, .contact-layout { grid-template-columns: 1fr; }
-            .portfolio-card.featured-item { grid-column: span 1; grid-template-columns: 1fr; height: auto; }
+            .profile {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+                gap: 16px;
+            }
+            .avatar { margin: 0 auto; }
+            .skill-strip, .kpi-row, .header-action-row {
+                justify-content: center;
+            }
+            .header-action-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .showcase-grid, .compact-grid, .testimonial-grid, .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-card.featured-item {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+                height: auto;
+            }
             .portfolio-card.featured-item .card-preview-area { height: 160px; }
             .about-card ul { grid-template-columns: 1fr; }
             nav .container { flex-direction: column; gap: 12px; }
             .testimonial-grid { grid-template-columns: 1fr; }
+            .compact-grid { grid-template-columns: 1fr; }
+            .header-socials { justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            header { padding: 60px 0 40px; }
+            section { padding: 60px 0; }
+            .avatar { width: 100px; height: 100px; }
+            .header-info h1 { font-size: 1.8rem; }
+            .tagline { font-size: 0.95rem; }
+            .skill-strip span { font-size: 0.7rem; padding: 3px 8px; }
+            .kpi-row { gap: 20px; }
+            .kpi-number { font-size: 1.5rem; }
+            .section-title { font-size: 1.5rem; }
+            .about-card { padding: 24px; }
+            .portfolio-card.featured-item .card-preview-area { height: 120px; }
+            .card-preview-area { height: 120px; font-size: 2rem; }
+            .card-body { padding: 16px; }
+            .project-title { font-size: 1rem; }
+            .btn { padding: 6px 12px; font-size: 0.75rem; }
+            .form-card { padding: 20px; }
+            .lightbox-desc { padding: 16px; }
+            .lightbox-img-container { height: 160px; font-size: 3rem; }
+            .compact-grid { gap: 16px; }
+            .metric-card { padding: 16px; }
+            .testimonial-card { padding: 20px; }
         }
     </style>
 </head>
@@ -479,9 +528,6 @@
     <header>
         <div class="container">
             <div class="profile">
-                <!-- Upload your photo directly to the repo root (same place as this index.html) via
-                     GitHub's web "Add file > Upload files" button — no folder needed.
-                     Then set the src below to match the exact filename you uploaded. -->
                 <div class="avatar">
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user placeholder-icon\'></i>';" />
                 </div>
@@ -788,34 +834,34 @@
             <div class="compact-grid">
                 <div class="metric-card">
                     <div class="metric-value"><i class="fab fa-ibm"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">IBM Data Science Professional Certificate</h3>
-                    <p class="project-desc" style="font-size:0.82rem">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
+                    <h3 class="project-title">IBM Data Science Professional Certificate</h3>
+                    <p class="project-desc">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
                     <div class="meta-tags">
                         <span class="meta-tag">Data Wrangling</span>
                         <span class="meta-tag">SQL</span>
                         <span class="meta-tag">ML</span>
                     </div>
-                    <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" style="width:100%" target="_blank">View Credential</a>
+                    <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" target="_blank">View Credential</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-bolt"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">PowerCo SME Churn Analysis Internship</h3>
-                    <p class="project-desc" style="font-size:0.82rem">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
+                    <h3 class="project-title">PowerCo SME Churn Analysis Internship</h3>
+                    <p class="project-desc">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
                     <div class="meta-tags">
                         <span class="meta-tag">EDA</span>
                         <span class="meta-tag">Visualisation</span>
                     </div>
-                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" style="width:100%" target="_blank">View Certificate</a>
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" target="_blank">View Certificate</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-user-graduate"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">B.Sc. (Hons.) Computer Science</h3>
-                    <p class="project-desc" style="font-size:0.82rem">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
+                    <h3 class="project-title">B.Sc. (Hons.) Computer Science</h3>
+                    <p class="project-desc">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
                     <div class="meta-tags">
                         <span class="meta-tag">Databases</span>
                         <span class="meta-tag">ML Fundamentals</span>
                     </div>
-                    <button class="btn btn-primary" style="width:100%" onclick="openRequestModal()">Request Certificate</button>
+                    <button class="btn btn-primary" onclick="openRequestModal()">Request Certificate</button>
                 </div>
             </div>
         </div>
@@ -1103,7 +1149,7 @@
                 }
             });
 
-            // ===== CARD ZOOM-OUT ON HOVER (new) =====
+            // ===== CARD ZOOM-OUT ON HOVER =====
             const cards = document.querySelectorAll('.portfolio-card');
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
