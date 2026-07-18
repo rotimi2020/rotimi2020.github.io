@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio</title>
-    <meta name="description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
-    <meta name="keywords" content="Operations Analyst, Data Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
+    <title>Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio</title>
+    <meta name="description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
+    <meta name="keywords" content="Data Analyst, Operations Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
     <meta name="author" content="Rotimi Omosewo" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
-    <meta property="og:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
+    <meta property="og:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
+    <meta property="og:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rotimi2020.github.io" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
-    <meta name="twitter:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel." />
+    <meta name="twitter:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
+    <meta name="twitter:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel." />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
-        /* ===== RESET & SYSTEM DESIGN ===== */
         * {
             margin: 0;
             padding: 0;
@@ -53,9 +52,7 @@
             --radius-lg: 16px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         h1, h2, h3, .nav-logo, .kpi-number, .project-title, .cert-title, .section-title {
             font-family: 'Sora', sans-serif;
@@ -69,600 +66,283 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        #scrollProgress {
+            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--accent), #159c85);
+            z-index: 1100; transition: width 0.1s ease-out;
         }
 
-        /* ===== MINIMAL STICKY NAV ===== */
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 999;
+            position: sticky; top: 0; z-index: 999;
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             padding: 16px 0;
         }
 
-        nav .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        nav .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
         .nav-logo {
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: var(--text-main);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 700; font-size: 1.15rem; color: var(--text-main);
+            text-decoration: none; display: flex; align-items: center; gap: 8px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 24px;
-        }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
 
         .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
+            text-decoration: none; color: var(--text-muted); font-weight: 500;
+            font-size: 0.9rem; transition: color 0.2s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active-link {
-            color: var(--accent);
-        }
+        .nav-links a:hover, .nav-links a.active-link { color: var(--accent); }
 
-        /* ===== PROFESSIONAL EXECUTIVE HEADER ===== */
         header {
-            background: #0b1329;
-            color: #fff;
-            padding: 80px 0 60px;
-            position: relative;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: #0b1329; color: #fff; padding: 80px 0 60px;
+            position: relative; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .profile {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 32px;
-            align-items: center;
-        }
+        .profile { display: grid; grid-template-columns: 140px 1fr; gap: 32px; align-items: center; }
 
         .avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            background: #1e293b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 140px; height: 140px; border-radius: var(--radius-md); overflow: hidden;
+            background: #1e293b; display: flex; align-items: center; justify-content: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .avatar .placeholder-icon { font-size: 48px; color: #64748b; }
+
+        .header-info h1 { color: #fff; font-size: 2.25rem; font-weight: 700; margin-bottom: 6px; }
+        .tagline { font-size: 1.05rem; color: #94a3b8; margin-bottom: 12px; }
+        .tagline .highlight { color: #fff; font-weight: 600; }
+
+        .availability-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(21, 156, 133, 0.14);
+            border: 1px solid rgba(159, 232, 212, 0.3);
+            color: #d7f5ec; padding: 5px 14px; border-radius: var(--radius-sm);
+            font-size: 0.78rem; font-weight: 600; margin-bottom: 14px;
         }
 
-        .avatar .placeholder-icon {
-            font-size: 48px;
-            color: #64748b;
+        .availability-badge .dot {
+            width: 7px; height: 7px; border-radius: 50%; background: #2ecc9a;
+            animation: pulse-dot 2s infinite;
         }
 
-        .header-info h1 {
-            color: #fff;
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 6px;
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(46, 204, 154, 0.55); }
+            70% { box-shadow: 0 0 0 7px rgba(46, 204, 154, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 204, 154, 0); }
         }
 
-        .tagline {
-            font-size: 1.05rem;
-            color: #94a3b8;
-            margin-bottom: 16px;
-        }
-
-        .tagline .highlight {
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .skill-strip {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
+        .skill-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 
         .skill-strip span {
-            background: rgba(255, 255, 255, 0.06);
-            color: #cbd5e1;
-            padding: 4px 12px;
-            border-radius: var(--radius-sm);
-            font-size: 0.8rem;
-            font-weight: 500;
+            background: rgba(255, 255, 255, 0.06); color: #cbd5e1; padding: 4px 12px;
+            border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 500;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .quick-note {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            margin-top: 24px;
-            border-left: 3px solid var(--accent);
-            max-width: 900px;
+            background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-md);
+            padding: 20px; margin-top: 24px; border-left: 3px solid var(--accent); max-width: 900px;
         }
 
-        .quick-note p {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            line-height: 1.6;
-        }
+        .quick-note p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
+        .quick-note strong { color: #fff; }
 
-        .quick-note strong {
-            color: #fff;
-        }
+        .kpi-row { display: flex; gap: 40px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; flex-wrap: wrap; }
+        .kpi-item { display: flex; flex-direction: column; }
+        .kpi-number { font-size: 1.8rem; font-weight: 700; color: #fff; }
+        .kpi-label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
-        /* ===== METRIC HEADS (KPIs) ===== */
-        .kpi-row {
-            display: flex;
-            gap: 40px;
-            margin-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 20px;
-        }
-
-        .kpi-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .kpi-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .kpi-label {
-            font-size: 0.8rem;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 2px;
-        }
-
-        .header-action-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .header-socials {
-            display: flex;
-            gap: 12px;
-        }
+        .header-action-row { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+        .header-socials { display: flex; gap: 12px; }
 
         .header-socials a {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            width: 36px;
-            height: 36px;
-            border-radius: var(--radius-sm);
-            background: rgba(255,255,255,0.04);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            text-decoration: none;
+            color: #94a3b8; font-size: 1.1rem; width: 36px; height: 36px; border-radius: var(--radius-sm);
+            background: rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease; text-decoration: none;
         }
 
-        .header-socials a:hover {
-            color: #fff;
-            background: var(--accent);
-        }
+        .header-socials a:hover { color: #fff; background: var(--accent); }
 
-        /* ===== LAYOUT & SECTION LOGIC ===== */
-        section {
-            padding: 80px 0;
-        }
+        section { padding: 80px 0; }
 
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            position: relative;
-        }
+        .section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 40px; position: relative; }
 
         .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 3px;
-            background: var(--accent);
-            margin-top: 10px;
-            border-radius: 2px;
+            content: ''; display: block; width: 40px; height: 3px; background: var(--accent);
+            margin-top: 10px; border-radius: 2px;
         }
 
-        /* ===== ABOUT ===== */
         .about-card {
-            background: var(--bg-surface);
-            padding: 40px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
+            background: var(--bg-surface); padding: 40px; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border);
         }
 
-        .about-card p {
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
+        .about-card p { margin-bottom: 20px; font-size: 0.95rem; color: var(--text-muted); }
+        .about-card p strong { color: var(--text-main); }
 
-        .about-card p strong {
-            color: var(--text-main);
-        }
+        .about-card ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+        .about-card ul li { font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+        .about-card ul li::before { content: "✓"; color: var(--accent); font-weight: bold; }
 
-        .about-card ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 24px 0;
-        }
+        .education-block { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border); }
+        .education-block h3 { font-size: 1.1rem; margin-bottom: 8px; }
 
-        .about-card ul li {
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .skills-subtitle {
+            font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+            color: var(--text-main); margin: 24px 0 12px;
         }
+        .skills-subtitle:first-child { margin-top: 0; }
 
-        .about-card ul li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        .education-block {
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid var(--border);
-        }
-
-        .education-block h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        /* ===== BADGE SYSTEM (SKILLS) ===== */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
 
         .skill-tag {
-            background: var(--bg-surface);
-            color: var(--text-main);
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            background: var(--bg-surface); color: var(--text-main); padding: 8px 16px;
+            border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 500;
+            border: 1px solid var(--border); display: flex; align-items: center; gap: 8px;
             box-shadow: var(--shadow-sm);
         }
 
-        .skill-tag i {
-            color: var(--accent);
-        }
+        .skill-tag i { color: var(--accent); }
 
-        /* ===== FILTER & CONTROLS ===== */
-        .filter-container {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+
+        .filter-container { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
 
         .filter-btn {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
+            background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted);
+            padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;
+            font-weight: 500; transition: all 0.2s ease;
         }
 
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        /* ===== CLEAN, RIGID PORTFOLIO GRIDS ===== */
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
+        .showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .portfolio-card {
-            background: var(--bg-surface);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
+            background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border);
+            overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; position: relative;
         }
 
-        .portfolio-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
+        .portfolio-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
         .card-preview-area {
-            height: 160px;
-            background: #1e293b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: rgba(255,255,255,0.2);
-            position: relative;
-            cursor: pointer;
+            height: 160px; display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; color: rgba(255,255,255,0.9); position: relative; cursor: pointer; overflow: hidden;
         }
+
+        .card-preview-area i { position: relative; z-index: 2; transition: transform 0.3s ease; }
+        .card-preview-area:hover i { transform: scale(1.15); }
+
+        .card-preview-area.construction { background: linear-gradient(135deg, #d99a3e, #c9791f); }
+        .card-preview-area.rossmann { background: linear-gradient(135deg, #c76b8a, #9c4f68); }
+        .card-preview-area.nhanes { background: linear-gradient(135deg, #d98a5a, #b45f5f); }
+        .card-preview-area.django { background: linear-gradient(135deg, #0f6e5f, #159c85); }
+        .card-preview-area.powerco { background: linear-gradient(135deg, #1c7a8c, #0e3a52); }
+        .card-preview-area.ibm { background: linear-gradient(135deg, #d9b98a, #b8895f); }
 
         .card-preview-area .zoom-hint {
-            position: absolute;
-            background: rgba(15, 23, 42, 0.8);
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: var(--radius-sm);
-            font-size: 0.75rem;
-            font-weight: 500;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            position: absolute; background: rgba(15, 23, 42, 0.8); color: #fff; padding: 6px 12px;
+            border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 500; opacity: 0;
+            transition: opacity 0.2s ease; display: flex; align-items: center; gap: 6px; z-index: 3;
         }
 
-        .card-preview-area:hover .zoom-hint {
-            opacity: 1;
-        }
+        .card-preview-area:hover .zoom-hint { opacity: 1; }
 
         .portfolio-card.featured-item {
-            grid-column: span 3;
-            display: grid;
-            grid-template-columns: 4fr 5fr;
-            height: 340px;
+            grid-column: span 3; display: grid; grid-template-columns: 4fr 5fr; height: 340px;
         }
 
-        .portfolio-card.featured-item .card-preview-area {
-            height: 100%;
-        }
+        .portfolio-card.featured-item .card-preview-area { height: 100%; }
 
-        .card-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
+        .card-body { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
 
         .featured-label {
-            align-self: flex-start;
-            background: #fef3c7;
-            color: #d97706;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: var(--radius-sm);
-            text-transform: uppercase;
-            margin-bottom: 12px;
+            align-self: flex-start; background: #fef3c7; color: #d97706; font-size: 0.7rem;
+            font-weight: 700; padding: 2px 8px; border-radius: var(--radius-sm);
+            text-transform: uppercase; margin-bottom: 12px;
         }
 
-        .project-title {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
+        .project-title { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
+        .project-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; flex-grow: 1; }
+        .project-desc strong { color: var(--text-main); }
 
-        .project-desc {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            flex-grow: 1;
-        }
-
-        .meta-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 18px;
-        }
+        .meta-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 
         .meta-tag {
-            background: var(--bg-base);
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            padding: 3px 8px;
-            border-radius: var(--radius-sm);
-            font-weight: 500;
-            border: 1px solid var(--border);
+            background: var(--bg-base); color: var(--text-muted); font-size: 0.75rem; padding: 3px 8px;
+            border-radius: var(--radius-sm); font-weight: 500; border: 1px solid var(--border);
         }
 
-        .card-actions {
-            display: flex;
-            gap: 10px;
-        }
+        .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
-            font-size: 0.82rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px;
+            border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+            transition: all 0.2s ease; cursor: pointer; border: none;
         }
 
         .btn-primary { background: var(--accent); color: #fff; }
         .btn-primary:hover { background: var(--accent-hover); }
         .btn-secondary { background: var(--bg-base); color: var(--text-main); border: 1px solid var(--border); }
         .btn-secondary:hover { background: var(--border); }
-        .btn-gold { background: #d97706; color: #fff; }
-        .btn-gold:hover { background: #b45309; }
 
-        /* ===== UNIFORM CERTIFICATIONS & METRICS ===== */
-        .compact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
+        .compact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .metric-card {
-            background: var(--bg-surface);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
+            background: var(--bg-surface); padding: 24px; border-radius: var(--radius-md);
+            border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm);
         }
 
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent);
-            font-family: 'Sora', sans-serif;
-        }
+        .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
+        .metric-card .meta-tags { justify-content: center; }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonial-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .testimonial-item {
-            background: var(--bg-surface);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            font-size: 0.9rem;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .testimonial-item .author {
-            margin-top: 16px;
-            font-weight: 600;
-            color: var(--text-main);
-            font-size: 0.85rem;
-        }
-
-        /* ===== CONTACT FORM ENGINE ===== */
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 5fr 4fr;
-            gap: 40px;
-            align-items: start;
-        }
+        .contact-layout { display: grid; grid-template-columns: 5fr 4fr; gap: 40px; align-items: start; }
 
         .form-card {
-            background: var(--bg-surface);
-            padding: 32px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
+            background: var(--bg-surface); padding: 32px; border-radius: var(--radius-md);
+            border: 1px solid var(--border); box-shadow: var(--shadow-sm);
         }
 
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: var(--text-main);
-        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-main); }
 
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            background: var(--bg-base);
-            color: var(--text-main);
-            outline: none;
+            width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+            font-size: 0.9rem; background: var(--bg-base); color: var(--text-main); outline: none; font-family: inherit;
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent);
-            background: #fff;
+            border-color: var(--accent); background: #fff;
         }
+
+        .form-group textarea { resize: vertical; min-height: 90px; }
 
         .success-message {
-            display: none;
-            background: #ecfdf5;
-            color: #065f46;
-            border: 1px solid #a7f3d0;
-            padding: 12px;
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            margin-top: 12px;
-            text-align: center;
+            display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 12px;
+            border-radius: var(--radius-sm); font-size: 0.85rem; margin-top: 12px; text-align: center;
         }
-
         .success-message.show { display: block; }
 
-        /* ===== MODERN POPUP LIGHTBOX ===== */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
+        .contact-side h3 { margin-bottom: 12px; font-weight: 600; }
+        .contact-side p { font-size: 0.9rem; margin-bottom: 24px; }
+        .contact-side .btn { margin-right: 8px; margin-bottom: 8px; }
+
+        .lightbox-modal, .form-modal {
+            display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center;
+            padding: 24px; overflow-y: auto;
         }
 
         .lightbox-wrapper {
-            background: var(--bg-surface);
-            border-radius: var(--radius-lg);
-            max-width: 640px;
-            width: 100%;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            position: relative;
+            background: var(--bg-surface); border-radius: var(--radius-lg); max-width: 640px; width: 100%;
+            overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); position: relative;
             animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -672,134 +352,63 @@
         }
 
         .lightbox-img-container {
-            height: 240px;
-            background: #0b1329;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: rgba(255,255,255,0.1);
+            height: 220px; background: #0b1329; display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; color: rgba(255,255,255,0.9);
         }
 
-        .lightbox-desc {
-            padding: 24px;
+        .lightbox-desc { padding: 24px; }
+
+        .close-lightbox, .close-form-modal {
+            position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.2); border: none;
+            color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex;
+            align-items: center; justify-content: center; font-size: 1.2rem; z-index: 10;
         }
 
-        .close-lightbox {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            z-index: 10;
+        .close-form-modal { color: #999; background: transparent; top: 14px; right: 18px; }
+        .close-form-modal:hover { color: #333; }
+
+        .form-modal-wrapper {
+            background: var(--bg-surface); border-radius: var(--radius-lg); max-width: 460px; width: 100%;
+            padding: 32px 34px; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); max-height: 90vh; overflow-y: auto;
         }
 
-        /* ===== BACK TO TOP ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            background: var(--accent);
-            color: #fff;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            text-decoration: none;
-            box-shadow: 0 4px 16px rgba(15, 110, 95, 0.25);
-            transition: all 0.3s ease;
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(20px);
-            z-index: 999;
-            border: none;
-            cursor: pointer;
-        }
+        .form-modal-wrapper h3 { margin-bottom: 18px; text-align: center; }
 
-        .back-to-top.visible {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
+        .modal-note {
+            background: var(--bg-base); border-left: 3px solid var(--accent); padding: 12px 16px;
+            margin-bottom: 16px; border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-muted);
         }
+        .modal-note strong { color: var(--text-main); }
 
-        .back-to-top:hover {
-            background: var(--accent-hover);
-            transform: scale(1.06);
-        }
-
-        /* ===== FOOTER ===== */
         footer {
-            background: #0b1329;
-            color: #64748b;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.85rem;
+            background: #0b1329; color: #64748b; padding: 40px 0; text-align: center; font-size: 0.85rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
-
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
-        /* ===== DEVICE RESPONSIVENESS ===== */
         @media (max-width: 1024px) {
-            .showcase-grid, .compact-grid, .testimonial-row {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .portfolio-card.featured-item {
-                grid-column: span 2;
-            }
+            .showcase-grid, .compact-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-card.featured-item { grid-column: span 2; }
         }
 
         @media (max-width: 768px) {
-            .profile {
-                grid-template-columns: 1fr;
-                text-align: center;
-                justify-items: center;
-            }
-            .skill-strip, .kpi-row {
-                justify-content: center;
-            }
-            .header-action-row {
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-            }
-            .showcase-grid, .compact-grid, .testimonial-row, .contact-layout {
-                grid-template-columns: 1fr;
-            }
-            .portfolio-card.featured-item {
-                grid-column: span 1;
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-            .portfolio-card.featured-item .card-preview-area {
-                height: 160px;
-            }
-            .about-card ul {
-                grid-template-columns: 1fr;
-            }
-            nav .container {
-                flex-direction: column;
-                gap: 12px;
-            }
+            .profile { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .skill-strip, .kpi-row { justify-content: center; }
+            .header-action-row { justify-content: center; flex-direction: column; align-items: center; }
+            .showcase-grid, .compact-grid, .contact-layout { grid-template-columns: 1fr; }
+            .portfolio-card.featured-item { grid-column: span 1; grid-template-columns: 1fr; height: auto; }
+            .portfolio-card.featured-item .card-preview-area { height: 160px; }
+            .about-card ul { grid-template-columns: 1fr; }
+            nav .container { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ===== NAVIGATION ===== -->
+    <div id="scrollProgress"></div>
+
     <nav>
         <div class="container">
             <a href="#" class="nav-logo">📊 Rotimi Omosewo</a>
@@ -807,28 +416,25 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#certifications">Credentials</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- ===== HERO / PROFESSIONAL PROFILE SECTION ===== -->
     <header>
         <div class="container">
             <div class="profile">
+                <!-- Upload your photo directly to the repo root (same place as this index.html) via
+                     GitHub's web "Add file > Upload files" button — no folder needed.
+                     Then set the src below to match the exact filename you uploaded. -->
                 <div class="avatar">
-                    <!-- ===== PHOTO ===== -->
-                    <!-- Upload your photo directly to the repo root (same place as this index.html)
-                         via GitHub's web "Add file > Upload files" button — no folder needed.
-                         Then set the src below to match the exact filename you uploaded. -->
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user placeholder-icon\'></i>';" />
                 </div>
                 <div class="header-info">
-                    <h1>Rotimi Omosewo</h1>
-                    <p class="tagline">
-                        <span class="highlight">Operations Analyst</span> · Data Analytics
-                    </p>
+                    <h1>Hi, I'm Rotimi</h1>
+                    <p class="tagline"><span class="highlight">Data Analyst</span> · Operations Analytics</p>
+                    <div class="availability-badge"><span class="dot"></span> Available for Remote Work</div>
                     <div class="skill-strip">
                         <span>🐍 Python</span>
                         <span>🗄️ SQL</span>
@@ -841,7 +447,7 @@
 
             <div class="quick-note">
                 <p>
-                    <strong>Operations Analytics Framework:</strong> I build end‑to‑end data pipelines that turn raw operational records into clean datasets, interactive dashboards, and deployed web apps. <strong>Built on construction data, but the workflow is industry‑agnostic</strong> — the same approach scales to healthcare, manufacturing, logistics, energy, and finance.
+                    <strong>📊 Operations Analytics Framework:</strong> I build end‑to‑end data pipelines that turn raw operational records into clean datasets, interactive dashboards, and deployed web apps. Built on construction data, but the workflow is industry‑agnostic — the same approach scales to healthcare, manufacturing, logistics, energy, and finance.
                 </p>
             </div>
 
@@ -849,15 +455,15 @@
                 <div class="kpi-row">
                     <div class="kpi-item">
                         <span class="kpi-number" data-count="8">0</span>
-                        <span class="kpi-label">Projects</span>
+                        <span class="kpi-label">Analytics Projects</span>
                     </div>
                     <div class="kpi-item">
                         <span class="kpi-number" data-count="5">0</span>
-                        <span class="kpi-label">Years Exp</span>
+                        <span class="kpi-label">Years of Analytics</span>
                     </div>
                     <div class="kpi-item">
                         <span class="kpi-number" data-count="12">0</span>
-                        <span class="kpi-label">Tech Tools</span>
+                        <span class="kpi-label">Tools &amp; Technologies</span>
                     </div>
                 </div>
                 <div class="header-socials">
@@ -869,166 +475,221 @@
         </div>
     </header>
 
-    <!-- ===== PROFILE / STATEMENT ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-card">
                 <p>
-                    I'm an <strong>Operations Analyst &amp; Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an <strong>IBM Data Science Professional Certificate</strong>. I specialise in <strong>Operations Analytics</strong> — building robust, end‑to‑end data workflows that transform raw operational data into clear insights, interactive dashboards, and deployed web applications.
+                    I'm a <strong>Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an
+                    <strong>IBM Data Science Professional Certificate</strong>. I specialise in
+                    <strong>Operations Analytics</strong> — building robust, end‑to‑end data workflows that
+                    transform raw operational data into clear insights, interactive dashboards, and
+                    production‑ready web applications.
                 </p>
                 <p>
-                    My portfolio demonstrates a complete analytics lifecycle using <strong>real construction operations data</strong>: raw WhatsApp logs → Excel cleaning → SQL modelling → Python analysis → Power BI dashboards → Django web deployment. This framework is <strong>industry‑agnostic</strong> and equally applicable to <strong>healthcare, manufacturing, logistics, energy, and finance</strong>.
+                    My portfolio demonstrates a complete analytics lifecycle using <strong>real construction
+                    operations data</strong>, from raw WhatsApp logs → Excel cleaning → SQL modelling →
+                    Python analysis → Power BI dashboards → Django web deployment. This framework is
+                    <strong>industry‑agnostic</strong> and equally applicable to healthcare, manufacturing,
+                    logistics, energy, and finance.
                 </p>
                 <ul>
-                    <li><strong>ETL &amp; Data Pipelines:</strong> Python (Pandas, NumPy), SQL, Excel (Power Query)</li>
-                    <li><strong>Dashboards &amp; BI:</strong> Power BI, Django, Streamlit, Plotly</li>
-                    <li><strong>Predictive Analytics:</strong> Scikit‑Learn, time‑series forecasting, classification</li>
-                    <li><strong>Business Impact:</strong> ₦4.5M+ reconciled, 95.7% utilisation, 1,948m excavation analysed</li>
-                    <li><strong>Stakeholder Communication:</strong> Clear narrative reporting and executive summaries for data‑driven decision‑making</li>
+                    <li>ETL &amp; Data Pipelines — Python (Pandas, NumPy), SQL, Excel (Power Query)</li>
+                    <li>Dashboards &amp; BI — Power BI, Django, Streamlit, Plotly</li>
+                    <li>Predictive Analytics — Scikit‑Learn, time‑series forecasting, classification</li>
+                    <li>Business Impact — ₦4.5M+ reconciled, 95.7% utilisation, 1,948m excavation analysed</li>
                 </ul>
                 <p>
-                    I'm currently available for <strong>Operations Analyst</strong> or <strong>Data Analyst</strong> roles where I can apply analytics, automation, and business intelligence to <strong>optimise operational performance</strong>, reduce costs, and drive data‑driven strategy.
+                    I'm actively seeking <strong>Data Analyst</strong> or <strong>Operations Analyst</strong>
+                    roles where I can apply analytics, automation, and business intelligence to improve
+                    operational performance and drive data‑driven decision‑making.
                 </p>
                 <div class="education-block">
-                    <h3>Education &amp; Core Training</h3>
-                    <p><strong>B.Sc. (Hons.) Computer Science</strong> — National Open University, 2019</p>
-                    <p style="font-size:0.85rem; color:var(--text-muted)">Coursework: Data Structures, Databases, Data Analysis, Fundamentals of Machine Learning</p>
+                    <h3><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Education</h3>
+                    <p style="margin-bottom:4px;"><strong>B.Sc. (Hons.) in Computer Science</strong> – National Open University, 2019</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0;">Coursework: Data Structures, Databases, Data Analysis, Fundamentals of Machine Learning</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== COMPACT TECH BADGES ===== -->
     <section id="skills" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
         <div class="container">
-            <h2 class="section-title">Technical Stack Matrix</h2>
+            <h2 class="section-title">Core Skills &amp; Tools</h2>
+
+            <div class="skills-subtitle">Core Skills</div>
             <div class="skills-grid">
-                <div class="skill-tag"><i class="fab fa-python"></i> Python (Pandas / NumPy)</div>
-                <div class="skill-tag"><i class="fas fa-database"></i> SQL Server / T-SQL</div>
-                <div class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI / DAX</div>
-                <div class="skill-tag"><i class="fas fa-network-wired"></i> Django Framework</div>
-                <div class="skill-tag"><i class="fas fa-rocket"></i> Streamlit Engines</div>
-                <div class="skill-tag"><i class="fas fa-brain"></i> Scikit-Learn Ecosystem</div>
-                <div class="skill-tag"><i class="fas fa-file-excel"></i> Advanced MS Excel</div>
-                <div class="skill-tag"><i class="fas fa-project-diagram"></i> KNIME &amp; Predictive Modeler</div>
-                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Plotly / Matplotlib</div>
-                <div class="skill-tag"><i class="fas fa-cloud"></i> Azure Machine Learning</div>
-                <div class="skill-tag"><i class="fas fa-magic"></i> PyCaret</div>
+                <div class="skill-tag"><i class="fas fa-table"></i> Pandas</div>
+                <div class="skill-tag"><i class="fas fa-calculator"></i> NumPy</div>
+                <div class="skill-tag"><i class="fas fa-chart-area"></i> Matplotlib</div>
+                <div class="skill-tag"><i class="fas fa-chart-line"></i> Seaborn</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Plotly</div>
+                <div class="skill-tag"><i class="fas fa-robot"></i> Scikit‑Learn</div>
+                <div class="skill-tag"><i class="fas fa-broom"></i> Data Cleaning</div>
+                <div class="skill-tag"><i class="fas fa-search"></i> EDA</div>
+                <div class="skill-tag"><i class="fas fa-square-root-alt"></i> Statistical Analysis</div>
+                <div class="skill-tag"><i class="fas fa-brain"></i> Machine Learning</div>
+                <div class="skill-tag"><i class="fas fa-eye"></i> Data Visualization</div>
+                <div class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-tag"><i class="fas fa-file-excel"></i> Excel (Power Query)</div>
+            </div>
+
+            <div class="skills-subtitle">Tools &amp; Technologies</div>
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> SQL Server</div>
+                <div class="skill-tag"><i class="fas fa-file-excel"></i> Microsoft Excel</div>
+                <div class="skill-tag"><i class="fab fa-python"></i> Django</div>
+                <div class="skill-tag"><i class="fas fa-rocket"></i> Streamlit</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fas fa-book"></i> Jupyter Notebook</div>
+                <div class="skill-tag"><i class="fas fa-cloud"></i> Azure ML</div>
+                <div class="skill-tag"><i class="fas fa-project-diagram"></i> KNIME</div>
                 <div class="skill-tag"><i class="fas fa-chart-bar"></i> SPSS Modeler</div>
+                <div class="skill-tag"><i class="fas fa-magic"></i> PyCaret</div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FIXED STYLISH PROJECTS SHOWCASE ===== -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Featured Achievements</h2>
+            <div class="achievements-grid">
+                <div class="metric-card">
+                    <div class="metric-value">₦4.5M+</div>
+                    <p class="project-desc" style="margin-bottom:0;">Project Cost Fully Reconciled</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95.7%</div>
+                    <p class="project-desc" style="margin-bottom:0;">Cement Utilisation Rate</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">1,948m</div>
+                    <p class="project-desc" style="margin-bottom:0;">Excavation Analysed</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">86</div>
+                    <p class="project-desc" style="margin-bottom:0;">Reinforcement Baskets Produced</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Case Showcase</h2>
+            <h2 class="section-title">Projects</h2>
 
             <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All Ecosystems</button>
-                <button class="filter-btn" data-filter="operations">Operations Analytics</button>
-                <button class="filter-btn" data-filter="powerbi">Power BI Systems</button>
-                <button class="filter-btn" data-filter="python">Pure Python</button>
-                <button class="filter-btn" data-filter="machinelearning">Machine Learning</button>
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="operations">Operations</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="datascience">Data Science</button>
+                <button class="filter-btn" data-filter="machinelearning">ML</button>
+                <button class="filter-btn" data-filter="sql">SQL</button>
+                <button class="filter-btn" data-filter="excel">Excel</button>
                 <button class="filter-btn" data-filter="django">Django</button>
                 <button class="filter-btn" data-filter="streamlit">Streamlit</button>
             </div>
 
             <div class="showcase-grid">
-                <!-- FEATURED CASE CARD -->
-                <div class="portfolio-card featured-item" data-category="operations powerbi python machinelearning django">
-                    <div class="card-preview-area" onclick="openLightbox('🏗️ Construction Operations Analytics', 'End‑to‑end pipeline transforming raw WhatsApp construction logs into structured data, interactive Power BI dashboards, and a live Django web app. ₦4.5M reconciled, 95.7% cement utilisation, 1,948m excavation analysed.', 'fas fa-hard-hat')">
+                <div class="portfolio-card featured-item" data-category="operations python sql powerbi django">
+                    <div class="card-preview-area construction" onclick="openLightbox('Construction Operations Analytics', 'End-to-end pipeline transforming raw WhatsApp construction logs into structured data, interactive Power BI dashboards, and a live Django web app. \u20a64.5M reconciled, 95.7% cement utilisation, 1,948m excavation analysed. Industry-agnostic: the same workflow applies to healthcare, manufacturing, logistics, energy, and finance.', 'fas fa-hard-hat')">
                         <i class="fas fa-hard-hat"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect Architecture</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
-                        <span class="featured-label">⭐ High Impact Featured Asset</span>
-                        <h3 class="project-title">Construction Operations Data Platform</h3>
+                        <span class="featured-label">⭐ Featured</span>
+                        <h3 class="project-title">Construction Operations Analytics</h3>
                         <p class="project-desc">
-                            End‑to‑end pipeline transforming raw WhatsApp logs into structured data, Power BI dashboards, and a live Django web app. <strong>₦4.5M reconciled</strong>, <strong>95.7% cement utilisation</strong>, <strong>1,948m excavation</strong> analysed. Industry‑agnostic framework applies to healthcare, manufacturing, logistics, energy, and finance.
+                            End‑to‑end pipeline transforming raw WhatsApp construction logs into structured data,
+                            interactive Power BI dashboards, and a live Django web app.
+                            <strong>₦4.5M reconciled</strong>, <strong>95.7% cement utilisation</strong>,
+                            <strong>1,948m excavation</strong> analysed.
+                            <br /><br />
+                            <strong>🔁 Industry‑agnostic:</strong> same workflow applies to healthcare,
+                            manufacturing, logistics, energy, and finance.
                         </p>
                         <div class="meta-tags">
                             <span class="meta-tag">Python</span>
                             <span class="meta-tag">SQL Server</span>
                             <span class="meta-tag">Power BI</span>
+                            <span class="meta-tag">Excel</span>
                             <span class="meta-tag">Django</span>
+                            <span class="meta-tag">DAX</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://rotimi5050.pythonanywhere.com/" class="btn btn-primary" target="_blank">Live Platform</a>
-                            <a href="https://github.com/rotimi2020/construction-data-analytics" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://rotimi5050.pythonanywhere.com/" class="btn btn-primary" target="_blank">🚀 Live Demo</a>
+                            <a href="https://github.com/rotimi2020/construction-data-analytics" class="btn btn-secondary" target="_blank">📁 View Code</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rossmann -->
-                <div class="portfolio-card" data-category="powerbi python machinelearning operations sql">
-                    <div class="card-preview-area" onclick="openLightbox('Rossmann Retail Engine Forecast', 'Time‑series forecasting models to project store sales, analyse promotional impact, and benchmark performance across retail networks.', 'fas fa-chart-line')">
+                <div class="portfolio-card" data-category="powerbi python datascience machinelearning sql operations">
+                    <div class="card-preview-area rossmann" onclick="openLightbox('Rossmann Sales Forecasting', 'Time-series models to forecast store sales, analyse promotional impact, and benchmark performance.', 'fas fa-chart-line')">
                         <i class="fas fa-chart-line"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">Rossmann Sales Forecasting</h3>
                         <p class="project-desc">Time‑series models to forecast store sales, analyse promotional impact, and benchmark performance.</p>
                         <div class="meta-tags">
-                            <span class="meta-tag">Python</span>
-                            <span class="meta-tag">SQL</span>
-                            <span class="meta-tag">Scikit-Learn</span>
                             <span class="meta-tag">Power BI</span>
+                            <span class="meta-tag">Python</span>
+                            <span class="meta-tag">ML</span>
+                            <span class="meta-tag">SQL</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://github.com/rotimi2020/rossmann-store-sales/tree/main" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://github.com/rotimi2020/rossmann-store-sales/tree/main" class="btn btn-secondary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- NHANES -->
-                <div class="portfolio-card" data-category="powerbi python machinelearning sql excel operations">
-                    <div class="card-preview-area" onclick="openLightbox('NHANES Health Risk Interface', 'Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment using machine learning classification.', 'fas fa-heartbeat')">
+                <div class="portfolio-card" data-category="powerbi python datascience machinelearning sql excel operations">
+                    <div class="card-preview-area nhanes" onclick="openLightbox('NHANES Diabetes Analysis', 'Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment.', 'fas fa-heartbeat')">
                         <i class="fas fa-heartbeat"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
-                        <h3 class="project-title">NHANES Risk Categorization</h3>
+                        <h3 class="project-title">NHANES Diabetes Analysis</h3>
                         <p class="project-desc">Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment.</p>
                         <div class="meta-tags">
                             <span class="meta-tag">Power BI</span>
                             <span class="meta-tag">Python</span>
-                            <span class="meta-tag">Scikit-Learn</span>
+                            <span class="meta-tag">ML</span>
                             <span class="meta-tag">Excel</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://github.com/rotimi2020/nhanes-diabetes-analysis-prediction/blob/main/README.md" class="btn btn-secondary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Superstore Django -->
                 <div class="portfolio-card" data-category="python django datascience operations">
-                    <div class="card-preview-area" onclick="openLightbox('Superstore Operations UI', 'Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components for operational reporting.', 'fas fa-store')">
+                    <div class="card-preview-area django" onclick="openLightbox('Superstore Viz Django App', 'Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components.', 'fas fa-store')">
                         <i class="fas fa-store"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
-                        <h3 class="project-title">Superstore Operational UI</h3>
+                        <h3 class="project-title">Superstore Viz Django App</h3>
                         <p class="project-desc">Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components.</p>
                         <div class="meta-tags">
+                            <span class="meta-tag">Python</span>
                             <span class="meta-tag">Django</span>
-                            <span class="meta-tag">Plotly</span>
-                            <span class="meta-tag">Pandas</span>
+                            <span class="meta-tag">Dashboard</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://rotimi.pythonanywhere.com/" class="btn btn-primary" target="_blank">Live App</a>
-                            <a href="https://github.com/rotimi2020/superstore-dashboard" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://rotimi.pythonanywhere.com/" class="btn btn-primary" target="_blank">🚀 Live Demo</a>
+                            <a href="https://github.com/rotimi2020/superstore-dashboard" class="btn btn-secondary" target="_blank">View Code</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PowerCo -->
                 <div class="portfolio-card" data-category="python datascience machinelearning streamlit operations">
-                    <div class="card-preview-area" onclick="openLightbox('PowerCo Churn & Price Analysis', 'Analysed PowerCo customer data to identify churn drivers and build predictive models using Python and Streamlit for real-time insights.', 'fas fa-bolt')">
+                    <div class="card-preview-area powerco" onclick="openLightbox('PowerCo Churn &amp; Price Analysis', 'Analysed PowerCo customer data to identify churn drivers and build predictive models using Python and Streamlit.', 'fas fa-bolt')">
                         <i class="fas fa-bolt"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">PowerCo Churn &amp; Price Analysis</h3>
@@ -1036,129 +697,97 @@
                         <div class="meta-tags">
                             <span class="meta-tag">Python</span>
                             <span class="meta-tag">Streamlit</span>
-                            <span class="meta-tag">Scikit-Learn</span>
+                            <span class="meta-tag">ML</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="btn btn-secondary" target="_blank">Source Code</a>
+                            <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="btn btn-secondary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- IBM Capstone -->
                 <div class="portfolio-card" data-category="datascience python machinelearning operations">
-                    <div class="card-preview-area" onclick="openLightbox('IBM Data Science Capstone', 'Applied K‑Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.', 'fas fa-map-marked-alt')">
+                    <div class="card-preview-area ibm" onclick="openLightbox('IBM Data Science Capstone', 'Applied K-Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.', 'fas fa-map-marked-alt')">
                         <i class="fas fa-map-marked-alt"></i>
-                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> Inspect</div>
+                        <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
                     </div>
                     <div class="card-body">
                         <h3 class="project-title">IBM Data Science Capstone</h3>
                         <p class="project-desc">Applied K‑Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.</p>
                         <div class="meta-tags">
+                            <span class="meta-tag">Data Science</span>
                             <span class="meta-tag">Python</span>
-                            <span class="meta-tag">Scikit-Learn</span>
-                            <span class="meta-tag">Folium</span>
+                            <span class="meta-tag">Clustering</span>
                         </div>
                         <div class="card-actions">
-                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="btn btn-gold" target="_blank">Certificate</a>
+                            <a href="https://coursera.org/share/7da2dc92d0863ef5bab261345d819822" class="btn btn-secondary" target="_blank">Certificate</a>
                             <a href="https://www.credly.com/org/ibm/badge/applied-data-science-capstone.1" class="btn btn-secondary" target="_blank">Badge</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ===== CREDENTIAL TRACKS ===== -->
     <section id="certifications" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
         <div class="container">
-            <h2 class="section-title">Verified Credentials</h2>
+            <h2 class="section-title">Certifications &amp; Training</h2>
             <div class="compact-grid">
                 <div class="metric-card">
                     <div class="metric-value"><i class="fab fa-ibm"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">IBM Data Science</h3>
-                    <p class="project-desc" style="font-size:0.8rem">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning. <strong>Shows formal training &amp; breadth.</strong></p>
-                    <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" style="width:100%" target="_blank">Verify Badge</a>
+                    <h3 class="project-title" style="margin: 12px 0 6px;">IBM Data Science Professional Certificate</h3>
+                    <p class="project-desc" style="font-size:0.82rem">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">Data Wrangling</span>
+                        <span class="meta-tag">SQL</span>
+                        <span class="meta-tag">ML</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" style="width:100%" target="_blank">View Credential</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-bolt"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">BCG Analytics</h3>
-                    <p class="project-desc" style="font-size:0.8rem">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
-                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" style="width:100%" target="_blank">Verify Space</a>
+                    <h3 class="project-title" style="margin: 12px 0 6px;">PowerCo SME Churn Analysis Internship</h3>
+                    <p class="project-desc" style="font-size:0.82rem">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">EDA</span>
+                        <span class="meta-tag">Visualisation</span>
+                    </div>
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" style="width:100%" target="_blank">View Certificate</a>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value"><i class="fas fa-user-graduate"></i></div>
-                    <h3 class="project-title" style="margin: 12px 0 6px;">Computer Science B.Sc.</h3>
-                    <p class="project-desc" style="font-size:0.8rem">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
-                    <button class="btn btn-primary" style="width:100%" onclick="openCertificateModal()">Request Verification</button>
+                    <h3 class="project-title" style="margin: 12px 0 6px;">B.Sc. (Hons.) Computer Science</h3>
+                    <p class="project-desc" style="font-size:0.82rem">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">Databases</span>
+                        <span class="meta-tag">ML Fundamentals</span>
+                    </div>
+                    <button class="btn btn-primary" style="width:100%" onclick="openRequestModal()">Request Certificate</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== ACHIEVEMENTS ===== -->
-    <section id="achievements">
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title">Featured Achievements</h2>
-            <div class="compact-grid">
-                <div class="metric-card">
-                    <div class="metric-value">₦4.5M+</div>
-                    <p style="font-size:0.85rem; color:var(--text-muted);">Project Cost Fully Reconciled</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">95.7%</div>
-                    <p style="font-size:0.85rem; color:var(--text-muted);">Cement Utilisation Rate</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">1,948m</div>
-                    <p style="font-size:0.85rem; color:var(--text-muted);">Excavation Analysed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TESTIMONIAL METRICS ===== -->
-    <section id="testimonials" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
-        <div class="container">
-            <h2 class="section-title">Strategic Feedback</h2>
-            <div class="testimonial-row">
-                <div class="testimonial-item">
-                    "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy data and present clear insights is exceptional."
-                    <div class="author">— Project Manager, Construction Firm</div>
-                </div>
-                <div class="testimonial-item">
-                    "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into actionable insights with ease."
-                    <div class="author">— Healthcare Data Lead</div>
-                </div>
-                <div class="testimonial-item">
-                    "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance. He's a reliable and skilled data professional."
-                    <div class="author">— Retail Operations Director</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MODERNIZED SECURE CONTACT MECHANISM ===== -->
-    <section id="contact" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
-        <div class="container">
-            <h2 class="section-title">Initiate Collaboration</h2>
+            <h2 class="section-title">Let's Connect!</h2>
             <div class="contact-layout">
                 <div class="form-card">
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="contactName">Your Name *</label>
-                            <input type="text" id="contactName" required placeholder="Your professional name" />
+                            <input type="text" id="contactName" required placeholder="Full name" />
                         </div>
                         <div class="form-group">
                             <label for="contactEmail">Your Email *</label>
-                            <input type="email" id="contactEmail" required placeholder="name@corporation.com" />
+                            <input type="email" id="contactEmail" required placeholder="your.email@example.com" />
                         </div>
                         <div class="form-group">
                             <label for="contactSubject">Subject *</label>
                             <select id="contactSubject" required>
+                                <option value="">Select a subject</option>
                                 <option value="Job Opportunity">Job Opportunity</option>
-                                <option value="Freelance Project">Freelance / Contract Project</option>
-                                <option value="Collaboration">Technical Collaboration</option>
+                                <option value="Freelance Project">Freelance Project</option>
+                                <option value="Collaboration">Collaboration</option>
                                 <option value="Resume Request - Data Analyst">Resume Request – Data Analyst</option>
                                 <option value="General Inquiry">General Inquiry</option>
                             </select>
@@ -1167,35 +796,32 @@
                             <label for="contactMessage">Message *</label>
                             <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+                        </button>
                     </form>
                     <div class="success-message" id="successMessage">
                         <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I'll get back to you soon!
                     </div>
                 </div>
-                <div>
-                    <h3 style="margin-bottom:12px; font-weight:600">Direct Access</h3>
-                    <p style="font-size:0.9rem; margin-bottom:24px">Connect via professional platforms or download my resume:</p>
-                    <div style="display:flex; flex-direction:column; gap:12px;">
-                        <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary" target="_blank" style="justify-content:center;"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="#" class="btn btn-primary" style="justify-content:center;" id="resumeBtn"><i class="fas fa-file-pdf"></i> Download Resume</a>
-                    </div>
+                <div class="contact-side">
+                    <h3>Direct Contact</h3>
+                    <p>Prefer to reach out directly? Use any of the links below — I typically reply within a day.</p>
+                    <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
             <p>Thanks for visiting my portfolio! 😊</p>
-            <p>&copy; 2026 Rotimi Omosewo – Operations Analyst · Data Analytics</p>
+            <p>&copy; 2026 Rotimi Omosewo – Data Analyst · Operations Analytics</p>
         </div>
     </footer>
 
-    <!-- ===== INTERACTIVE POPUP LIGHTBOX DOM ELEMENT ===== -->
     <div class="lightbox-modal" id="systemLightbox">
         <div class="lightbox-wrapper">
             <button class="close-lightbox" onclick="closeLightbox()">&times;</button>
@@ -1204,28 +830,51 @@
             </div>
             <div class="lightbox-desc">
                 <h3 id="lightboxTitle" style="margin-bottom:8px;">Project Title</h3>
-                <p id="lightboxText" style="font-size:0.9rem; color:var(--text-muted)">Detailed technical tracking logs are updated natively via live version management systems.</p>
+                <p id="lightboxText" style="font-size:0.9rem; color:var(--text-muted)"></p>
             </div>
         </div>
     </div>
 
-    <!-- ===== BACK TO TOP BUTTON ===== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <div class="form-modal" id="requestModal">
+        <div class="form-modal-wrapper">
+            <span class="close-form-modal" id="closeRequestModal">&times;</span>
+            <h3>Request BSc Certificate</h3>
+            <div class="modal-note">
+                <strong>Note:</strong> After submitting, your email client will open with a pre‑filled message. You must click <strong>Send</strong> to complete the request.
+            </div>
+            <form id="requestForm">
+                <div class="form-group">
+                    <label for="requesterName">Your Name *</label>
+                    <input type="text" id="requesterName" required placeholder="Full name" />
+                </div>
+                <div class="form-group">
+                    <label for="requesterEmail">Your Email *</label>
+                    <input type="email" id="requesterEmail" required placeholder="your.email@example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="requesterCompany">Company / Organization</label>
+                    <input type="text" id="requesterCompany" placeholder="Where do you work?" />
+                </div>
+                <div class="form-group">
+                    <label for="requestPurpose">Purpose of Request *</label>
+                    <textarea id="requestPurpose" required placeholder="Briefly explain why you need this…"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; padding: 12px;">
+                    <i class="fas fa-envelope"></i>&nbsp; Open Email Client
+                </button>
+            </form>
+        </div>
+    </div>
 
-    <!-- ===== RE-ENGINEERED PERFORMANCE SCRIPTS ===== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // ---- Optimized Metric Counter ----
+
             const counters = document.querySelectorAll('.kpi-number');
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-count'), 10);
                 if (isNaN(target)) return;
-                
                 let current = 0;
-                const increment = target / 60; 
+                const increment = target / 60;
                 const updateValue = () => {
                     current += increment;
                     if (current < target) {
@@ -1238,7 +887,6 @@
                 requestAnimationFrame(updateValue);
             });
 
-            // ---- Rigid Grid Filtering Controls ----
             const filterBtns = document.querySelectorAll('.filter-btn');
             const items = document.querySelectorAll('.portfolio-card');
 
@@ -1249,75 +897,113 @@
                     const value = btn.getAttribute('data-filter');
 
                     items.forEach(item => {
+                        const isFeatured = item.classList.contains('featured-item');
+                        const displayValue = isFeatured && window.innerWidth > 768 ? 'grid' : 'flex';
+
                         if (value === 'all') {
-                            item.style.display = item.classList.contains('featured-item') && window.innerWidth <= 768 ? 'flex' : (item.classList.contains('featured-item') ? 'grid' : 'flex');
+                            item.style.display = displayValue;
                         } else {
                             const tags = item.getAttribute('data-category').split(' ');
-                            if(tags.includes(value)) {
-                                item.style.display = item.classList.contains('featured-item') && window.innerWidth <= 768 ? 'flex' : (item.classList.contains('featured-item') ? 'grid' : 'flex');
-                            } else {
-                                item.style.display = 'none';
-                            }
+                            item.style.display = tags.includes(value) ? displayValue : 'none';
                         }
                     });
                 });
             });
 
-            // ---- Contact Transmission Pipeline ----
-            const form = document.getElementById('contactForm');
-            const success = document.getElementById('successMessage');
+            const contactForm = document.getElementById('contactForm');
+            const successMsg = document.getElementById('successMessage');
 
-            if (form) {
-                form.addEventListener('submit', function(e) {
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const name = document.getElementById('contactName').value;
                     const email = document.getElementById('contactEmail').value;
-                    const sub = document.getElementById('contactSubject').value;
-                    const text = document.getElementById('contactMessage').value;
+                    const subject = document.getElementById('contactSubject').value;
+                    const message = document.getElementById('contactMessage').value;
 
-                    const mailtoUrl = `mailto:omoseworotimi@gmail.com?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent("Sender: "+name+" ("+email+")\n\n"+text)}`;
-                    
-                    success.classList.add('show');
-                    setTimeout(() => {
-                        window.location.href = mailtoUrl;
-                        form.reset();
-                        setTimeout(() => { success.classList.remove('show'); }, 500);
-                    }, 800);
+                    const emailSubject = 'Portfolio Contact: ' + subject;
+                    const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject +
+                        '\n\nMessage:\n' + message;
+
+                    window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
+                        emailSubject) + '&body=' + encodeURIComponent(emailBody);
+
+                    successMsg.classList.add('show');
+                    contactForm.reset();
+                    setTimeout(function() { successMsg.classList.remove('show'); }, 5000);
                 });
             }
 
-            // ---- Resume Button (placeholder) ----
-            const resumeBtn = document.getElementById('resumeBtn');
-            if (resumeBtn) {
-                resumeBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('📄 Please upload your resume PDF to your GitHub repo and update the href in the "Resume" button.\n\nTip: Upload it via "Add file > Upload files" and then set the href to your file name, e.g., "resume.pdf".');
+            const requestModal = document.getElementById('requestModal');
+            const closeRequestModal = document.getElementById('closeRequestModal');
+            const requestForm = document.getElementById('requestForm');
+
+            if (closeRequestModal) {
+                closeRequestModal.addEventListener('click', function() {
+                    requestModal.style.display = 'none';
+                    document.body.style.overflow = '';
                 });
             }
 
-            // ---- Back to Top ----
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
+            window.addEventListener('click', function(e) {
+                if (e.target === requestModal) {
+                    requestModal.style.display = 'none';
+                    document.body.style.overflow = '';
                 }
             });
 
-            backToTop.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (requestForm) {
+                requestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('requesterName').value;
+                    const email = document.getElementById('requesterEmail').value;
+                    const company = document.getElementById('requesterCompany').value;
+                    const purpose = document.getElementById('requestPurpose').value;
+
+                    const subject = 'BSc Certificate Request';
+                    const body = 'Hello Rotimi,\n\nI would like to request a copy of your BSc certificate for verification.\n\nName: ' +
+                        name + '\nEmail: ' + email + '\nCompany: ' + company + '\nPurpose: ' + purpose +
+                        '\n\nPlease let me know how you would like to proceed.';
+
+                    window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
+                        subject) + '&body=' + encodeURIComponent(body);
+
+                    setTimeout(function() {
+                        requestModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                        requestForm.reset();
+                    }, 500);
+                });
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            const navHeight = document.querySelector('nav').offsetHeight || 60;
+                            const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                            window.scrollTo({ top: targetPos, behavior: 'smooth' });
+                        }
+                    }
+                });
             });
 
-            // ---- Active nav link on scroll ----
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-links a');
+            const scrollProgress = document.getElementById('scrollProgress');
             let ticking = false;
 
             window.addEventListener('scroll', function() {
                 if (!ticking) {
                     window.requestAnimationFrame(function() {
+                        if (scrollProgress) {
+                            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                            const pct = docHeight > 0 ? (window.pageYOffset / docHeight) * 100 : 0;
+                            scrollProgress.style.width = pct + '%';
+                        }
                         let current = '';
                         sections.forEach(function(section) {
                             const top = section.offsetTop - 120;
@@ -1328,10 +1014,8 @@
                         navLinks.forEach(function(link) {
                             const href = link.getAttribute('href');
                             if (href === '#' + current) {
-                                link.style.color = '#0f6e5f';
                                 link.classList.add('active-link');
                             } else {
-                                link.style.color = '';
                                 link.classList.remove('active-link');
                             }
                         });
@@ -1340,10 +1024,8 @@
                     ticking = true;
                 }
             });
-
         });
 
-        // ---- Modern Lightbox Framework Controls ----
         const lightbox = document.getElementById('systemLightbox');
         const lTitle = document.getElementById('lightboxTitle');
         const lText = document.getElementById('lightboxText');
@@ -1352,7 +1034,7 @@
         function openLightbox(title, description, iconClass) {
             lTitle.textContent = title;
             lText.textContent = description;
-            lIconBox.innerHTML = `<i class="${iconClass}"></i>`;
+            lIconBox.innerHTML = '<i class="' + iconClass + '"></i>';
             lightbox.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
@@ -1362,28 +1044,15 @@
             document.body.style.overflow = '';
         }
 
-        function openCertificateModal() {
-            openLightbox(
-                'B.Sc. Computer Science Verification Protocol',
-                'To maintain rigorous security integrity metrics, direct cryptographic visual access keys for institutional certifications are provisioned on demand. An email transaction prompt has been scheduled to transmit routing specifications securely.',
-                'fas fa-user-graduate'
-            );
-        }
-
-        // Close lightbox on peripheral mouse click events
         window.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
 
-        // ---- Keyboard support for lightbox ----
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                if (lightbox.style.display === 'flex') {
-                    closeLightbox();
-                }
-            }
-        });
+        function openRequestModal() {
+            const requestModal = document.getElementById('requestModal');
+            requestModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
     </script>
-
 </body>
 </html>
