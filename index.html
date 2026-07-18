@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio</title>
-    <meta name="description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
-    <meta name="keywords" content="Data Analyst, Operations Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
+    <title>Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio</title>
+    <meta name="description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
+    <meta name="keywords" content="Operations Analyst, Data Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
     <meta name="author" content="Rotimi Omosewo" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
-    <meta property="og:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
+    <meta property="og:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
+    <meta property="og:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rotimi2020.github.io" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
-    <meta name="twitter:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel." />
+    <meta name="twitter:title" content="Rotimi Omosewo – Operations Analyst | Data Analyst Portfolio" />
+    <meta name="twitter:description" content="Operations Analyst & Data Analyst specializing in Python, SQL, Power BI, and Excel." />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -964,6 +964,13 @@
             box-shadow: 0 8px 22px rgba(15, 110, 95, 0.22);
         }
 
+        .contact-btn.resume {
+            background: var(--gold);
+        }
+        .contact-btn.resume:hover {
+            background: #a8722f;
+        }
+
         /* ===== MODAL ===== */
         .modal {
             display: none;
@@ -1063,6 +1070,40 @@
 
         .email-instructions strong {
             color: var(--text);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--secondary);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(15, 110, 95, 0.25);
+            transition: all 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: #0c5849;
+            transform: scale(1.06);
         }
 
         /* ===== FOOTER ===== */
@@ -1323,12 +1364,11 @@
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user placeholder-icon\'></i>';" />
                 </div>
 
-                <!-- Primary title: "Data Analyst" for maximum job-search visibility -->
                 <h1>Hi, I'm Rotimi</h1>
                 <p class="tagline">
-                    <span class="highlight">Data Analyst</span>
+                    <span class="highlight">Operations Analyst</span>
                     <span style="font-weight:300; margin:0 6px;">·</span>
-                    Operations Analytics
+                    Data Analytics
                     <br />
                     <span class="skill-strip">
                         <span>🐍 Python</span>
@@ -1384,19 +1424,11 @@
                 <div class="about-text">
 
                     <p>
-                        I'm a <strong>Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an
-                        <strong>IBM Data Science Professional Certificate</strong>. I specialise in
-                        <strong>Operations Analytics</strong> — building robust, end‑to‑end data workflows that
-                        transform raw operational data into clear insights, interactive dashboards, and
-                        production‑ready web applications.
+                        I'm an <strong>Operations Analyst &amp; Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an <strong>IBM Data Science Professional Certificate</strong>. I specialise in <strong>Operations Analytics</strong> — building robust, end‑to‑end data workflows that transform raw operational data into clear insights, interactive dashboards, and deployed web applications.
                     </p>
 
                     <p>
-                        My portfolio demonstrates a complete analytics lifecycle using <strong>real construction
-                        operations data</strong>, from raw WhatsApp logs → Excel cleaning → SQL modelling →
-                        Python analysis → Power BI dashboards → Django web deployment. This framework is
-                        <strong>industry‑agnostic</strong> and equally applicable to healthcare, manufacturing,
-                        logistics, energy, and finance.
+                        My portfolio demonstrates a complete analytics lifecycle using <strong>real construction operations data</strong>: raw WhatsApp logs → Excel cleaning → SQL modelling → Python analysis → Power BI dashboards → Django web deployment. This framework is <strong>industry‑agnostic</strong> and equally applicable to <strong>healthcare, manufacturing, logistics, energy, and finance</strong>.
                     </p>
 
                     <p><strong>What I deliver:</strong></p>
@@ -1405,12 +1437,11 @@
                         <li><strong>Dashboards &amp; BI:</strong> Power BI, Django, Streamlit, Plotly</li>
                         <li><strong>Predictive Analytics:</strong> Scikit‑Learn, time‑series forecasting, classification</li>
                         <li><strong>Business Impact:</strong> ₦4.5M+ reconciled, 95.7% utilisation, 1,948m excavation analysed</li>
+                        <li><strong>Stakeholder Communication:</strong> Clear narrative reporting and executive summaries for data‑driven decision‑making</li>
                     </ul>
 
                     <p>
-                        I'm actively seeking <strong>Data Analyst</strong> or <strong>Operations Analyst</strong>
-                        roles where I can apply analytics, automation, and business intelligence to improve
-                        operational performance and drive data‑driven decision‑making.
+                        I'm currently available for <strong>Operations Analyst</strong> or <strong>Data Analyst</strong> roles where I can apply analytics, automation, and business intelligence to <strong>optimise operational performance</strong>, reduce costs, and drive data‑driven strategy.
                     </p>
 
                     <div class="education-block">
@@ -1664,7 +1695,7 @@
                             <span class="cert-tag">Python</span>
                             <span class="cert-tag">ML</span>
                         </div>
-                        <p class="cert-desc">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
+                        <p class="cert-desc">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning. <strong>Keep – shows formal training &amp; breadth.</strong></p>
                         <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="cert-link" target="_blank">View Credential</a>
                     </div>
                 </div>
@@ -1765,6 +1796,7 @@
                 <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/rotimi2020" class="contact-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:omoseworotimi@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="#" class="contact-btn resume" id="resumeBtn"><i class="fas fa-file-pdf"></i> Resume</a>
             </div>
         </div>
     </section>
@@ -1773,7 +1805,7 @@
     <footer>
         <div class="container">
             <p>Thanks for visiting my portfolio! 😊</p>
-            <p>&copy; 2026 Rotimi Omosewo – Data Analyst · Operations Analytics</p>
+            <p>&copy; 2026 Rotimi Omosewo – Operations Analyst · Data Analytics</p>
         </div>
     </footer>
 
@@ -1808,6 +1840,11 @@
             </form>
         </div>
     </div>
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <!-- ===== SCRIPTS ===== -->
     <script>
@@ -1934,6 +1971,16 @@
                 });
             }
 
+            // ---- Resume Button (placeholder) ----
+            const resumeBtn = document.getElementById('resumeBtn');
+            if (resumeBtn) {
+                resumeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Replace this with your actual resume PDF URL (e.g., "https://your-link.com/resume.pdf")
+                    alert('📄 Please upload your resume PDF to your GitHub repo and update the href in the "Resume" button.\n\nTip: Upload it via "Add file > Upload files" and then set the href to your file name, e.g., "resume.pdf".');
+                });
+            }
+
             // ---- Run Counter ----
             animateCounters();
 
@@ -1954,14 +2001,16 @@
                 });
             });
 
-            // ---- Active nav link on scroll (with performance throttle) ----
+            // ---- Active nav link on scroll + Back to Top visibility ----
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-links a');
+            const backToTop = document.getElementById('backToTop');
             let ticking = false;
 
             window.addEventListener('scroll', function() {
                 if (!ticking) {
                     window.requestAnimationFrame(function() {
+                        // Nav highlight
                         let current = '';
                         sections.forEach(function(section) {
                             const top = section.offsetTop - 120;
@@ -1979,11 +2028,27 @@
                                 link.classList.remove('active-link');
                             }
                         });
+
+                        // Back to top visibility
+                        if (window.pageYOffset > 300) {
+                            backToTop.classList.add('visible');
+                        } else {
+                            backToTop.classList.remove('visible');
+                        }
+
                         ticking = false;
                     });
                     ticking = true;
                 }
             });
+
+            // ---- Back to top smooth scroll ----
+            if (backToTop) {
+                backToTop.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
         });
     </script>
