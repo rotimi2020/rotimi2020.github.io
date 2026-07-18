@@ -103,7 +103,6 @@
             position: relative; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* ===== LEFT-ALIGNED HEADER (as before) ===== */
         .profile {
             display: grid;
             grid-template-columns: 140px 1fr;
@@ -235,15 +234,15 @@
         .portfolio-card {
             background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border);
             overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);
-            transition: transform 0.25s ease, box-shadow 0.25s ease; position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
         }
 
-        .portfolio-card.zoom-out {
-            transform: scale(0.96);
-            box-shadow: var(--shadow-sm);
+        /* ===== FIXED: combined transform on hover ===== */
+        .portfolio-card.zoom-out:hover {
+            transform: translateY(-4px) scale(0.96);
+            box-shadow: var(--shadow-lg);
         }
-
-        .portfolio-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
         .card-preview-area {
             height: 160px; display: flex; align-items: center; justify-content: center;
@@ -308,7 +307,6 @@
 
         .compact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-        /* ===== FIXED CERTIFICATION CARDS ===== */
         .metric-card {
             background: var(--bg-surface); padding: 24px; border-radius: var(--radius-md);
             border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm);
@@ -322,7 +320,6 @@
         .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
         .metric-card .meta-tags { justify-content: center; margin-top: 8px; }
 
-        /* ===== TESTIMONIALS ===== */
         .testimonial-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
         }
@@ -441,7 +438,6 @@
         }
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .showcase-grid, .compact-grid, .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
