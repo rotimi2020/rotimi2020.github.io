@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio</title>
-    <meta name="description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Django. Real-world analytics across construction, healthcare, retail, and energy." />
+    <title>Rotimi Omosewo | Data Analyst | Operations Analyst | Python | SQL | Power BI Portfolio</title>
+    <meta name="description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel. Real-world analytics across construction, healthcare, retail, and energy." />
     <meta name="keywords" content="Data Analyst, Operations Analyst, Business Intelligence, Python, SQL, Power BI, Excel, Django, Analytics Portfolio, Rotimi Omosewo" />
     <meta name="author" content="Rotimi Omosewo" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
+    <meta property="og:title" content="Rotimi Omosewo | Data Analyst | Operations Analyst | Python | SQL | Power BI Portfolio" />
     <meta property="og:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel. View my analytics projects and technical expertise." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rotimi2020.github.io" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rotimi Omosewo – Data Analyst | Operations Analytics Portfolio" />
+    <meta name="twitter:title" content="Rotimi Omosewo | Data Analyst | Operations Analyst | Python | SQL | Power BI Portfolio" />
     <meta name="twitter:description" content="Data Analyst specializing in Operations Analytics, Python, SQL, Power BI, and Excel." />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
@@ -160,8 +160,16 @@
         .quick-note p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
         .quick-note strong { color: #fff; }
 
-        .kpi-row { display: flex; gap: 40px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; flex-wrap: wrap; justify-content: flex-start; }
-        .kpi-item { display: flex; flex-direction: column; }
+        .kpi-row { 
+            display: flex; gap: 40px; margin-top: 24px; 
+            border-top: 1px solid rgba(255,255,255,0.08); 
+            padding-top: 20px; flex-wrap: wrap; 
+            justify-content: flex-start; 
+        }
+        .kpi-item { 
+            display: flex; flex-direction: column; 
+            align-items: center; text-align: center;
+        }
         .kpi-number { font-size: 1.8rem; font-weight: 700; color: #fff; }
         .kpi-label { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
@@ -238,7 +246,6 @@
             position: relative;
         }
 
-        /* ===== FIXED: combined transform on hover ===== */
         .portfolio-card.zoom-out:hover {
             transform: translateY(-4px) scale(0.96);
             box-shadow: var(--shadow-lg);
@@ -307,7 +314,6 @@
 
         .compact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-        /* ===== FIXED CERTIFICATION CARDS with hover effect ===== */
         .metric-card {
             background: var(--bg-surface); padding: 24px; border-radius: var(--radius-md);
             border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm);
@@ -326,40 +332,6 @@
 
         .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
         .metric-card .meta-tags { justify-content: center; margin-top: 8px; }
-
-        .testimonial-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-        }
-
-        .testimonial-card {
-            background: var(--bg-surface); padding: 28px 24px; border-radius: var(--radius-md);
-            border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .testimonial-card .quote-icon {
-            color: var(--accent); font-size: 1.8rem; opacity: 0.3; margin-bottom: 12px;
-        }
-
-        .testimonial-card .testimonial-text {
-            font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; font-style: italic;
-        }
-
-        .testimonial-card .testimonial-author {
-            margin-top: 16px; font-weight: 600; color: var(--text-main); font-size: 0.85rem;
-            display: flex; align-items: center; gap: 8px;
-        }
-
-        .testimonial-card .testimonial-author::before {
-            content: ''; display: inline-block; width: 24px; height: 2px; background: var(--accent);
-            border-radius: 2px;
-        }
 
         .contact-layout { display: grid; grid-template-columns: 5fr 4fr; gap: 40px; align-items: start; }
 
@@ -391,6 +363,20 @@
         .contact-side h3 { margin-bottom: 12px; font-weight: 600; }
         .contact-side p { font-size: 0.9rem; margin-bottom: 24px; }
         .contact-side .btn { margin-right: 8px; margin-bottom: 8px; }
+
+        /* Resume Request Note */
+        .resume-note {
+            display: none;
+            background: var(--bg-base);
+            border-left: 3px solid var(--accent);
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+        .resume-note.show { display: block; }
+        .resume-note strong { color: var(--text-main); }
 
         .lightbox-modal, .form-modal {
             display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.8);
@@ -446,7 +432,7 @@
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
         @media (max-width: 1024px) {
-            .showcase-grid, .compact-grid, .testimonial-grid {
+            .showcase-grid, .compact-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .portfolio-card.featured-item { grid-column: span 2; }
@@ -467,7 +453,7 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .showcase-grid, .compact-grid, .testimonial-grid, .contact-layout {
+            .showcase-grid, .compact-grid, .contact-layout {
                 grid-template-columns: 1fr;
             }
             .portfolio-card.featured-item {
@@ -478,7 +464,6 @@
             .portfolio-card.featured-item .card-preview-area { height: 160px; }
             .about-card ul { grid-template-columns: 1fr; }
             nav .container { flex-direction: column; gap: 12px; }
-            .testimonial-grid { grid-template-columns: 1fr; }
             .compact-grid { grid-template-columns: 1fr; }
             .header-socials { justify-content: center; }
         }
@@ -505,7 +490,6 @@
             .lightbox-img-container { height: 160px; font-size: 3rem; }
             .compact-grid { gap: 16px; }
             .metric-card { padding: 16px; }
-            .testimonial-card { padding: 20px; }
         }
     </style>
 </head>
@@ -522,7 +506,6 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certifications</a>
-                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -535,9 +518,9 @@
                     <img src="avatar-placeholder.jpg" alt="Rotimi Omosewo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user placeholder-icon\'></i>';" />
                 </div>
                 <div class="header-info">
-                    <h1>Hi, I'm Rotimi</h1>
-                    <p class="tagline"><span class="highlight">Data Analyst</span> · Operations Analytics</p>
-                    <div class="availability-badge"><span class="dot"></span> Available for Remote Work</div>
+                    <h1>Rotimi Omosewo</h1>
+                    <p class="tagline"><span class="highlight">Data Analyst</span> · Operations Analytics · Business Intelligence</p>
+                    <div class="availability-badge"><span class="dot"></span> Open to Remote · Hybrid · International</div>
                     <div class="skill-strip">
                         <span>🐍 Python</span>
                         <span>🗄️ SQL</span>
@@ -550,7 +533,7 @@
 
             <div class="quick-note">
                 <p>
-                    <strong>📊 Operations Analytics Framework:</strong> I build end‑to‑end data pipelines that turn raw operational records into clean datasets, interactive dashboards, and deployed web apps. Built on construction data, but the workflow is industry‑agnostic — the same approach scales to healthcare, manufacturing, logistics, energy, and finance.
+                    <strong>📊 Operations Analytics Framework:</strong> I build scalable analytics solutions that transform raw operational data into dashboards, reports, forecasts and business insights. While my flagship portfolio uses construction operations, the same methodology applies across healthcare, manufacturing, retail, logistics, finance and energy.
                 </p>
             </div>
 
@@ -558,15 +541,15 @@
                 <div class="kpi-row">
                     <div class="kpi-item">
                         <span class="kpi-number" data-count="8">0</span>
-                        <span class="kpi-label">Analytics Projects</span>
+                        <span class="kpi-label">+ Projects</span>
                     </div>
                     <div class="kpi-item">
                         <span class="kpi-number" data-count="5">0</span>
-                        <span class="kpi-label">Years of Analytics</span>
+                        <span class="kpi-label">+ Years Building</span>
                     </div>
                     <div class="kpi-item">
-                        <span class="kpi-number" data-count="12">0</span>
-                        <span class="kpi-label">Tools &amp; Technologies</span>
+                        <span class="kpi-number" data-count="15">0</span>
+                        <span class="kpi-label">+ Technologies</span>
                     </div>
                 </div>
                 <div class="header-socials">
@@ -636,6 +619,8 @@
                 <div class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</div>
                 <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
                 <div class="skill-tag"><i class="fas fa-file-excel"></i> Excel (Power Query)</div>
+                <div class="skill-tag"><i class="fas fa-table"></i> DAX</div>
+                <div class="skill-tag"><i class="fas fa-exchange-alt"></i> Power Query</div>
             </div> <br>
 
             <div class="skills-subtitle">Tools &amp; Technologies</div>
@@ -647,10 +632,9 @@
                 <div class="skill-tag"><i class="fas fa-rocket"></i> Streamlit</div>
                 <div class="skill-tag"><i class="fas fa-code"></i> VS Code</div>
                 <div class="skill-tag"><i class="fas fa-book"></i> Jupyter Notebook</div>
-                <div class="skill-tag"><i class="fas fa-cloud"></i> Azure ML</div>
-                <div class="skill-tag"><i class="fas fa-project-diagram"></i> KNIME</div>
-                <div class="skill-tag"><i class="fas fa-chart-bar"></i> SPSS Modeler</div>
-                <div class="skill-tag"><i class="fas fa-magic"></i> PyCaret</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Tableau</div>
+                <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+                <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
             </div>
         </div>
     </section>
@@ -672,8 +656,8 @@
                     <p class="project-desc" style="margin-bottom:0;">Excavation Analysed</p>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">86</div>
-                    <p class="project-desc" style="margin-bottom:0;">Reinforcement Baskets Produced</p>
+                    <div class="metric-value">909</div>
+                    <p class="project-desc" style="margin-bottom:0;">Cement Bags Tracked</p>
                 </div>
             </div>
         </div>
@@ -688,8 +672,6 @@
                 <button class="filter-btn" data-filter="operations">Operations</button>
                 <button class="filter-btn" data-filter="powerbi">Power BI</button>
                 <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="datascience">Data Science</button>
-                <button class="filter-btn" data-filter="machinelearning">ML</button>
                 <button class="filter-btn" data-filter="sql">SQL</button>
                 <button class="filter-btn" data-filter="excel">Excel</button>
                 <button class="filter-btn" data-filter="django">Django</button>
@@ -697,6 +679,7 @@
             </div>
 
             <div class="showcase-grid">
+                <!-- Featured: Construction Operations Analytics -->
                 <div class="portfolio-card featured-item" data-category="operations python sql powerbi django">
                     <div class="card-preview-area construction" onclick="openLightbox('Construction Operations Analytics', 'End-to-end pipeline transforming raw WhatsApp construction logs into structured data, interactive Power BI dashboards, and a live Django web app. \u20a64.5M reconciled, 95.7% cement utilisation, 1,948m excavation analysed. Industry-agnostic: the same workflow applies to healthcare, manufacturing, logistics, energy, and finance.', 'fas fa-hard-hat')">
                         <i class="fas fa-hard-hat"></i>
@@ -729,7 +712,8 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-category="powerbi python datascience machinelearning sql operations">
+                <!-- Rossmann Sales Forecasting -->
+                <div class="portfolio-card" data-category="powerbi python sql operations">
                     <div class="card-preview-area rossmann" onclick="openLightbox('Rossmann Sales Forecasting', 'Time-series models to forecast store sales, analyse promotional impact, and benchmark performance.', 'fas fa-chart-line')">
                         <i class="fas fa-chart-line"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
@@ -740,7 +724,6 @@
                         <div class="meta-tags">
                             <span class="meta-tag">Power BI</span>
                             <span class="meta-tag">Python</span>
-                            <span class="meta-tag">ML</span>
                             <span class="meta-tag">SQL</span>
                         </div>
                         <div class="card-actions">
@@ -749,7 +732,8 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-category="powerbi python datascience machinelearning sql excel operations">
+                <!-- NHANES Diabetes Analysis -->
+                <div class="portfolio-card" data-category="powerbi python sql excel operations">
                     <div class="card-preview-area nhanes" onclick="openLightbox('NHANES Diabetes Analysis', 'Explored NHANES health data to uncover diabetes risk factors and built predictive models for risk assessment.', 'fas fa-heartbeat')">
                         <i class="fas fa-heartbeat"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
@@ -760,7 +744,6 @@
                         <div class="meta-tags">
                             <span class="meta-tag">Power BI</span>
                             <span class="meta-tag">Python</span>
-                            <span class="meta-tag">ML</span>
                             <span class="meta-tag">Excel</span>
                         </div>
                         <div class="card-actions">
@@ -769,7 +752,8 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-category="python django datascience operations">
+                <!-- Superstore Viz Django App -->
+                <div class="portfolio-card" data-category="python django operations">
                     <div class="card-preview-area django" onclick="openLightbox('Superstore Viz Django App', 'Interactive Django web dashboard exploring Superstore data with Plotly visualisations and analytics components.', 'fas fa-store')">
                         <i class="fas fa-store"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
@@ -789,7 +773,8 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-category="python datascience machinelearning streamlit operations">
+                <!-- PowerCo Churn & Price Analysis -->
+                <div class="portfolio-card" data-category="python streamlit operations">
                     <div class="card-preview-area powerco" onclick="openLightbox('PowerCo Churn &amp; Price Analysis', 'Analysed PowerCo customer data to identify churn drivers and build predictive models using Python and Streamlit.', 'fas fa-bolt')">
                         <i class="fas fa-bolt"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
@@ -800,7 +785,6 @@
                         <div class="meta-tags">
                             <span class="meta-tag">Python</span>
                             <span class="meta-tag">Streamlit</span>
-                            <span class="meta-tag">ML</span>
                         </div>
                         <div class="card-actions">
                             <a href="https://github.com/rotimi2020/PowerCo-Churn-Analysis-Python" class="btn btn-secondary" target="_blank">View Project</a>
@@ -808,7 +792,8 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-category="datascience python machinelearning operations">
+                <!-- IBM Data Science Capstone -->
+                <div class="portfolio-card" data-category="python operations">
                     <div class="card-preview-area ibm" onclick="openLightbox('IBM Data Science Capstone', 'Applied K-Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.', 'fas fa-map-marked-alt')">
                         <i class="fas fa-map-marked-alt"></i>
                         <div class="zoom-hint"><i class="fas fa-search-plus"></i> View Details</div>
@@ -817,7 +802,6 @@
                         <h3 class="project-title">IBM Data Science Capstone</h3>
                         <p class="project-desc">Applied K‑Means clustering and data analysis to solve location optimisation problems across the full data science lifecycle.</p>
                         <div class="meta-tags">
-                            <span class="meta-tag">Data Science</span>
                             <span class="meta-tag">Python</span>
                             <span class="meta-tag">Clustering</span>
                         </div>
@@ -870,33 +854,9 @@
         </div>
     </section>
 
-    <!-- ===== TESTIMONIALS SECTION ===== -->
-    <section id="testimonials" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
-        <div class="container">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy data and present clear insights is exceptional."</p>
-                    <div class="testimonial-author">Project Manager, Construction Firm</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into actionable insights with ease."</p><br>
-                    <div class="testimonial-author">Healthcare Data Lead</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance. He's a reliable and skilled data professional."</p><br>
-                    <div class="testimonial-author">Retail Operations Director</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Let's Connect!</h2>
+            <h2 class="section-title">Let's Connect</h2>
             <div class="contact-layout">
                 <div class="form-card">
                     <form id="contactForm">
@@ -915,9 +875,13 @@
                                 <option value="Job Opportunity">Job Opportunity</option>
                                 <option value="Freelance Project">Freelance Project</option>
                                 <option value="Collaboration">Collaboration</option>
-                                <option value="Resume Request - Data Analyst">Resume Request – Data Analyst</option>
+                                <option value="Resume Request">Resume Request</option>
                                 <option value="General Inquiry">General Inquiry</option>
                             </select>
+                        </div>
+                        <!-- Resume Request Note -->
+                        <div class="resume-note" id="resumeNote">
+                            <strong>📄 Resume Request:</strong> Please specify the role, company, and any key requirements (e.g., industry, must-have skills).
                         </div>
                         <div class="form-group">
                             <label for="contactMessage">Message *</label>
@@ -937,6 +901,10 @@
                     <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
+                    <br><br>
+                    <a href="resume-rotimi-omosewo-data-analyst.pdf" class="btn btn-primary" download style="width:100%; justify-content:center;">
+                        <i class="fas fa-file-pdf"></i>&nbsp; Download Resume / CV
+                    </a>
                 </div>
             </div>
         </div>
@@ -944,8 +912,8 @@
 
     <footer>
         <div class="container">
-            <p>Thanks for visiting my portfolio! 😊</p>
-            <p>&copy; 2026 Rotimi Omosewo – Data Analyst · Operations Analytics</p>
+            <p>Transforming Data into Business Value.</p>
+            <p>&copy; 2026 Rotimi Omosewo – Data Analyst · Operations Analytics · Business Intelligence</p>
         </div>
     </footer>
 
@@ -1037,6 +1005,20 @@
                 });
             });
 
+            // Resume Request Note toggle
+            const subjectSelect = document.getElementById('contactSubject');
+            const resumeNote = document.getElementById('resumeNote');
+
+            if (subjectSelect && resumeNote) {
+                subjectSelect.addEventListener('change', function() {
+                    if (this.value === 'Resume Request') {
+                        resumeNote.classList.add('show');
+                    } else {
+                        resumeNote.classList.remove('show');
+                    }
+                });
+            }
+
             const contactForm = document.getElementById('contactForm');
             const successMsg = document.getElementById('successMessage');
 
@@ -1048,15 +1030,22 @@
                     const subject = document.getElementById('contactSubject').value;
                     const message = document.getElementById('contactMessage').value;
 
+                    // If Resume Request, add a helpful note to the email body
+                    let extraNote = '';
+                    if (subject === 'Resume Request') {
+                        extraNote = '\n\n[Resume Request] Please specify the role, company, and any key requirements (e.g., industry, must-have skills).';
+                    }
+
                     const emailSubject = 'Portfolio Contact: ' + subject;
                     const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject +
-                        '\n\nMessage:\n' + message;
+                        '\n\nMessage:\n' + message + extraNote;
 
                     window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
                         emailSubject) + '&body=' + encodeURIComponent(emailBody);
 
                     successMsg.classList.add('show');
                     contactForm.reset();
+                    resumeNote.classList.remove('show');
                     setTimeout(function() { successMsg.classList.remove('show'); }, 5000);
                 });
             }
@@ -1152,7 +1141,6 @@
                 }
             });
 
-            // ===== CARD ZOOM-OUT ON HOVER =====
             const cards = document.querySelectorAll('.portfolio-card');
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
