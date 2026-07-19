@@ -339,6 +339,63 @@
         .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
         .metric-card .meta-tags { justify-content: center; margin-top: 8px; }
 
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-surface);
+            padding: 28px 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card .quote-icon {
+            color: var(--accent);
+            font-size: 1.8rem;
+            opacity: 0.3;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card .testimonial-text {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-style: italic;
+            flex-grow: 1;
+        }
+
+        .testimonial-card .testimonial-author {
+            margin-top: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .testimonial-card .testimonial-author::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
         .contact-layout { display: grid; grid-template-columns: 5fr 4fr; gap: 40px; align-items: start; }
 
         .form-card {
@@ -354,11 +411,31 @@
             font-size: 0.9rem; background: var(--bg-base); color: var(--text-main); outline: none; font-family: inherit;
         }
 
+        .form-group input[type="file"] {
+            padding: 8px 10px;
+            background: var(--bg-base);
+            border: 1px dashed var(--border);
+            cursor: pointer;
+        }
+
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: var(--accent); background: #fff;
         }
 
         .form-group textarea { resize: vertical; min-height: 90px; }
+
+        .file-upload-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .file-upload-wrapper .file-name {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
 
         .success-message {
             display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 12px;
@@ -438,7 +515,7 @@
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
         @media (max-width: 1024px) {
-            .showcase-grid, .compact-grid {
+            .showcase-grid, .compact-grid, .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .portfolio-card.featured-item { grid-column: span 2; }
@@ -459,7 +536,7 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .showcase-grid, .compact-grid, .contact-layout {
+            .showcase-grid, .compact-grid, .contact-layout, .testimonial-grid {
                 grid-template-columns: 1fr;
             }
             .portfolio-card.featured-item {
@@ -496,6 +573,7 @@
             .lightbox-img-container { height: 160px; font-size: 3rem; }
             .compact-grid { gap: 16px; }
             .metric-card { padding: 16px; }
+            .testimonial-card { padding: 20px; }
         }
     </style>
 </head>
@@ -512,6 +590,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certifications</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -568,7 +647,7 @@
         </div>
     </header>
 
-    <!-- ===== UPDATED ABOUT ME SECTION ===== -->
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -616,6 +695,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
         <div class="container">
             <h2 class="section-title">Core Skills &amp; Tools</h2>
@@ -656,6 +736,7 @@
         </div>
     </section>
 
+    <!-- Featured Achievements -->
     <section id="achievements">
         <div class="container">
             <h2 class="section-title">Featured Achievements</h2>
@@ -680,6 +761,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
@@ -831,6 +913,7 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
     <section id="certifications" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
         <div class="container">
             <h2 class="section-title">Certifications &amp; Training</h2>
@@ -870,6 +953,37 @@
         </div>
     </section>
 
+    <!-- ===== NEW TESTIMONIALS SECTION ===== -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy WhatsApp data and present clear, actionable insights is exceptional. He saved us hours of manual reconciliation."
+                    </p>
+                    <div class="testimonial-author">Project Manager, Construction Firm</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into clear visualisations that even non-technical stakeholders can understand. A reliable and detail-oriented analyst."
+                    </p>
+                    <div class="testimonial-author">Healthcare Data Lead</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance across regions. He built it quickly, communicated clearly via written updates, and delivered exactly what we needed—no unnecessary meetings."
+                    </p>
+                    <div class="testimonial-author">Retail Operations Director</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Resume Upload Button -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
@@ -903,6 +1017,19 @@
                             <label for="contactMessage">Message *</label>
                             <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
                         </div>
+
+                        <!-- ===== NEW UPLOAD RESUME BUTTON ===== -->
+                        <div class="form-group">
+                            <label for="resumeUpload">Upload Your Resume / CV (Optional)</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" />
+                                <span class="file-name" id="fileName">No file selected</span>
+                            </div>
+                            <small style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:4px;">
+                                Accepted formats: PDF, DOC, DOCX (Max 5MB)
+                            </small>
+                        </div>
+
                         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">
                             <i class="fas fa-paper-plane"></i>&nbsp; Send Message
                         </button>
@@ -1031,6 +1158,20 @@
                 });
             }
 
+            // File upload display
+            const fileInput = document.getElementById('resumeUpload');
+            const fileNameDisplay = document.getElementById('fileName');
+
+            if (fileInput && fileNameDisplay) {
+                fileInput.addEventListener('change', function() {
+                    if (this.files && this.files.length > 0) {
+                        fileNameDisplay.textContent = this.files[0].name;
+                    } else {
+                        fileNameDisplay.textContent = 'No file selected';
+                    }
+                });
+            }
+
             const contactForm = document.getElementById('contactForm');
             const successMsg = document.getElementById('successMessage');
 
@@ -1041,6 +1182,12 @@
                     const email = document.getElementById('contactEmail').value;
                     const subject = document.getElementById('contactSubject').value;
                     const message = document.getElementById('contactMessage').value;
+                    const fileInput = document.getElementById('resumeUpload');
+                    let fileName = 'No file attached';
+
+                    if (fileInput && fileInput.files && fileInput.files.length > 0) {
+                        fileName = fileInput.files[0].name;
+                    }
 
                     // If Resume Request, add a helpful note to the email body
                     let extraNote = '';
@@ -1050,6 +1197,7 @@
 
                     const emailSubject = 'Portfolio Contact: ' + subject;
                     const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject +
+                        '\nResume/CV Attached: ' + fileName +
                         '\n\nMessage:\n' + message + extraNote;
 
                     window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
@@ -1057,6 +1205,7 @@
 
                     successMsg.classList.add('show');
                     contactForm.reset();
+                    if (fileNameDisplay) fileNameDisplay.textContent = 'No file selected';
                     resumeNote.classList.remove('show');
                     setTimeout(function() { successMsg.classList.remove('show'); }, 5000);
                 });
