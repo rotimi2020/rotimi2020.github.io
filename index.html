@@ -411,31 +411,11 @@
             font-size: 0.9rem; background: var(--bg-base); color: var(--text-main); outline: none; font-family: inherit;
         }
 
-        .form-group input[type="file"] {
-            padding: 8px 10px;
-            background: var(--bg-base);
-            border: 1px dashed var(--border);
-            cursor: pointer;
-        }
-
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: var(--accent); background: #fff;
         }
 
         .form-group textarea { resize: vertical; min-height: 90px; }
-
-        .file-upload-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .file-upload-wrapper .file-name {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
 
         .success-message {
             display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 12px;
@@ -953,7 +933,7 @@
         </div>
     </section>
 
-    <!-- ===== NEW TESTIMONIALS SECTION ===== -->
+    <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
             <h2 class="section-title">Testimonials</h2>
@@ -983,7 +963,7 @@
         </div>
     </section>
 
-    <!-- Contact Section with Resume Upload Button -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
@@ -1017,19 +997,6 @@
                             <label for="contactMessage">Message *</label>
                             <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
                         </div>
-
-                        <!-- ===== NEW UPLOAD RESUME BUTTON ===== -->
-                        <div class="form-group">
-                            <label for="resumeUpload">Upload Your Resume / CV (Optional)</label>
-                            <div class="file-upload-wrapper">
-                                <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" />
-                                <span class="file-name" id="fileName">No file selected</span>
-                            </div>
-                            <small style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:4px;">
-                                Accepted formats: PDF, DOC, DOCX (Max 5MB)
-                            </small>
-                        </div>
-
                         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">
                             <i class="fas fa-paper-plane"></i>&nbsp; Send Message
                         </button>
@@ -1044,6 +1011,15 @@
                     <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
+                    <br><br>
+                    <!-- Download Resume Button -->
+                    <a href="https://drive.google.com/your-resume-link" class="btn btn-primary" download style="width:100%; justify-content:center;">
+                        <i class="fas fa-file-pdf"></i>&nbsp; Download Resume (PDF)
+                    </a>
+                    <br>
+                    <small style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:6px; text-align:center;">
+                        <strong>Note:</strong> Replace the link with your actual resume PDF.
+                    </small>
                 </div>
             </div>
         </div>
@@ -1158,20 +1134,6 @@
                 });
             }
 
-            // File upload display
-            const fileInput = document.getElementById('resumeUpload');
-            const fileNameDisplay = document.getElementById('fileName');
-
-            if (fileInput && fileNameDisplay) {
-                fileInput.addEventListener('change', function() {
-                    if (this.files && this.files.length > 0) {
-                        fileNameDisplay.textContent = this.files[0].name;
-                    } else {
-                        fileNameDisplay.textContent = 'No file selected';
-                    }
-                });
-            }
-
             const contactForm = document.getElementById('contactForm');
             const successMsg = document.getElementById('successMessage');
 
@@ -1182,12 +1144,6 @@
                     const email = document.getElementById('contactEmail').value;
                     const subject = document.getElementById('contactSubject').value;
                     const message = document.getElementById('contactMessage').value;
-                    const fileInput = document.getElementById('resumeUpload');
-                    let fileName = 'No file attached';
-
-                    if (fileInput && fileInput.files && fileInput.files.length > 0) {
-                        fileName = fileInput.files[0].name;
-                    }
 
                     // If Resume Request, add a helpful note to the email body
                     let extraNote = '';
@@ -1197,7 +1153,6 @@
 
                     const emailSubject = 'Portfolio Contact: ' + subject;
                     const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject +
-                        '\nResume/CV Attached: ' + fileName +
                         '\n\nMessage:\n' + message + extraNote;
 
                     window.location.href = 'mailto:omoseworotimi@gmail.com?subject=' + encodeURIComponent(
@@ -1205,7 +1160,6 @@
 
                     successMsg.classList.add('show');
                     contactForm.reset();
-                    if (fileNameDisplay) fileNameDisplay.textContent = 'No file selected';
                     resumeNote.classList.remove('show');
                     setTimeout(function() { successMsg.classList.remove('show'); }, 5000);
                 });
