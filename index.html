@@ -214,6 +214,43 @@
         .education-block { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border); }
         .education-block h3 { font-size: 1.1rem; margin-bottom: 8px; }
 
+        /* ===== NEW ABOUT SECTION STYLES ===== */
+        .about-subtitle {
+            margin-top: 24px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .icon-accent {
+            color: var(--accent);
+        }
+
+        .pipeline-flow {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .about-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-list li {
+            margin-bottom: 8px;
+        }
+
+        .edu-title {
+            margin-bottom: 4px;
+        }
+
+        .edu-coursework {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        /* ===== END NEW ABOUT SECTION STYLES ===== */
+
         .skills-subtitle {
             font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
             color: var(--text-main); margin: 24px 0 12px;
@@ -627,49 +664,80 @@
         </div>
     </header>
 
-    <!-- About Section -->
+    <!-- ===== UPDATED ABOUT SECTION ===== -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Professional Profile</h2>
             <div class="about-card">
                 <p>
-                    I'm a <strong>Data Analyst</strong> with a B.Sc. in Computer Science (Hons, 2019) and an
-                    <strong>IBM Data Science Professional Certificate</strong>. I specialise in
-                    <strong>Operations Analytics</strong> — building end‑to‑end data pipelines that turn raw,
-                    messy operational data into clear insights, interactive dashboards, and production‑ready
-                    web applications.
+                    I am a <strong>Data Analyst | Operations Analytics</strong> with a B.Sc. in Computer Science and an 
+                    IBM Data Science Certification. I build data pipelines that turn messy, unstructured 
+                    operational data into clear dashboards, forecasts, and web applications for teams across 
+                    a wide range of industries.
                 </p>
                 <p>
-                    My flagship portfolio demonstrates a complete analytics lifecycle using <strong>real construction
-                    operations data</strong>: from raw WhatsApp logs → Excel cleaning → SQL modelling →
-                    Python analysis → Power BI dashboards → Django web deployment. Across <strong>348 records</strong>,
-                    I reconciled <strong>₦4.5M+</strong> in project costs, tracked <strong>1,948m</strong>
-                    of excavation, achieved <strong>95.7% cement utilisation</strong>, and reconciled
-                    <strong>909 bags of cement</strong> to the last unit.
+                    My approach is simple: take real-world data from the field — logs, spreadsheets, 
+                    WhatsApp records — clean it, structure it, and present it in a way that helps 
+                    teams make better decisions. I transform operational data into reliable insights, 
+                    KPI dashboards, automated reports, and decision-support tools that improve business 
+                    performance.
                 </p>
+
+                <h3 class="about-subtitle">
+                    <i class="fas fa-rocket icon-accent" aria-hidden="true"></i> Flagship Project
+                </h3>
                 <p>
-                    This framework is <strong>industry‑agnostic</strong> — the same methodology applies across
-                    <strong>healthcare, manufacturing, logistics, retail, energy, and finance</strong>.
-                    I deliver <strong>data‑driven decision support</strong> through ETL pipelines, KPI
-                    dashboards, forecasting models, and automated reporting systems.
+                    My flagship project demonstrates a complete end-to-end analytics workflow using 
+                    <strong>real-world construction operations data</strong>:
                 </p>
-                <ul>
-                    <li><strong>ETL &amp; Data Pipelines</strong> — Python (Pandas, NumPy), SQL, Excel (Power Query)</li>
-                    <li><strong>Dashboards &amp; BI</strong> — Power BI (DAX), Django, Streamlit, Plotly</li>
-                    <li><strong>Predictive Analytics</strong> — Scikit‑Learn, time‑series forecasting, classification</li>
-                    <li><strong>Business Impact</strong> — ₦4.5M+ reconciled, 95.7% utilisation, 348 records processed</li>
+                <p class="pipeline-flow">
+                    WhatsApp Logs &rarr; Excel &rarr; SQL &rarr; Python &rarr; Power BI &rarr; Live Web App
+                </p>
+                <ul class="about-list">
+                    <li>
+                        <i class="fas fa-coins icon-accent" aria-hidden="true"></i> 
+                        <strong>Cost Control:</strong> Reconciled <strong>₦4.5M+</strong> in project costs across 348 records.
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line icon-accent" aria-hidden="true"></i> 
+                        <strong>Resource Tracking:</strong> Tracked <strong>1,948m</strong> of excavation and achieved <strong>95.7%</strong> cement utilization — reconciling 909 bags to the last unit.
+                    </li>
+                    <li>
+                        <i class="fas fa-sync-alt icon-accent" aria-hidden="true"></i> 
+                        <strong>Adaptable Framework:</strong> Although developed using construction data, the same analytics framework is directly applicable to healthcare, manufacturing, logistics, supply chain, retail, energy, finance, and other data-driven industries.
+                    </li>
                 </ul>
-                <p>
-                    I'm actively seeking <strong>Data Analyst</strong> or <strong>Operations Analyst</strong>
-                    roles where I can apply analytics, automation, and business intelligence to improve
-                    operational performance and drive data‑driven decision‑making — with minimal reliance
-                    on verbal communication and a strong focus on written deliverables, dashboards, and
-                    structured reporting.
-                </p>
+
+                <h3 class="about-subtitle">
+                    <i class="fas fa-tools icon-accent" aria-hidden="true"></i> Core Expertise
+                </h3>
+                <ul class="about-list">
+                    <li>
+                        <i class="fas fa-database icon-accent" aria-hidden="true"></i> 
+                        <strong>Data Processing:</strong> Python (Pandas, NumPy), SQL, Excel
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-pie icon-accent" aria-hidden="true"></i> 
+                        <strong>Dashboards &amp; Apps:</strong> Power BI, Django, Streamlit, Plotly
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-bar icon-accent" aria-hidden="true"></i> 
+                        <strong>Forecasting:</strong> Scikit-Learn, Time-Series Models
+                    </li>
+                    <li>
+                        <i class="fas fa-bullseye icon-accent" aria-hidden="true"></i> 
+                        <strong>Focus Areas:</strong> Cost Reconciliation, Process Automation, Operations Analytics
+                    </li>
+                </ul>
+
                 <div class="education-block">
-                    <h3><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Education</h3>
-                    <p style="margin-bottom:4px;"><strong>B.Sc. (Hons.) in Computer Science</strong> – National Open University, 2019</p>
-                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0;">Coursework: Data Structures, Databases, Data Analysis, Fundamentals of Machine Learning</p>
+                    <h3>
+                        <i class="fas fa-graduation-cap icon-accent" aria-hidden="true"></i> 
+                        Education &amp; Certifications
+                    </h3>
+                    <p class="edu-title"><strong>B.Sc. (Hons.) in Computer Science</strong> – National Open University, 2019</p>
+                    <p class="edu-title"><strong>IBM Data Science Professional Certificate</strong></p>
+                    <p class="edu-coursework">Coursework: Data Structures, Databases, Machine Learning Fundamentals</p>
                 </div>
             </div>
         </div>
