@@ -192,12 +192,6 @@
 
         section { padding: 80px 0; }
 
-        /* ===== Consistent Section Container Widths ===== */
-        .section-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
         .section-title { 
             font-size: 1.75rem; 
             font-weight: 700; 
@@ -751,7 +745,29 @@
         }
         footer p { color: #94a3b8; margin-bottom: 4px; }
 
-        /* ===== RESPONSIVE ===== */
+        /* ============================================================
+                   FIX: Consistent Section Widths (THE ONLY CHANGE)
+                   ============================================================ */
+
+        /* All sections now have consistent max-width and centering */
+        .section-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Skills section uses the same wrapper */
+        #skills .section-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Achievements / Certifications / Testimonials / Contact all use .section-content */
+        /* No extra changes needed — they already use .section-content in the HTML */
+
+        /* ============================================================
+                   RESPONSIVE: Mobile Fixes
+                   ============================================================ */
+
         @media (max-width: 1024px) {
             .showcase-grid, .compact-grid, .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
