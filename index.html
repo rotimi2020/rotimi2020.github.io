@@ -67,29 +67,16 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ===== SCROLL PROGRESS ===== */
         #scrollProgress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            width: 0%;
+            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
             background: linear-gradient(90deg, var(--accent), #159c85);
-            z-index: 1100;
-            transition: width 0.1s ease-out;
+            z-index: 1100; transition: width 0.1s ease-out;
         }
 
-        /* ===== NAVIGATION ===== */
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 999;
+            position: sticky; top: 0; z-index: 999;
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
@@ -133,7 +120,6 @@
             color: var(--accent);
         }
 
-        /* ===== HEADER ===== */
         header {
             background: #0b1329;
             color: #fff;
@@ -162,15 +148,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .avatar .placeholder-icon {
-            font-size: 48px;
-            color: #64748b;
-        }
+        .avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .avatar .placeholder-icon { font-size: 48px; color: #64748b; }
 
         .header-info h1 {
             color: #fff;
@@ -222,7 +201,6 @@
             flex-wrap: wrap;
             gap: 6px;
             margin-top: 10px;
-            justify-content: flex-start;
         }
 
         .skill-strip span {
@@ -263,7 +241,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding-top: 16px;
             flex-wrap: wrap;
-            justify-content: flex-start;
         }
 
         .kpi-item {
@@ -319,7 +296,6 @@
             background: var(--accent);
         }
 
-        /* ===== SECTIONS ===== */
         section {
             padding: 60px 0;
         }
@@ -341,7 +317,7 @@
             border-radius: 2px;
         }
 
-        /* ===== SECTION CONTENT WRAPPER (Consistent Width) ===== */
+        /* ===== SECTION CONTENT WRAPPER ===== */
         .section-content {
             max-width: 1100px;
             margin: 0 auto;
@@ -434,7 +410,6 @@
             margin-bottom: 0;
         }
 
-        /* ===== SKILLS ===== */
         .skills-subtitle {
             font-size: 0.8rem;
             font-weight: 700;
@@ -471,14 +446,12 @@
             color: var(--accent);
         }
 
-        /* ===== ACHIEVEMENTS ===== */
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 16px;
         }
 
-        /* ===== FILTERS ===== */
         .filter-container {
             display: flex;
             gap: 6px;
@@ -505,7 +478,6 @@
             border-color: var(--primary);
         }
 
-        /* ===== PROJECTS ===== */
         .showcase-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -550,24 +522,12 @@
             transform: scale(1.15);
         }
 
-        .card-preview-area.construction {
-            background: linear-gradient(135deg, #d99a3e, #c9791f);
-        }
-        .card-preview-area.rossmann {
-            background: linear-gradient(135deg, #c76b8a, #9c4f68);
-        }
-        .card-preview-area.nhanes {
-            background: linear-gradient(135deg, #d98a5a, #b45f5f);
-        }
-        .card-preview-area.django {
-            background: linear-gradient(135deg, #0f6e5f, #159c85);
-        }
-        .card-preview-area.powerco {
-            background: linear-gradient(135deg, #1c7a8c, #0e3a52);
-        }
-        .card-preview-area.ibm {
-            background: linear-gradient(135deg, #d9b98a, #b8895f);
-        }
+        .card-preview-area.construction { background: linear-gradient(135deg, #d99a3e, #c9791f); }
+        .card-preview-area.rossmann { background: linear-gradient(135deg, #c76b8a, #9c4f68); }
+        .card-preview-area.nhanes { background: linear-gradient(135deg, #d98a5a, #b45f5f); }
+        .card-preview-area.django { background: linear-gradient(135deg, #0f6e5f, #159c85); }
+        .card-preview-area.powerco { background: linear-gradient(135deg, #1c7a8c, #0e3a52); }
+        .card-preview-area.ibm { background: linear-gradient(135deg, #d9b98a, #b8895f); }
 
         .card-preview-area .zoom-hint {
             position: absolute;
@@ -690,7 +650,6 @@
             background: var(--border);
         }
 
-        /* ===== CERTIFICATIONS ===== */
         .compact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -737,7 +696,6 @@
             margin-top: 6px;
         }
 
-        /* ===== TESTIMONIALS ===== */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -795,7 +753,6 @@
             border-radius: 2px;
         }
 
-        /* ===== CONTACT ===== */
         .contact-layout {
             display: grid;
             grid-template-columns: 5fr 4fr;
@@ -894,7 +851,6 @@
             color: var(--text-main);
         }
 
-        /* ===== LIGHTBOX / MODAL ===== */
         .lightbox-modal,
         .form-modal {
             display: none;
@@ -921,14 +877,8 @@
         }
 
         @keyframes popupIn {
-            from {
-                transform: scale(0.95);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .lightbox-img-container {
@@ -1005,7 +955,6 @@
             color: var(--text-main);
         }
 
-        /* ===== FOOTER ===== */
         footer {
             background: #0b1329;
             color: #64748b;
@@ -1328,7 +1277,7 @@
         </div>
     </header>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===== UPDATED ABOUT SECTION ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">Professional Profile</h2>
