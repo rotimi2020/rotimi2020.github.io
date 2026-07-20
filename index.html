@@ -192,24 +192,14 @@
 
         section { padding: 80px 0; }
 
-        .section-title { 
-            font-size: 1.75rem; 
-            font-weight: 700; 
-            margin-bottom: 40px; 
-            position: relative; 
-        }
+        .section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 40px; position: relative; }
 
         .section-title::after {
-            content: ''; 
-            display: block; 
-            width: 40px; 
-            height: 3px; 
-            background: var(--accent);
-            margin-top: 10px; 
-            border-radius: 2px;
+            content: ''; display: block; width: 40px; height: 3px; background: var(--accent);
+            margin-top: 10px; border-radius: 2px;
         }
 
-        /* ===== ABOUT SECTION ===== */
+        /* ===== UPDATED ABOUT SECTION ===== */
         .about-card {
             background: var(--bg-surface);
             padding: 40px;
@@ -296,83 +286,40 @@
             margin-bottom: 0;
         }
 
-        /* ===== SKILLS SECTION ===== */
         .skills-subtitle {
-            font-size: 0.85rem; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
-            color: var(--text-main); 
-            margin: 24px 0 12px;
+            font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+            color: var(--text-main); margin: 24px 0 12px;
         }
         .skills-subtitle:first-child { margin-top: 0; }
 
         .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
 
         .skill-tag {
-            background: var(--bg-surface); 
-            color: var(--text-main); 
-            padding: 8px 16px;
-            border-radius: var(--radius-sm); 
-            font-size: 0.85rem; 
-            font-weight: 500;
-            border: 1px solid var(--border); 
-            display: flex; 
-            align-items: center; 
-            gap: 8px;
+            background: var(--bg-surface); color: var(--text-main); padding: 8px 16px;
+            border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 500;
+            border: 1px solid var(--border); display: flex; align-items: center; gap: 8px;
             box-shadow: var(--shadow-sm);
         }
 
         .skill-tag i { color: var(--accent); }
 
-        /* ===== ACHIEVEMENTS ===== */
-        .achievements-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-            gap: 20px; 
-        }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
 
-        /* ===== FILTERS ===== */
-        .filter-container { 
-            display: flex; 
-            gap: 8px; 
-            margin-bottom: 32px; 
-            flex-wrap: wrap; 
-        }
+        .filter-container { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
 
         .filter-btn {
-            background: var(--bg-surface); 
-            border: 1px solid var(--border); 
-            color: var(--text-muted);
-            padding: 8px 16px; 
-            border-radius: var(--radius-sm); 
-            cursor: pointer; 
-            font-size: 0.85rem;
-            font-weight: 500; 
-            transition: all 0.2s ease;
+            background: var(--bg-surface); border: 1px solid var(--border); color: var(--text-muted);
+            padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.85rem;
+            font-weight: 500; transition: all 0.2s ease;
         }
 
-        .filter-btn:hover, .filter-btn.active { 
-            background: var(--primary); 
-            color: #fff; 
-            border-color: var(--primary); 
-        }
+        .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        /* ===== PROJECTS ===== */
-        .showcase-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 24px; 
-        }
+        .showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .portfolio-card {
-            background: var(--bg-surface); 
-            border-radius: var(--radius-md); 
-            border: 1px solid var(--border);
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
-            box-shadow: var(--shadow-sm);
+            background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border);
+            overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
             position: relative;
         }
@@ -383,15 +330,8 @@
         }
 
         .card-preview-area {
-            height: 160px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            font-size: 2.5rem; 
-            color: rgba(255,255,255,0.9); 
-            position: relative; 
-            cursor: pointer; 
-            overflow: hidden;
+            height: 160px; display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; color: rgba(255,255,255,0.9); position: relative; cursor: pointer; overflow: hidden;
         }
 
         .card-preview-area i { position: relative; z-index: 2; transition: transform 0.3s ease; }
@@ -405,28 +345,15 @@
         .card-preview-area.ibm { background: linear-gradient(135deg, #d9b98a, #b8895f); }
 
         .card-preview-area .zoom-hint {
-            position: absolute; 
-            background: rgba(15, 23, 42, 0.8); 
-            color: #fff; 
-            padding: 6px 12px;
-            border-radius: var(--radius-sm); 
-            font-size: 0.75rem; 
-            font-weight: 500; 
-            opacity: 0;
-            transition: opacity 0.2s ease; 
-            display: flex; 
-            align-items: center; 
-            gap: 6px; 
-            z-index: 3;
+            position: absolute; background: rgba(15, 23, 42, 0.8); color: #fff; padding: 6px 12px;
+            border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 500; opacity: 0;
+            transition: opacity 0.2s ease; display: flex; align-items: center; gap: 6px; z-index: 3;
         }
 
         .card-preview-area:hover .zoom-hint { opacity: 1; }
 
         .portfolio-card.featured-item {
-            grid-column: span 3; 
-            display: grid; 
-            grid-template-columns: 4fr 5fr; 
-            height: 340px;
+            grid-column: span 3; display: grid; grid-template-columns: 4fr 5fr; height: 340px;
         }
 
         .portfolio-card.featured-item .card-preview-area { height: 100%; }
@@ -434,15 +361,9 @@
         .card-body { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
 
         .featured-label {
-            align-self: flex-start; 
-            background: #fef3c7; 
-            color: #d97706; 
-            font-size: 0.7rem;
-            font-weight: 700; 
-            padding: 2px 8px; 
-            border-radius: var(--radius-sm);
-            text-transform: uppercase; 
-            margin-bottom: 12px;
+            align-self: flex-start; background: #fef3c7; color: #d97706; font-size: 0.7rem;
+            font-weight: 700; padding: 2px 8px; border-radius: var(--radius-sm);
+            text-transform: uppercase; margin-bottom: 12px;
         }
 
         .project-title { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
@@ -452,30 +373,16 @@
         .meta-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 
         .meta-tag {
-            background: var(--bg-base); 
-            color: var(--text-muted); 
-            font-size: 0.75rem; 
-            padding: 3px 8px;
-            border-radius: var(--radius-sm); 
-            font-weight: 500; 
-            border: 1px solid var(--border);
+            background: var(--bg-base); color: var(--text-muted); font-size: 0.75rem; padding: 3px 8px;
+            border-radius: var(--radius-sm); font-weight: 500; border: 1px solid var(--border);
         }
 
         .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
         .btn {
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 6px; 
-            padding: 8px 16px;
-            border-radius: var(--radius-sm); 
-            font-size: 0.82rem; 
-            font-weight: 600; 
-            text-decoration: none;
-            transition: all 0.2s ease; 
-            cursor: pointer; 
-            border: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 16px;
+            border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+            transition: all 0.2s ease; cursor: pointer; border: none;
         }
 
         .btn-primary { background: var(--accent); color: #fff; }
@@ -483,22 +390,12 @@
         .btn-secondary { background: var(--bg-base); color: var(--text-main); border: 1px solid var(--border); }
         .btn-secondary:hover { background: var(--border); }
 
-        /* ===== CERTIFICATIONS ===== */
-        .compact-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 24px; 
-        }
+        .compact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .metric-card {
-            background: var(--bg-surface); 
-            padding: 24px; 
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border); 
-            text-align: center; 
-            box-shadow: var(--shadow-sm);
-            display: flex; 
-            flex-direction: column;
+            background: var(--bg-surface); padding: 24px; border-radius: var(--radius-md);
+            border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow-sm);
+            display: flex; flex-direction: column;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
@@ -511,15 +408,9 @@
         .metric-card .project-desc { flex-grow: 1; margin-bottom: 16px; }
         .metric-card .btn { width: 100%; margin-top: auto; }
 
-        .metric-value { 
-            font-size: 2rem; 
-            font-weight: 700; 
-            color: var(--accent); 
-            font-family: 'Sora', sans-serif; 
-        }
+        .metric-value { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: 'Sora', sans-serif; }
         .metric-card .meta-tags { justify-content: center; margin-top: 8px; }
 
-        /* ===== TESTIMONIALS ===== */
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -577,54 +468,30 @@
             border-radius: 2px;
         }
 
-        /* ===== CONTACT ===== */
-        .contact-layout { 
-            display: grid; 
-            grid-template-columns: 5fr 4fr; 
-            gap: 40px; 
-            align-items: start; 
-        }
+        .contact-layout { display: grid; grid-template-columns: 5fr 4fr; gap: 40px; align-items: start; }
 
         .form-card {
-            background: var(--bg-surface); 
-            padding: 32px; 
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border); 
-            box-shadow: var(--shadow-sm);
+            background: var(--bg-surface); padding: 32px; border-radius: var(--radius-md);
+            border: 1px solid var(--border); box-shadow: var(--shadow-sm);
         }
 
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-main); }
 
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%; 
-            padding: 10px 14px; 
-            border: 1px solid var(--border); 
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem; 
-            background: var(--bg-base); 
-            color: var(--text-main); 
-            outline: none; 
-            font-family: inherit;
+            width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+            font-size: 0.9rem; background: var(--bg-base); color: var(--text-main); outline: none; font-family: inherit;
         }
 
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent); 
-            background: #fff;
+            border-color: var(--accent); background: #fff;
         }
 
         .form-group textarea { resize: vertical; min-height: 90px; }
 
         .success-message {
-            display: none; 
-            background: #ecfdf5; 
-            color: #065f46; 
-            border: 1px solid #a7f3d0; 
-            padding: 12px;
-            border-radius: var(--radius-sm); 
-            font-size: 0.85rem; 
-            margin-top: 12px; 
-            text-align: center;
+            display: none; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 12px;
+            border-radius: var(--radius-sm); font-size: 0.85rem; margin-top: 12px; text-align: center;
         }
         .success-message.show { display: block; }
 
@@ -645,28 +512,15 @@
         .resume-note.show { display: block; }
         .resume-note strong { color: var(--text-main); }
 
-        /* ===== LIGHTBOX / MODAL ===== */
         .lightbox-modal, .form-modal {
-            display: none; 
-            position: fixed; 
-            inset: 0; 
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px); 
-            z-index: 1000; 
-            justify-content: center; 
-            align-items: center;
-            padding: 24px; 
-            overflow-y: auto;
+            display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center;
+            padding: 24px; overflow-y: auto;
         }
 
         .lightbox-wrapper {
-            background: var(--bg-surface); 
-            border-radius: var(--radius-lg); 
-            max-width: 640px; 
-            width: 100%;
-            overflow: hidden; 
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); 
-            position: relative;
+            background: var(--bg-surface); border-radius: var(--radius-lg); max-width: 640px; width: 100%;
+            overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); position: relative;
             animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -676,97 +530,40 @@
         }
 
         .lightbox-img-container {
-            height: 220px; 
-            background: #0b1329; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            font-size: 4rem; 
-            color: rgba(255,255,255,0.9);
+            height: 220px; background: #0b1329; display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; color: rgba(255,255,255,0.9);
         }
 
         .lightbox-desc { padding: 24px; }
 
         .close-lightbox, .close-form-modal {
-            position: absolute; 
-            top: 16px; 
-            right: 16px; 
-            background: rgba(255,255,255,0.2); 
-            border: none;
-            color: #fff; 
-            width: 32px; 
-            height: 32px; 
-            border-radius: 50%; 
-            cursor: pointer; 
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            font-size: 1.2rem; 
-            z-index: 10;
+            position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.2); border: none;
+            color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex;
+            align-items: center; justify-content: center; font-size: 1.2rem; z-index: 10;
         }
 
         .close-form-modal { color: #999; background: transparent; top: 14px; right: 18px; }
         .close-form-modal:hover { color: #333; }
 
         .form-modal-wrapper {
-            background: var(--bg-surface); 
-            border-radius: var(--radius-lg); 
-            max-width: 460px; 
-            width: 100%;
-            padding: 32px 34px; 
-            position: relative; 
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); 
-            max-height: 90vh; 
-            overflow-y: auto;
+            background: var(--bg-surface); border-radius: var(--radius-lg); max-width: 460px; width: 100%;
+            padding: 32px 34px; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            animation: popupIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); max-height: 90vh; overflow-y: auto;
         }
 
         .form-modal-wrapper h3 { margin-bottom: 18px; text-align: center; }
 
         .modal-note {
-            background: var(--bg-base); 
-            border-left: 3px solid var(--accent); 
-            padding: 12px 16px;
-            margin-bottom: 16px; 
-            border-radius: var(--radius-sm); 
-            font-size: 0.82rem; 
-            color: var(--text-muted);
+            background: var(--bg-base); border-left: 3px solid var(--accent); padding: 12px 16px;
+            margin-bottom: 16px; border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-muted);
         }
         .modal-note strong { color: var(--text-main); }
 
-        /* ===== FOOTER ===== */
         footer {
-            background: #0b1329; 
-            color: #64748b; 
-            padding: 40px 0; 
-            text-align: center; 
-            font-size: 0.85rem;
+            background: #0b1329; color: #64748b; padding: 40px 0; text-align: center; font-size: 0.85rem;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
         footer p { color: #94a3b8; margin-bottom: 4px; }
-
-        /* ============================================================
-                   FIX: Consistent Section Widths (THE ONLY CHANGE)
-                   ============================================================ */
-
-        /* All sections now have consistent max-width and centering */
-        .section-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Skills section uses the same wrapper */
-        #skills .section-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Achievements / Certifications / Testimonials / Contact all use .section-content */
-        /* No extra changes needed — they already use .section-content in the HTML */
-
-        /* ============================================================
-                   RESPONSIVE: Mobile Fixes
-                   ============================================================ */
 
         @media (max-width: 1024px) {
             .showcase-grid, .compact-grid, .testimonial-grid {
@@ -803,7 +600,6 @@
             nav .container { flex-direction: column; gap: 12px; }
             .compact-grid { grid-template-columns: 1fr; }
             .header-socials { justify-content: center; }
-            .contact-layout { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
@@ -903,7 +699,7 @@
         </div>
     </header>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===== UPDATED ABOUT SECTION ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">Professional Profile</h2>
@@ -952,77 +748,73 @@
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- Skills Section -->
     <section id="skills" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
         <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">Core Skills &amp; Tools</h2>
+            <h2 class="section-title">Core Skills &amp; Tools</h2>
 
-                <div class="skills-subtitle">Core Skills</div>
-                <div class="skills-grid">
-                    <div class="skill-tag"><i class="fas fa-table"></i> Pandas</div>
-                    <div class="skill-tag"><i class="fas fa-calculator"></i> NumPy</div>
-                    <div class="skill-tag"><i class="fas fa-chart-area"></i> Matplotlib</div>
-                    <div class="skill-tag"><i class="fas fa-chart-line"></i> Seaborn</div>
-                    <div class="skill-tag"><i class="fas fa-chart-pie"></i> Plotly</div>
-                    <div class="skill-tag"><i class="fas fa-robot"></i> Scikit‑Learn</div>
-                    <div class="skill-tag"><i class="fas fa-broom"></i> Data Cleaning</div>
-                    <div class="skill-tag"><i class="fas fa-search"></i> EDA</div>
-                    <div class="skill-tag"><i class="fas fa-square-root-alt"></i> Statistical Analysis</div>
-                    <div class="skill-tag"><i class="fas fa-brain"></i> Machine Learning</div>
-                    <div class="skill-tag"><i class="fas fa-eye"></i> Data Visualization</div>
-                    <div class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</div>
-                    <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
-                    <div class="skill-tag"><i class="fas fa-file-excel"></i> Excel (Power Query)</div>
-                    <div class="skill-tag"><i class="fas fa-table"></i> DAX</div>
-                    <div class="skill-tag"><i class="fas fa-exchange-alt"></i> Power Query</div>
-                </div> <br>
+            <div class="skills-subtitle">Core Skills</div>
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fas fa-table"></i> Pandas</div>
+                <div class="skill-tag"><i class="fas fa-calculator"></i> NumPy</div>
+                <div class="skill-tag"><i class="fas fa-chart-area"></i> Matplotlib</div>
+                <div class="skill-tag"><i class="fas fa-chart-line"></i> Seaborn</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Plotly</div>
+                <div class="skill-tag"><i class="fas fa-robot"></i> Scikit‑Learn</div>
+                <div class="skill-tag"><i class="fas fa-broom"></i> Data Cleaning</div>
+                <div class="skill-tag"><i class="fas fa-search"></i> EDA</div>
+                <div class="skill-tag"><i class="fas fa-square-root-alt"></i> Statistical Analysis</div>
+                <div class="skill-tag"><i class="fas fa-brain"></i> Machine Learning</div>
+                <div class="skill-tag"><i class="fas fa-eye"></i> Data Visualization</div>
+                <div class="skill-tag"><i class="fas fa-chart-bar"></i> Power BI</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-tag"><i class="fas fa-file-excel"></i> Excel (Power Query)</div>
+                <div class="skill-tag"><i class="fas fa-table"></i> DAX</div>
+                <div class="skill-tag"><i class="fas fa-exchange-alt"></i> Power Query</div>
+            </div> <br>
 
-                <div class="skills-subtitle">Tools &amp; Technologies</div>
-                <div class="skills-grid">
-                    <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-                    <div class="skill-tag"><i class="fas fa-database"></i> SQL Server</div>
-                    <div class="skill-tag"><i class="fas fa-file-excel"></i> Microsoft Excel</div>
-                    <div class="skill-tag"><i class="fab fa-python"></i> Django</div>
-                    <div class="skill-tag"><i class="fas fa-rocket"></i> Streamlit</div>
-                    <div class="skill-tag"><i class="fas fa-code"></i> VS Code</div>
-                    <div class="skill-tag"><i class="fas fa-book"></i> Jupyter Notebook</div>
-                    <div class="skill-tag"><i class="fas fa-chart-pie"></i> Tableau</div>
-                    <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
-                    <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
-                </div>
+            <div class="skills-subtitle">Tools &amp; Technologies</div>
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> SQL Server</div>
+                <div class="skill-tag"><i class="fas fa-file-excel"></i> Microsoft Excel</div>
+                <div class="skill-tag"><i class="fab fa-python"></i> Django</div>
+                <div class="skill-tag"><i class="fas fa-rocket"></i> Streamlit</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> VS Code</div>
+                <div class="skill-tag"><i class="fas fa-book"></i> Jupyter Notebook</div>
+                <div class="skill-tag"><i class="fas fa-chart-pie"></i> Tableau</div>
+                <div class="skill-tag"><i class="fab fa-git-alt"></i> Git</div>
+                <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FEATURED ACHIEVEMENTS ===== -->
+    <!-- Featured Achievements -->
     <section id="achievements">
         <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">Featured Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="metric-card">
-                        <div class="metric-value">₦4.5M+</div>
-                        <p class="project-desc" style="margin-bottom:0;">Project Cost Fully Reconciled</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">95.7%</div>
-                        <p class="project-desc" style="margin-bottom:0;">Cement Utilisation Rate</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">1,948m</div>
-                        <p class="project-desc" style="margin-bottom:0;">Excavation Analysed</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">909</div>
-                        <p class="project-desc" style="margin-bottom:0;">Cement Bags Tracked</p>
-                    </div>
+            <h2 class="section-title">Featured Achievements</h2>
+            <div class="achievements-grid">
+                <div class="metric-card">
+                    <div class="metric-value">₦4.5M+</div>
+                    <p class="project-desc" style="margin-bottom:0;">Project Cost Fully Reconciled</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95.7%</div>
+                    <p class="project-desc" style="margin-bottom:0;">Cement Utilisation Rate</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">1,948m</div>
+                    <p class="project-desc" style="margin-bottom:0;">Excavation Analysed</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">909</div>
+                    <p class="project-desc" style="margin-bottom:0;">Cement Bags Tracked</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
@@ -1175,137 +967,131 @@
         </div>
     </section>
 
-    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <!-- Certifications Section -->
     <section id="certifications" style="background: var(--bg-surface); border-top: 1px solid var(--border)">
         <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">Certifications &amp; Training</h2>
-                <div class="compact-grid">
-                    <div class="metric-card">
-                        <div class="metric-value"><i class="fab fa-microchip"></i></div>
-                        <h3 class="project-title">IBM Data Science Professional Certificate</h3>
-                        <p class="project-desc">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
-                        <div class="meta-tags">
-                            <span class="meta-tag">Data Wrangling</span>
-                            <span class="meta-tag">SQL</span>
-                            <span class="meta-tag">ML</span>
-                        </div>
-                        <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" target="_blank">View Credential</a>
+            <h2 class="section-title">Certifications &amp; Training</h2>
+            <div class="compact-grid">
+                <div class="metric-card">
+                    <div class="metric-value"><i class="fab fa-microchip"></i></div>
+                    <h3 class="project-title">IBM Data Science Professional Certificate</h3>
+                    <p class="project-desc">Comprehensive program covering data methodology, Python, SQL, visualisation, and machine learning.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">Data Wrangling</span>
+                        <span class="meta-tag">SQL</span>
+                        <span class="meta-tag">ML</span>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-value"><i class="fas fa-bolt"></i></div>
-                        <h3 class="project-title">PowerCo SME Churn Analysis Internship</h3>
-                        <p class="project-desc">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
-                        <div class="meta-tags">
-                            <span class="meta-tag">EDA</span>
-                            <span class="meta-tag">Visualisation</span>
-                        </div>
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" target="_blank">View Certificate</a>
+                    <a href="https://www.credly.com/badges/774574a1-6ecf-4160-bfdc-7c946304b6f5" class="btn btn-secondary" target="_blank">View Credential</a>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value"><i class="fas fa-bolt"></i></div>
+                    <h3 class="project-title">PowerCo SME Churn Analysis Internship</h3>
+                    <p class="project-desc">Forage virtual internship applying business understanding, EDA, and communication to deliver churn and diversity insights.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">EDA</span>
+                        <span class="meta-tag">Visualisation</span>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-value"><i class="fas fa-user-graduate"></i></div>
-                        <h3 class="project-title">B.Sc. (Hons.) Computer Science Certificate</h3>
-                        <p class="project-desc">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
-                        <div class="meta-tags">
-                            <span class="meta-tag">Databases</span>
-                            <span class="meta-tag">ML Fundamentals</span>
-                        </div>
-                        <button class="btn btn-primary" onclick="openRequestModal()">Request Academic Verification</button>
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_xwajQBms7XNeGD293_1755273142490_completion_certificate.pdf" class="btn btn-secondary" target="_blank">View Certificate</a>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value"><i class="fas fa-user-graduate"></i></div>
+                    <h3 class="project-title">B.Sc. (Hons.) Computer Science Certificate</h3>
+                    <p class="project-desc">Undergraduate degree covering programming, algorithms, database systems, and machine learning foundations.</p>
+                    <div class="meta-tags">
+                        <span class="meta-tag">Databases</span>
+                        <span class="meta-tag">ML Fundamentals</span>
                     </div>
+                    <button class="btn btn-primary" onclick="openRequestModal()">Request Academic Verification</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">Testimonials</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">
-                            "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy WhatsApp data and present clear, actionable insights is exceptional. He saved us hours of manual reconciliation."
-                        </p>
-                        <div class="testimonial-author">Project Manager, Construction Firm</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">
-                            "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into clear visualisations that even non-technical stakeholders can understand. A reliable and detail-oriented analyst."
-                        </p>
-                        <div class="testimonial-author">Healthcare Data Lead</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">
-                            "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance across regions. He built it quickly, communicated clearly via written updates, and delivered exactly what we needed—no unnecessary meetings."
-                        </p>
-                        <div class="testimonial-author">Retail Operations Director</div>
-                    </div>
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy WhatsApp data and present clear, actionable insights is exceptional. He saved us hours of manual reconciliation."
+                    </p>
+                    <div class="testimonial-author">Project Manager, Construction Firm</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into clear visualisations that even non-technical stakeholders can understand. A reliable and detail-oriented analyst."
+                    </p>
+                    <div class="testimonial-author">Healthcare Data Lead</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">
+                        "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance across regions. He built it quickly, communicated clearly via written updates, and delivered exactly what we needed—no unnecessary meetings."
+                    </p>
+                    <div class="testimonial-author">Retail Operations Director</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="contact-layout">
-                    <div class="form-card">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="contactName">Your Name *</label>
-                                <input type="text" id="contactName" required placeholder="Full name" />
-                            </div>
-                            <div class="form-group">
-                                <label for="contactEmail">Your Email *</label>
-                                <input type="email" id="contactEmail" required placeholder="your.email@example.com" />
-                            </div>
-                            <div class="form-group">
-                                <label for="contactSubject">Subject *</label>
-                                <select id="contactSubject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="Job Opportunity">Job Opportunity</option>
-                                    <option value="Freelance Project">Freelance Project</option>
-                                    <option value="Collaboration">Collaboration</option>
-                                    <option value="Resume Request">Resume Request</option>
-                                    <option value="General Inquiry">General Inquiry</option>
-                                </select>
-                            </div>
-                            <div class="resume-note" id="resumeNote">
-                                <strong>📄 Resume Request:</strong> Please specify the role, company, and any key requirements (e.g., industry, must-have skills).
-                            </div>
-                            <div class="form-group">
-                                <label for="contactMessage">Message *</label>
-                                <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">
-                                <i class="fas fa-paper-plane"></i>&nbsp; Send Message
-                            </button>
-                        </form>
-                        <div class="success-message" id="successMessage">
-                            <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I'll get back to you soon!
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-layout">
+                <div class="form-card">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" required placeholder="Full name" />
                         </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email *</label>
+                            <input type="email" id="contactEmail" required placeholder="your.email@example.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" required>
+                                <option value="">Select a subject</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Freelance Project">Freelance Project</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="Resume Request">Resume Request</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="resume-note" id="resumeNote">
+                            <strong>📄 Resume Request:</strong> Please specify the role, company, and any key requirements (e.g., industry, must-have skills).
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" rows="4" required placeholder="Tell me about your project, opportunity, or inquiry…"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+                        </button>
+                    </form>
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent. I'll get back to you soon!
                     </div>
-                    <div class="contact-side">
-                        <h3>Direct Contact</h3>
-                        <p>Prefer to reach out directly? Use any of the links below — I typically reply within a day.</p>
-                        <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
-                        <br><br>
-                        <a href="https://drive.google.com/your-resume-link" class="btn btn-primary" download style="width:100%; justify-content:center;">
-                            <i class="fas fa-file-pdf"></i>&nbsp; Download Resume (PDF)
-                        </a>
-                        <br>
-                        <small style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:6px; text-align:center;">
-                            <strong>Note:</strong> Replace the link with your actual resume PDF.
-                        </small>
-                    </div>
+                </div>
+                <div class="contact-side">
+                    <h3>Direct Contact</h3>
+                    <p>Prefer to reach out directly? Use any of the links below — I typically reply within a day.</p>
+                    <a href="https://linkedin.com/in/rotimi-sheriff-omosewo-939a806b" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/rotimi2020" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:omoseworotimi@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
+                    <br><br>
+                    <a href="https://drive.google.com/your-resume-link" class="btn btn-primary" download style="width:100%; justify-content:center;">
+                        <i class="fas fa-file-pdf"></i>&nbsp; Download Resume (PDF)
+                    </a>
+                    <br>
+                    <small style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:6px; text-align:center;">
+                        <strong>Note:</strong> Replace the link with your actual resume PDF.
+                    </small>
                 </div>
             </div>
         </div>
