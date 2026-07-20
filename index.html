@@ -323,7 +323,7 @@
             margin: 0 auto;
         }
 
-        /* ===== ABOUT ===== */
+        /* ===== ABOUT / PROFESSIONAL PROFILE ===== */
         .about-card {
             background: var(--bg-surface);
             padding: 32px;
@@ -345,51 +345,30 @@
             color: var(--text-main);
         }
 
-        .about-subtitle {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            color: var(--text-main);
-        }
-
-        .icon-accent {
-            color: var(--accent);
-        }
-
-        .pipeline-flow {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 14px;
-            font-size: 0.88rem;
-        }
-
-        .about-list {
+        .about-card ul {
             list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-
-        .about-list li {
-            margin-bottom: 8px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            line-height: 1.6;
+            margin: 16px 0 20px;
         }
 
-        .about-list li i {
-            margin-top: 3px;
-            flex-shrink: 0;
+        .about-card ul li {
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
         }
 
-        .about-list li strong {
-            color: var(--text-main);
+        .about-card ul li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
         }
 
         .education-block {
-            margin-top: 24px;
+            margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid var(--border);
         }
@@ -397,17 +376,6 @@
         .education-block h3 {
             font-size: 1rem;
             margin-bottom: 8px;
-        }
-
-        .edu-title {
-            margin-bottom: 3px;
-            font-size: 0.9rem;
-        }
-
-        .edu-coursework {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 0;
         }
 
         .skills-subtitle {
@@ -1021,6 +989,9 @@
             .about-card {
                 padding: 24px;
             }
+            .about-card ul {
+                grid-template-columns: 1fr;
+            }
             nav .container {
                 flex-direction: column;
                 gap: 10px;
@@ -1098,7 +1069,7 @@
             .about-card p {
                 font-size: 0.85rem;
             }
-            .about-list li {
+            .about-card ul li {
                 font-size: 0.82rem;
             }
             .portfolio-card.featured-item .card-preview-area {
@@ -1277,50 +1248,44 @@
         </div>
     </header>
 
-    <!-- ===== UPDATED ABOUT SECTION ===== -->
+    <!-- ===== PROFESSIONAL PROFILE SECTION ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">Professional Profile</h2>
             <div class="about-card">
                 <p>
-                    I am a <strong>Data Analyst | Operations Analytics</strong> with a B.Sc. in Computer Science and an
-                    IBM Data Science Certification. I build data pipelines that turn messy operational data into
-                    clear dashboards, forecasts, and web applications.
+                    I am a <strong>Data Analyst | Operations Analytics</strong> with a B.Sc. in Computer Science (Hons, 2019) and an 
+                    <strong>IBM Data Science Professional Certificate</strong>. I build end‑to‑end data pipelines that transform 
+                    raw, messy operational data into clear insights, interactive dashboards, and production‑ready web applications.
                 </p>
-
-                <h3 class="about-subtitle">
-                    <i class="fas fa-rocket icon-accent" aria-hidden="true"></i> Flagship Project
-                </h3>
                 <p>
-                    My flagship project demonstrates a complete end-to-end analytics workflow using
-                    <strong>real-world construction operations data</strong>:
+                    My flagship portfolio demonstrates a complete analytics lifecycle using <strong>real construction operations data</strong>: 
+                    from WhatsApp logs → Excel cleaning → SQL modelling → Python analysis → Power BI dashboards → Django web deployment. 
+                    Across <strong>348 records</strong>, I reconciled <strong>₦4.5M+</strong> in project costs, tracked <strong>1,948m</strong> 
+                    of excavation, achieved <strong>95.7% cement utilisation</strong>, and reconciled <strong>909 bags of cement</strong> 
+                    to the last unit.
                 </p>
-                <p class="pipeline-flow">
-                    WhatsApp Logs &rarr; Excel &rarr; SQL &rarr; Python &rarr; Power BI &rarr; Live Web App
+                <p>
+                    This framework is <strong>industry‑agnostic</strong> — the same methodology applies across healthcare, manufacturing, 
+                    logistics, retail, energy, and finance. I deliver data‑driven decision support through ETL pipelines, KPI dashboards, 
+                    forecasting models, and automated reporting systems.
                 </p>
-                <ul class="about-list">
-                    <li>
-                        <i class="fas fa-coins icon-accent" aria-hidden="true"></i>
-                        <strong>Cost Control:</strong> Reconciled <strong>₦4.5M+</strong> in project costs across 348 records.
-                    </li>
-                    <li>
-                        <i class="fas fa-chart-line icon-accent" aria-hidden="true"></i>
-                        <strong>Resource Tracking:</strong> Tracked <strong>1,948m</strong> of excavation and achieved <strong>95.7%</strong> cement utilization — reconciling 909 bags to the last unit.
-                    </li>
-                    <li>
-                        <i class="fas fa-sync-alt icon-accent" aria-hidden="true"></i>
-                        <strong>Adaptable Framework:</strong> The same analytics framework applies to healthcare, manufacturing, logistics, retail, energy, finance, and more.
-                    </li>
+                <ul>
+                    <li><strong>ETL &amp; Data Pipelines</strong> — Python (Pandas, NumPy), SQL, Excel (Power Query)</li>
+                    <li><strong>Dashboards &amp; BI</strong> — Power BI (DAX), Django, Streamlit, Plotly</li>
+                    <li><strong>Predictive Analytics</strong> — Scikit‑Learn, time‑series forecasting, classification</li>
+                    <li><strong>Business Impact</strong> — ₦4.5M+ reconciled, 95.7% utilisation, 348 records processed</li>
                 </ul>
-
+                <p>
+                    I am seeking <strong>Data Analyst</strong> or <strong>Operations Analyst</strong> roles where I can apply analytics, 
+                    automation, and business intelligence to drive operational performance — delivering value through written reports, 
+                    dashboards, and structured data.
+                </p>
                 <div class="education-block">
-                    <h3>
-                        <i class="fas fa-graduation-cap icon-accent" aria-hidden="true"></i>
-                        Education &amp; Certifications
-                    </h3>
-                    <p class="edu-title"><strong>B.Sc. (Hons.) in Computer Science</strong> – National Open University, 2019</p>
-                    <p class="edu-title"><strong>IBM Data Science Professional Certificate</strong></p>
-                    <p class="edu-coursework">Coursework: Data Structures, Databases, Machine Learning Fundamentals</p>
+                    <h3><i class="fas fa-graduation-cap" style="color:var(--accent);"></i> Education &amp; Certifications</h3>
+                    <p style="margin-bottom:4px;"><strong>B.Sc. (Hons.) in Computer Science</strong> – National Open University, 2019</p>
+                    <p style="margin-bottom:4px;"><strong>IBM Data Science Professional Certificate</strong></p>
+                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0;">Coursework: Data Structures, Databases, Machine Learning Fundamentals</p>
                 </div>
             </div>
         </div>
