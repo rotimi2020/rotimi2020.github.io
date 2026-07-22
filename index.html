@@ -708,17 +708,37 @@
             color: var(--text-main);
             font-size: 0.82rem;
             display: flex;
-            align-items: center;
-            gap: 8px;
+            flex-direction: column;
+            gap: 2px;
+            line-height: 1.5;
         }
 
-        .testimonial-card .testimonial-author::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 2px;
-            background: var(--accent);
-            border-radius: 2px;
+        .testimonial-card .testimonial-author .author-name {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .testimonial-card .testimonial-author .author-role {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .testimonial-card .testimonial-author .author-company {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .privacy-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .privacy-note i {
+            margin-right: 6px;
+            color: var(--accent);
         }
 
         .contact-layout {
@@ -1248,12 +1268,11 @@
         </div>
     </header>
 
-    <!-- ===== PROFESSIONAL PROFILE SECTION (UPDATED) ===== -->
+    <!-- ===== PROFESSIONAL PROFILE SECTION ===== -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">Professional Profile</h2>
             <div class="about-card">
-                <!-- ✅ UPDATED INTRO: Matches "Operations Analytics · Data Analyst" branding -->
                 <p>
                     I am a <strong>Data Analyst</strong> specializing in <strong>Operations Analytics</strong> — building end‑to‑end data pipelines that transform raw, messy operational data into clear insights, interactive dashboards, and production‑ready web applications. I hold a B.Sc. in Computer Science (Hons, 2019) and an <strong>IBM Data Science Professional Certificate</strong>.
                 </p>
@@ -1556,33 +1575,56 @@
         </div>
     </section>
 
-    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <!-- ===== TESTIMONIALS SECTION (UPDATED) ===== -->
     <section id="testimonials">
         <div class="container">
             <div class="section-content">
                 <h2 class="section-title">Testimonials</h2>
                 <div class="testimonial-grid">
+                    <!-- Testimonial 1: Project Manager -->
                     <div class="testimonial-card">
                         <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                         <p class="testimonial-text">
-                            "Rotimi delivered a comprehensive analytics dashboard that transformed how we track construction site costs. His ability to clean messy WhatsApp data and present clear, actionable insights is exceptional. He saved us hours of manual reconciliation."
+                            "Rotimi transformed the way we track costs on site. Before, we relied on paper logs and manual entries — it took days to get a clear picture of where we stood. He stepped in, cleaned up our WhatsApp data, and built a dashboard that gave us real-time visibility into materials, labour, and progress. It saved us hours of reconciliation and gave us confidence in our numbers. He's a reliable and sharp analyst."
                         </p>
-                        <div class="testimonial-author">Project Manager, Construction Firm</div>
+                        <div class="testimonial-author">
+                            <span class="author-name">A. K.</span>
+                            <span class="author-role">Project Manager</span>
+                            <span class="author-company">MTF Construction Company</span>
+                        </div>
                     </div>
+
+                    <!-- Testimonial 2: Site Engineer -->
                     <div class="testimonial-card">
                         <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                         <p class="testimonial-text">
-                            "His work on the diabetes risk prediction model was thorough and clinically relevant. He translates complex health data into clear visualisations that even non-technical stakeholders can understand. A reliable and detail-oriented analyst."
+                            "What stood out to me was Rotimi's attention to detail. He didn't just track quantities — he flagged inconsistencies before they became problems. When we had a cement shortage, he traced it back to the exact point of loss and helped us plug the gap. His reporting was always accurate, and he communicated clearly through his dashboards and written updates. I never had to chase him for data."
                         </p>
-                        <div class="testimonial-author">Healthcare Data Lead</div>
+                        <div class="testimonial-author">
+                            <span class="author-name">B. O.</span>
+                            <span class="author-role">Site Engineer</span>
+                            <span class="author-company">MTF Construction Company</span>
+                        </div>
                     </div>
+
+                    <!-- Testimonial 3: Site Supervisor -->
                     <div class="testimonial-card">
                         <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                         <p class="testimonial-text">
-                            "Rotimi's Django dashboard for our retail sales data gave us real‑time visibility into performance across regions. He built it quickly, communicated clearly via written updates, and delivered exactly what we needed—no unnecessary meetings."
+                            "Rotimi was always on the ground, logging every activity — excavation, casting, deliveries, equipment hours. His records were so detailed that we could look back at any day and know exactly what happened. He made my job easier because I could focus on managing the crew while he handled the numbers. He's thorough, calm, and gets the job done without unnecessary fuss."
                         </p>
-                        <div class="testimonial-author">Retail Operations Director</div>
+                        <div class="testimonial-author">
+                            <span class="author-name">C. N.</span>
+                            <span class="author-role">Site Supervisor</span>
+                            <span class="author-company">MTF Construction Company</span>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Privacy Note -->
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    Names and company details abbreviated with permission to respect privacy.
                 </div>
             </div>
         </div>
