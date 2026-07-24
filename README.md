@@ -1,4 +1,4 @@
-# Rotimi Omosewo — Data Analyst Portfolio
+# Rotimi Sheriff Omosewo — Data Analyst Portfolio
 
 ### Operations Analyst | Data Analyst | Construction Data Analyst
 
