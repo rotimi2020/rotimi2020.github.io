@@ -44,7 +44,7 @@ Operations Analytics • Data Cleaning & Transformation • Business Intelligenc
 | | |
 | :--- | :--- |
 | 📧 **Email** | omoseworotimi@gmail.com |
-| 💼 **LinkedIn** | [linkedin.com/in/rotimi-sheriff-omosewo-939a806b](https://linkedin.com/in/rotimi-sheriff-omosewo) |
+| 💼 **LinkedIn** | [linkedin.com/in/rotimi-sheriff-omosewo](https://linkedin.com/in/rotimi-sheriff-omosewo) |
 | 🐙 **GitHub** | [github.com/rotimi2020](https://github.com/rotimi2020) |
 | 🌐 **Portfolio** | [rotimi2020.github.io](https://rotimi2020.github.io) |
 | 🚀 **Live Dashboard** | [rotimi5050.pythonanywhere.com](https://rotimi5050.pythonanywhere.com) |
