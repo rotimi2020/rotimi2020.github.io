@@ -1,54 +1,55 @@
-# Rotimi Omosewo — Data Analyst Portfolio
+# Rotimi Omosewo — Data & BI Analyst Portfolio
 
-### Operations Analyst | Data Analyst | Construction Data Analyst
+**Data Analysis · Business Intelligence · Operations & Supply Chain Analytics**
 
-**SQL • Python • Power BI • Excel • Django**
+SQL · Python · Power BI · Excel · Django · KNIME
 
-This repository contains the source code for my professional portfolio website — showcasing my analytics projects, technical skills, and professional experience.
+This repository contains the source code for my portfolio website. It brings together my data analytics projects, dashboards, technical skills, and experience working with real operational data.
+
+My work covers data cleaning, analysis, reporting, dashboard development, and using data to better understand business and operational problems.
+
+## 🌐 Portfolio Website
+
+**Live website:** https://rotimi2020.github.io/
+
+## 🛠️ Technologies
+
+- **HTML, CSS & JavaScript** — Portfolio website
+- **GitHub Pages** — Website hosting
+- **SQL & Python** — Data analysis and data preparation
+- **Power BI & Excel** — Reporting, dashboards and visualization
+- **Django & Streamlit** — Interactive analytics applications
+- **Plotly** — Interactive charts and visualizations
+
+## 📊 Featured Projects
+
+| Project | Tools | Links |
+|---|---|---|
+| DataCo Supply Chain Analytics | Python, SQL, Django, Data Visualization | [Live Dashboard](https://rotimi0000.pythonanywhere.com/) · [Analysis Repository](https://github.com/rotimi2020/dataco-supply-chain-analytics) |
+| Construction Operations Analytics | Python, SQL, Excel, Power BI | [GitHub Repository](https://github.com/rotimi2020/construction-data-analytics) |
+| NHANES Diabetes Analysis | Python, Streamlit, Scikit-learn | [Live App](https://nhanes-diabetes.streamlit.app/) |
+| Superstore Analytics Application | Python, Django, Plotly | [Live App](https://rotimi.pythonanywhere.com/) |
+| Rossmann Sales Forecasting | Python, Pandas, Machine Learning | Available on my portfolio |
+| PowerCo Customer Analytics | Python, Data Analysis, Customer Analytics | Available on my portfolio |
+
+## Skills & Areas of Work
+
+- Data cleaning, preparation and quality checks
+- SQL queries, analysis and reporting
+- Dashboard development and KPI tracking
+- Business and operational data analysis
+- Supply chain, logistics and inventory analytics
+- Cost and performance analysis
+- Data visualization and exploratory analysis
+- Python automation and analytical applications
+
+## 📫 Contact
+
+- **Email:** omoseworotimi@gmail.com
+- **LinkedIn:** https://linkedin.com/in/rotimi-sheriff-omosewo
+- **GitHub:** https://github.com/rotimi2020
+- **Portfolio:** https://rotimi2020.github.io/
 
 ---
 
-## 🌐 Live Website
-
-Visit my live portfolio at: **[rotimi2020.github.io](https://rotimi2020.github.io)**
-
----
-
-## 🛠️ Built With
-
-- **HTML5, CSS3, JavaScript** — responsive front-end
-- **GitHub Pages** — hosting
-- **Power BI, SQL, Python** — featured in projects
-
----
-
-## 📂 Featured Projects
-
-| Project | Tech Stack | Live Demo |
-| :--- | :--- | :--- |
-| Construction Operations Dashboard | Django, Power BI, SQL, Python | [rotimi5050.pythonanywhere.com](https://rotimi5050.pythonanywhere.com) |
-| NHANES Diabetes Prediction App | Streamlit, Python, Scikit-Learn | [nhanes-diabetes.streamlit.app](https://nhanes-diabetes.streamlit.app) |
-| Construction Operations Analytics | Excel, SQL Server, Python, Power BI | [GitHub Repo](https://github.com/rotimi2020/construction-data-analytics) |
-| Superstore Viz Django App | Django, Plotly, Python | [rotimi.pythonanywhere.com](https://rotimi.pythonanywhere.com) |
-
----
-
-## 🎯 Core Competencies
-
-Operations Analytics • Data Cleaning & Transformation • Business Intelligence • KPI Development • Cost Analysis • Dashboard Development • ETL Processes • Data Visualization • Operational Reporting
-
----
-
-## 📫 Connect With Me
-
-| | |
-| :--- | :--- |
-| 📧 **Email** | omoseworotimi@gmail.com |
-| 💼 **LinkedIn** | [linkedin.com/in/rotimi-sheriff-omosewo](https://linkedin.com/in/rotimi-sheriff-omosewo) |
-| 🐙 **GitHub** | [github.com/rotimi2020](https://github.com/rotimi2020) |
-| 🌐 **Portfolio** | [rotimi2020.github.io](https://rotimi2020.github.io) |
-| 🚀 **Live Dashboard** | [rotimi5050.pythonanywhere.com](https://rotimi5050.pythonanywhere.com) |
-
----
-
-*This portfolio showcases my data analysis, visualization, and machine learning projects using various tools and technologies.*
+I use these projects to explore real-world datasets, build practical analytics solutions, and present findings in a way that is useful and easy to understand.
